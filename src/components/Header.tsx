@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const exploreLinks = [
   { href: "/explore", label: "Explore Hot Springs" },
@@ -23,18 +26,21 @@ const sisterSites = [
 ];
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="logo">
+        <Link href="/" className="logo" onClick={() => setOpen(false)}>
           Hot Springs Arkansas
         </Link>
 
-        <nav className="nav">
+        {/* DESKTOP NAV */}
+        <nav className="nav desktop-nav">
           <Link href="/">Home</Link>
 
           <div className="nav-dropdown">
-            <button>Explore</button>
+            <button type="button">Explore</button>
             <div className="dropdown-menu">
               {exploreLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
@@ -45,7 +51,7 @@ export default function Header() {
           </div>
 
           <div className="nav-dropdown">
-            <button>Places To Stay</button>
+            <button type="button">Places To Stay</button>
             <div className="dropdown-menu">
               {stayLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
@@ -56,7 +62,7 @@ export default function Header() {
           </div>
 
           <div className="nav-dropdown">
-            <button>Local Guide</button>
+            <button type="button">Local Guide</button>
             <div className="dropdown-menu">
               {localLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
@@ -67,7 +73,7 @@ export default function Header() {
           </div>
 
           <div className="nav-dropdown">
-            <button>Sister Sites</button>
+            <button type="button">Sister Sites</button>
             <div className="dropdown-menu">
               {sisterSites.map((site) => (
                 <a
@@ -86,7 +92,90 @@ export default function Header() {
             Get Listed
           </Link>
         </nav>
+
+        {/* MOBILE BUTTON */}
+        <button
+          type="button"
+          className="mobile-menu-button"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
+        >
+          {open ? "Close" : "Menu"}
+        </button>
       </div>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div className="mobile-menu">
+          <nav className="container mobile-menu-inner">
+            <Link href="/" onClick={() => setOpen(false)}>
+              Home
+            </Link>
+
+            <div className="mobile-menu-group">
+              <p>Explore</p>
+              {exploreLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mobile-menu-group">
+              <p>Places To Stay</p>
+              {stayLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mobile-menu-group">
+              <p>Local Guide</p>
+              {localLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mobile-menu-group">
+              <p>Sister Sites</p>
+              {sisterSites.map((site) => (
+                <a
+                  key={site.href}
+                  href={site.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {site.label}
+                </a>
+              ))}
+            </div>
+
+            <Link
+              className="nav-cta mobile-cta"
+              href="/local-businesses"
+              onClick={() => setOpen(false)}
+            >
+              Get Listed
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

@@ -16,6 +16,12 @@ const localLinks = [
   { href: "/local-businesses", label: "Local Businesses" },
 ];
 
+const sisterSites = [
+  { href: "https://glenwoodarkansas.org", label: "Glenwood Arkansas" },
+  { href: "https://amityarkansas.org", label: "Amity Arkansas" },
+  { href: "https://mountidaarkansas.org", label: "Mount Ida Arkansas" },
+];
+
 export default function Header() {
   return (
     <header className="site-header">
@@ -56,6 +62,22 @@ export default function Header() {
                 <Link key={link.href} href={link.href}>
                   {link.label}
                 </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="nav-dropdown">
+            <button>Sister Sites</button>
+            <div className="dropdown-menu">
+              {sisterSites.map((site) => (
+                <a
+                  key={site.href}
+                  href={site.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {site.label}
+                </a>
               ))}
             </div>
           </div>

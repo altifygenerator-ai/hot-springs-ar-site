@@ -9,6 +9,10 @@ const siteUrl = "https://hotspringsarkansas.org";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
+  verification: {
+    google: "AFQuEhVgUdyUay552rz7wj6VFNfCWFxMGAFGPWyEvjE",
+  },
+
   title: {
     default:
       "Hot Springs Arkansas Guide | Things To Do, Restaurants, Hotels, Cabins & Travel Info",

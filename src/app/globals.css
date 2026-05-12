@@ -446,26 +446,38 @@ p {
    RESPONSIVE
 ===================== */
 
+/* Desktop nav for Hot Springs header */
+.hot-desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.hot-desktop-nav a,
+.hot-desktop-nav .nav-dropdown button {
+  color: var(--green);
+  opacity: 0.88;
+}
+
+.hot-desktop-nav a:hover,
+.hot-desktop-nav .nav-dropdown button:hover {
+  opacity: 1;
+  color: var(--accent-dark);
+}
+
+.hot-mobile-button,
+.hot-mobile-menu {
+  display: none;
+}
+
+/* Tablet and mobile layout */
 @media (max-width: 900px) {
   .header-inner {
     height: auto;
     padding: 18px 0;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .nav {
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .nav-dropdown button {
-    padding: 0;
-  }
-
-  .dropdown-menu {
-    position: static;
-    margin-top: 10px;
   }
 
   .categories-grid,
@@ -486,5 +498,93 @@ p {
 
   .cta-box {
     padding: 30px;
+  }
+}
+
+/* Mobile nav only */
+@media (max-width: 860px) {
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hot-desktop-nav {
+    display: none !important;
+  }
+
+  .hot-mobile-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .hot-mobile-menu {
+    display: block !important;
+    border-top: 1px solid var(--border);
+    background: var(--background);
+  }
+
+  .hot-mobile-menu-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .hot-mobile-menu-inner a {
+    display: block;
+    border-radius: 0.75rem;
+    padding: 0.8rem 0.9rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .hot-mobile-menu-inner a:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .hot-mobile-menu-group {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--surface);
+    padding: 0.75rem;
+  }
+
+  .hot-mobile-menu-group p {
+    margin: 0 0 0.4rem;
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .hot-mobile-cta {
+    display: block;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Desktop only */
+@media (min-width: 861px) {
+  .hot-desktop-nav {
+    display: flex !important;
+  }
+
+  .hot-mobile-button,
+  .hot-mobile-menu {
+    display: none !important;
   }
 }

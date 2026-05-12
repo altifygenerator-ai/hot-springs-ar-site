@@ -35,12 +35,13 @@ export default function Header() {
           Hot Springs Arkansas
         </Link>
 
-        {/* DESKTOP NAV */}
-        <nav className="nav desktop-nav">
+        {/* DESKTOP NAV ONLY */}
+        <nav className="hot-desktop-nav">
           <Link href="/">Home</Link>
 
           <div className="nav-dropdown">
             <button type="button">Explore</button>
+
             <div className="dropdown-menu">
               {exploreLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
@@ -52,6 +53,7 @@ export default function Header() {
 
           <div className="nav-dropdown">
             <button type="button">Places To Stay</button>
+
             <div className="dropdown-menu">
               {stayLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
@@ -63,6 +65,7 @@ export default function Header() {
 
           <div className="nav-dropdown">
             <button type="button">Local Guide</button>
+
             <div className="dropdown-menu">
               {localLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
@@ -74,6 +77,7 @@ export default function Header() {
 
           <div className="nav-dropdown">
             <button type="button">Sister Sites</button>
+
             <div className="dropdown-menu">
               {sisterSites.map((site) => (
                 <a
@@ -93,10 +97,10 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* MOBILE BUTTON */}
+        {/* MOBILE BUTTON ONLY */}
         <button
           type="button"
-          className="mobile-menu-button"
+          className="hot-mobile-button"
           onClick={() => setOpen((prev) => !prev)}
           aria-label="Toggle navigation menu"
           aria-expanded={open}
@@ -105,15 +109,15 @@ export default function Header() {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* MOBILE MENU ONLY */}
       {open && (
-        <div className="mobile-menu">
-          <nav className="container mobile-menu-inner">
+        <div className="hot-mobile-menu">
+          <nav className="container hot-mobile-menu-inner">
             <Link href="/" onClick={() => setOpen(false)}>
               Home
             </Link>
 
-            <div className="mobile-menu-group">
+            <div className="hot-mobile-menu-group">
               <p>Explore</p>
               {exploreLinks.map((link) => (
                 <Link
@@ -126,7 +130,7 @@ export default function Header() {
               ))}
             </div>
 
-            <div className="mobile-menu-group">
+            <div className="hot-mobile-menu-group">
               <p>Places To Stay</p>
               {stayLinks.map((link) => (
                 <Link
@@ -139,7 +143,7 @@ export default function Header() {
               ))}
             </div>
 
-            <div className="mobile-menu-group">
+            <div className="hot-mobile-menu-group">
               <p>Local Guide</p>
               {localLinks.map((link) => (
                 <Link
@@ -152,7 +156,7 @@ export default function Header() {
               ))}
             </div>
 
-            <div className="mobile-menu-group">
+            <div className="hot-mobile-menu-group">
               <p>Sister Sites</p>
               {sisterSites.map((site) => (
                 <a
@@ -167,7 +171,7 @@ export default function Header() {
             </div>
 
             <Link
-              className="nav-cta mobile-cta"
+              className="nav-cta hot-mobile-cta"
               href="/local-businesses"
               onClick={() => setOpen(false)}
             >

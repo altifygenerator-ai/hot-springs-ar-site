@@ -217,7 +217,9 @@ export default function HotelsPage() {
 
               <p>
                 These featured stays are useful starting points for visitors
-                looking near downtown, Bathhouse Row, Oaklawn, Lake Hamilton,
+                looking near downtown, Bathhouse Row, <Link href="/hotels-near-oaklawn" className="btn">
+  Oaklawn
+</Link>, Lake Hamilton,
                 restaurants, spas, and local attractions.
               </p>
             </div>
@@ -539,7 +541,9 @@ export default function HotelsPage() {
 
             <p>
               Quick answers for visitors comparing hotels, downtown stays,
-              lake-area lodging, Oaklawn trips, cabins, restaurants, and
+              lake-area lodging, <Link href="/hotels-near-oaklawn" className="btn">
+  Oaklawn
+</Link> trips, cabins, restaurants, and
               attractions.
             </p>
           </div>
@@ -601,7 +605,9 @@ export default function HotelsPage() {
               >
                 This Hot Springs lodging guide helps visitors compare places to
                 stay while planning trips around Bathhouse Row, Lake Hamilton,
-                Oaklawn, restaurants, spas, and local attractions.
+                <Link href="/hotels-near-oaklawn" className="btn">
+  Hotels Near Oaklawn
+</Link>, restaurants, spas, and local attractions.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">

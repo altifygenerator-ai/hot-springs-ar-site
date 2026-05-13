@@ -6,16 +6,30 @@ import { useState } from "react";
 const exploreLinks = [
   { href: "/explore", label: "Explore Hot Springs" },
   { href: "/things-to-do-in-hot-springs-ar", label: "Things To Do" },
+  { href: "/lake-hamilton", label: "Lake Hamilton" },
+  { href: "/bathhouse-row", label: "Bathhouse Row" },
   { href: "/history", label: "History" },
+  { href: "/free-things-to-do-hot-springs", label: "Free Things To Do" },
 ];
 
 const stayLinks = [
-  { href: "/hot-springs-ar-cabins", label: "Cabins" },
   { href: "/hot-springs-ar-hotels", label: "Hotels" },
+  { href: "/hotels-near-bathhouse-row", label: "Hotels Near Bathhouse Row" },
+  { href: "/hotels-near-oaklawn", label: "Hotels Near Oaklawn" },
+  { href: "/hot-springs-ar-cabins", label: "Cabins" },
+  { href: "/lake-hamilton-cabins", label: "Lake Hamilton Cabins" },
 ];
 
 const localLinks = [
   { href: "/hot-springs-ar-restaurants", label: "Restaurants" },
+  {
+    href: "/restaurants-near-bathhouse-row",
+    label: "Restaurants Near Bathhouse Row",
+  },
+  {
+    href: "/lake-hamilton-restaurants",
+    label: "Lake Hamilton Restaurants",
+  },
   { href: "/local-businesses", label: "Local Businesses" },
 ];
 

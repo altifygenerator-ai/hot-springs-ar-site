@@ -26,13 +26,13 @@ const hero = {
     "Walk the historic heart of Hot Springs with classic bathhouses, thermal water, downtown shops, restaurants, museums, spas, and Hot Springs National Park all close together.",
   image: "/images/businesses/bathhouse-row.webp",
   primaryCta: {
-    label: "Things To Do Nearby",
-    href: "/things-to-do-in-hot-springs-ar",
-  },
-  secondaryCta: {
-    label: "Find Hotels",
-    href: "/hot-springs-ar-hotels",
-  },
+  label: "Restaurants Nearby",
+  href: "/restaurants-near-bathhouse-row",
+},
+secondaryCta: {
+  label: "Things To Do Nearby",
+  href: "/things-to-do-in-hot-springs-ar",
+},
 };
 
 const bathhouses = [
@@ -204,12 +204,12 @@ export default function BathhouseRowPage() {
               <p className="leading-relaxed" style={{ color: "var(--muted)" }}>
                 It pairs naturally with{" "}
                 <Link
-                  href="/hot-springs-ar-restaurants"
-                  className="font-semibold underline underline-offset-4"
-                  style={{ color: "var(--accent-dark)" }}
-                >
-                  restaurants
-                </Link>
+  href="/restaurants-near-bathhouse-row"
+  className="font-semibold underline underline-offset-4"
+  style={{ color: "var(--accent-dark)" }}
+>
+  restaurants near Bathhouse Row
+</Link>
                 ,{" "}
                 <Link
                   href="/hot-springs-ar-hotels"
@@ -232,19 +232,18 @@ export default function BathhouseRowPage() {
           </div>
         </div>
       </section>
-
       <section className="section pt-0">
         <div className="container flex flex-wrap justify-center gap-3">
-          <Link href="/things-to-do-in-hot-springs-ar" className="btn">
-            Things To Do
-          </Link>
-
-          <Link href="/hot-springs-ar-restaurants" className="btn">
-            Restaurants Nearby
+          <Link href="/restaurants-near-bathhouse-row" className="btn">
+            Restaurants Near Bathhouse Row
           </Link>
 
           <Link href="/hot-springs-ar-hotels" className="btn">
-            Hotels Nearby
+            Hotels Near Downtown
+          </Link>
+
+          <Link href="/things-to-do-in-hot-springs-ar" className="btn">
+            Things To Do Nearby
           </Link>
 
           <Link href="/explore" className="btn">
@@ -252,6 +251,7 @@ export default function BathhouseRowPage() {
           </Link>
         </div>
       </section>
+      
 
       <section className="section">
         <div className="container">

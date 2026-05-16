@@ -175,7 +175,7 @@ export const localBusinessesHero: HeroData = {
   description:
     "Discover local shops, restaurants, attractions, guides, services, boutiques, outdoor businesses, and visitor-friendly businesses across Hot Springs, Arkansas.",
 
-  image: "/images/hero/hot-springs-local-businesses.jpg",
+  image: "/images/hero/hot-springs-local-business.webp",
 
   primaryCta: {
     label: "Explore Hot Springs",

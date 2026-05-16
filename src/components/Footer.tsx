@@ -85,10 +85,18 @@ export default function Footer() {
     and business guide.
   </p>
 
-  <p className="md:text-right">
-    Part of the <strong>Natural State Tourism Project</strong> — an independent
-    local tourism guide network.
-  </p>
+ <p className="md:text-right">
+  Part of the{" "}
+  <a
+    href="https://naturalstatetourismproject.org"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-semibold underline underline-offset-4 hover:opacity-80"
+  >
+    Natural State Tourism Project
+  </a>{" "}
+  — an independent local tourism guide network.
+</p>
 </div>
     </footer>
   );

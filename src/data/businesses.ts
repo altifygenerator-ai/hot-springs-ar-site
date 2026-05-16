@@ -199,7 +199,7 @@ export const businesses: Business[] = [
     type: "Latin Food • Downtown Dining",
     description:
       "A popular downtown restaurant serving Latin-inspired food in a lively historic setting near Bathhouse Row.",
-    image: "/images/hero/rolandos.webp",
+    image: "/images/businesses/rolandos.webp",
     phone: "501-318-6054",
     address: "210 Central Ave, Hot Springs, AR 71901",
     website: "https://rolandosrestaurante.com/",
@@ -470,7 +470,7 @@ export const businesses: Business[] = [
     type: "Theme Park • Water Park • Family Attraction",
     description:
       "A major family attraction in Hot Springs with rides, water park fun, seasonal events, and entertainment.",
-    image: "/images/businesses/magic-springs.jpg",
+    image: "/images/businesses/magic-springs.webp",
     phone: "501-624-0100",
     address: "1701 E Grand Ave, Hot Springs, AR 71901",
     website: "https://www.magicsprings.com/",
@@ -498,7 +498,7 @@ export const businesses: Business[] = [
     type: "Zipline • Outdoor Adventure",
     description:
       "An outdoor adventure stop near Hot Springs with zipline experiences and activities for visitors looking for something active.",
-    image: "/images/businesses/adventureworks.jpg",
+    image: "/images/businesses/adventure-works.jpg",
     phone: "501-262-9182",
     address: "1700 Shady Grove Rd, Hot Springs, AR 71901",
     website: "https://adventureworks.com/hot-springs/",
@@ -512,7 +512,7 @@ export const businesses: Business[] = [
     type: "Scenic Overlook • Mountain Views",
     description:
       "A scenic tower offering wide views over Hot Springs, the Ouachita Mountains, and the surrounding national park area.",
-    image: "/images/businesses/hot-springs-mountain-tower.jpg",
+    image: "/images/businesses/hot-springs-mountain-tower.webp",
     phone: "501-623-6035",
     address: "401 Hot Springs Mountain Dr, Hot Springs, AR 71901",
     website: "https://hotspringstower.com/",
@@ -531,7 +531,7 @@ export const businesses: Business[] = [
     type: "Fried Pies • Local Food Stop",
     description:
       "A popular Hot Springs food stop known for fried pies, road-trip snacks, and a local Arkansas flavor visitors often remember.",
-    image: "/images/businesses/morrisons-fried-pies.jpg",
+    image: "/images/businesses/morrisons-fried-pie.jpg",
     address: "Hot Springs, AR",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Morrisons+Fried+Pies+Hot+Springs+AR",

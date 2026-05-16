@@ -81,16 +81,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     // Local info
-    {
-      path: "/history",
-      priority: 0.75,
-      changeFrequency: "monthly" as const,
-    },
-    {
-      path: "/local-businesses",
-      priority: 0.8,
-      changeFrequency: "weekly" as const,
-    },
+ {
+  path: "/history",
+  priority: 0.75,
+  changeFrequency: "monthly" as const,
+},
+{
+  path: "/local-businesses",
+  priority: 0.8,
+  changeFrequency: "weekly" as const,
+},
+{
+  path: "/contact",
+  priority: 0.8,
+  changeFrequency: "monthly" as const,
+},
   ];
 
   return routes.map((route) => ({

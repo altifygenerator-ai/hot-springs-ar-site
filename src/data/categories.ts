@@ -32,7 +32,7 @@ export const homeCategories = [
     description:
       "Discover local shops, services, attractions, and businesses serving visitors and residents in Hot Springs, Arkansas.",
     href: "/local-businesses",
-    image: "/images/categories/hot-springs-local-businesses.jpg",
+    image: "/images/categories/local-business.webp",
   },
   {
     title: "History",

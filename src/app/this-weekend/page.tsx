@@ -1,6 +1,7 @@
 import WeekendEvents from "@/components/events/WeekendEvents";
 import { getWeekendEvents } from "@/lib/events";
-
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 export const metadata = {
   title: "This Weekend in Hot Springs, Arkansas",
   description:

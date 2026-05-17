@@ -12,7 +12,7 @@ import FAQSection from "@/components/home/FAQSection";
 import PromoteBusinessCTA from "@/components/home/PromoteBusinessCTA";
 import NearbyDestinations from "@/components/home/NearbyDestinations";
 import { homeHero } from "@/data/hero";
-
+import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 export default function HomePage() {
   return (
     <main>
@@ -28,7 +28,7 @@ export default function HomePage() {
       <QuickLinks />
 
       <IntroSection />
-
+<HomeEventsPreview />
       <CategoryGrid />
 
       <FeaturedAttractions />

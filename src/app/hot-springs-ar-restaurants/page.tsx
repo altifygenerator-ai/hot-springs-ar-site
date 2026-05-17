@@ -2,7 +2,7 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import { restaurantsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
-
+import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title:
     "Restaurants in Hot Springs, Arkansas | Downtown Dining, Breakfast, Lakefront Food & Local Favorites",
@@ -554,7 +554,10 @@ export default function RestaurantsPage() {
           </div>
         </div>
       </section>
-
+<EventsCTA
+  title="Going out around Hot Springs?"
+  text="Check current events before dinner plans. There may be live music, downtown events, markets, or family-friendly things happening nearby."
+/>
       <section className="section">
         <div className="container">
           <div className="section-heading">

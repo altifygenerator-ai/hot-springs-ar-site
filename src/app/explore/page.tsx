@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { exploreHero } from "@/data/hero";
-
+import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title:
     "Explore Hot Springs by Area | Downtown, Bathhouse Row, Lake Hamilton & Oaklawn",
@@ -478,7 +478,7 @@ export default function ExplorePage() {
           </div>
         </div>
       </section>
-
+<EventsCTA />
       <section className="section">
         <div className="container">
           <div className="section-heading">

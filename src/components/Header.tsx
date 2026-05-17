@@ -4,7 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 const exploreLinks = [
-  { href: "/explore", label: "Explore Hot Springs" },
+
+  { href: "/explore", label: "Explore Hot Springs" }
+  ,{ href: "/events", label: "Events" },
+{ href: "/this-weekend", label: "This Weekend" },
   { href: "/things-to-do-in-hot-springs-ar", label: "Things To Do" },
   { href: "/lake-hamilton", label: "Lake Hamilton" },
   { href: "/bathhouse-row", label: "Bathhouse Row" },

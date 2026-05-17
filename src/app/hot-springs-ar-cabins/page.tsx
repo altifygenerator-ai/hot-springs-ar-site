@@ -2,7 +2,7 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import { cabinsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
-
+import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title:
     "Cabins in Hot Springs, Arkansas | Lake Hamilton Cabins, Treehouses & Quiet Stays",
@@ -536,7 +536,10 @@ export default function CabinsPage() {
           </div>
         </div>
       </section>
-
+<EventsCTA
+  title="Staying in Hot Springs soon?"
+  text="Before you book out your weekend, check what’s happening around town so you can plan around festivals, live music, markets, and local events."
+/>
       <section className="section">
         <div className="container">
           <div className="section-heading">

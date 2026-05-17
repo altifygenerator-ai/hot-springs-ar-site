@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { thingsToDoHero } from "@/data/hero";
-
+import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title:
     "Things To Do in Hot Springs, Arkansas | Bathhouse Row, Lake Hamilton & Attractions",
@@ -546,7 +546,7 @@ export default function ThingsToDoPage() {
           </div>
         </div>
       </section>
-
+<EventsCTA />
       <section className="section">
         <div className="container">
           <div className="section-heading">

@@ -32,11 +32,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
 
     {
+      path: "/hot-springs-local-spots",
+      priority: 0.9,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-family-friendly",
+      priority: 0.88,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-ouachita-avenue",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-bathhouse-row-local-finds",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+
+    {
       path: "/things-to-do-in-hot-springs-ar",
       priority: 0.95,
       changeFrequency: "weekly" as const,
     },
-
     {
       path: "/free-things-to-do-hot-springs",
       priority: 0.85,
@@ -48,13 +68,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
       changeFrequency: "weekly" as const,
     },
-
     {
       path: "/restaurants-near-bathhouse-row",
       priority: 0.85,
       changeFrequency: "monthly" as const,
     },
-
     {
       path: "/lake-hamilton-restaurants",
       priority: 0.85,
@@ -66,13 +84,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
       changeFrequency: "weekly" as const,
     },
-
     {
       path: "/hotels-near-bathhouse-row",
       priority: 0.85,
       changeFrequency: "monthly" as const,
     },
-
     {
       path: "/hotels-near-oaklawn",
       priority: 0.85,
@@ -84,7 +100,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
       changeFrequency: "weekly" as const,
     },
-
     {
       path: "/lake-hamilton-cabins",
       priority: 0.85,
@@ -96,13 +111,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
       changeFrequency: "monthly" as const,
     },
-
     {
       path: "/lake-hamilton",
       priority: 0.9,
       changeFrequency: "monthly" as const,
     },
-
     {
       path: "/history",
       priority: 0.75,
@@ -114,7 +127,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
       changeFrequency: "weekly" as const,
     },
-
     {
       path: "/contact",
       priority: 0.8,
@@ -140,7 +152,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: event.updated_at
         ? new Date(event.updated_at)
         : new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "weekly" as const,
       priority: 0.8,
     })) || [];
 

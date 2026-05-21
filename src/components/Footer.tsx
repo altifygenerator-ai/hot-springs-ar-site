@@ -7,6 +7,16 @@ const exploreLinks = [
   { href: "/bathhouse-row", label: "Bathhouse Row" },
 ];
 
+const localPickLinks = [
+  { href: "/hot-springs-local-spots", label: "Local Hidden Gems" },
+  { href: "/hot-springs-family-friendly", label: "Family-Friendly Finds" },
+  { href: "/hot-springs-ouachita-avenue", label: "Ouachita Avenue" },
+  {
+    href: "/hot-springs-bathhouse-row-local-finds",
+    label: "Bathhouse Row Local Finds",
+  },
+];
+
 const visitorLinks = [
   { href: "/hot-springs-ar-restaurants", label: "Restaurants" },
   { href: "/hot-springs-ar-cabins", label: "Cabins" },
@@ -38,8 +48,8 @@ export default function Footer() {
           <h3>Hot Springs Arkansas</h3>
           <p>
             A local guide for exploring Hot Springs, Arkansas — from things to
-            do and places to stay to restaurants, history, events, and local
-            businesses.
+            do and places to stay to restaurants, events, local picks, history,
+            and small businesses.
           </p>
         </div>
 
@@ -62,6 +72,13 @@ export default function Footer() {
         <div>
           <h4>Visitor Guide</h4>
           {visitorLinks.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
+
+          <h4 className="footer-subheading">Local Picks</h4>
+          {localPickLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
             </Link>

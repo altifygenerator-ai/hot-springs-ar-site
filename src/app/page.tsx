@@ -13,6 +13,7 @@ import PromoteBusinessCTA from "@/components/home/PromoteBusinessCTA";
 import NearbyDestinations from "@/components/home/NearbyDestinations";
 import { homeHero } from "@/data/hero";
 import HomeEventsPreview from "@/components/events/HomeEventsPreview";
+import LocalSpotsPreview from "@/components/home/LocalSpotsPreview";
 export default function HomePage() {
   return (
     <main>
@@ -29,6 +30,7 @@ export default function HomePage() {
 
       <IntroSection />
 <HomeEventsPreview />
+<LocalSpotsPreview />
       <CategoryGrid />
 
       <FeaturedAttractions />

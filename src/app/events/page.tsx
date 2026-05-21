@@ -1,7 +1,9 @@
 import EventCard from "@/components/events/EventCard";
 import { getUpcomingApprovedEvents } from "@/lib/events";
+
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+
 export const metadata = {
   title: "Events in Hot Springs, Arkansas",
   description:
@@ -22,6 +24,16 @@ export default async function EventsPage() {
             music, family-friendly activities, and things worth checking out
             while you’re in town.
           </p>
+
+          <div className="hero-buttons">
+            <a href="/submit-event" className="btn-primary">
+              Submit an Event
+            </a>
+
+            <a href="/this-weekend" className="btn-secondary">
+              See This Weekend
+            </a>
+          </div>
         </div>
       </section>
 

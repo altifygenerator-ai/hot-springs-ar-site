@@ -24,6 +24,13 @@ const stayLinks = [
 ];
 
 const localLinks = [
+  { href: "/hot-springs-local-spots", label: "Local Hidden Gems" },
+  { href: "/hot-springs-family-friendly", label: "Family-Friendly Finds" },
+  { href: "/hot-springs-ouachita-avenue", label: "Ouachita Avenue" },
+  {
+    href: "/hot-springs-bathhouse-row-local-finds",
+    label: "Bathhouse Row Local Finds",
+  },
   { href: "/hot-springs-ar-restaurants", label: "Restaurants" },
   {
     href: "/restaurants-near-bathhouse-row",

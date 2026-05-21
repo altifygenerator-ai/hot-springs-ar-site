@@ -41,6 +41,13 @@ export async function POST(request: Request) {
       start_time: cleanString(body.start_time),
       end_time: cleanString(body.end_time),
 
+      is_recurring: Boolean(body.is_recurring),
+      recurrence_type: cleanString(body.recurrence_type),
+      recurrence_days: Array.isArray(body.recurrence_days)
+        ? body.recurrence_days
+        : [],
+      recurrence_end_date: cleanString(body.recurrence_end_date),
+
       category: cleanString(body.category),
       tags: [],
 

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { cabinsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
 import EventsCTA from "@/components/events/EventsCTA";
+import LynLiliRentalCleaningBanner from "@/components/ads/LynLiliRentalCleaningBanner";
 export const metadata = {
   title:
     "Cabins in Hot Springs, Arkansas | Lake Hamilton Cabins, Treehouses & Quiet Stays",
@@ -211,7 +212,7 @@ export default function CabinsPage() {
           </Link>
         </div>
       </section>
-
+<LynLiliRentalCleaningBanner context="cabins" />
       {mainCabin && (
         <section className="section">
           <div className="container">

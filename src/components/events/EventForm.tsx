@@ -8,11 +8,22 @@ type EventFormProps = {
   sourceType?: "submission" | "manual";
 };
 
+const recurringDays = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+
 export default function EventForm({
   sourceType = "submission",
 }: EventFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
+  const [isRecurring, setIsRecurring] = useState(false);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -21,6 +32,10 @@ export default function EventForm({
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+
+    const selectedRecurringDays = formData
+      .getAll("recurrence_days")
+      .map(String);
 
     const payload = {
       title: String(formData.get("title") || ""),
@@ -38,6 +53,15 @@ export default function EventForm({
       submitter_name: String(formData.get("submitter_name") || ""),
       submitter_email: String(formData.get("submitter_email") || ""),
       source_type: sourceType,
+
+      is_recurring: isRecurring,
+      recurrence_type: isRecurring
+        ? String(formData.get("recurrence_type") || "")
+        : "",
+      recurrence_days: isRecurring ? selectedRecurringDays : [],
+      recurrence_end_date: isRecurring
+        ? String(formData.get("recurrence_end_date") || "")
+        : "",
     };
 
     try {
@@ -54,6 +78,7 @@ export default function EventForm({
       }
 
       form.reset();
+      setIsRecurring(false);
       setStatus("success");
       setMessage(
         sourceType === "manual"
@@ -106,14 +131,44 @@ export default function EventForm({
           </div>
 
           <div className="event-form-field">
-            <label htmlFor="start_date">Start Date *</label>
-            <input id="start_date" name="start_date" type="date" required />
+            <label htmlFor="event_type">Event Type</label>
+            <select
+              id="event_type"
+              name="event_type"
+              defaultValue="single"
+              onChange={(event) =>
+                setIsRecurring(event.target.value === "recurring")
+              }
+            >
+              <option value="single">One-time event</option>
+              <option value="recurring">Recurring event</option>
+            </select>
           </div>
 
           <div className="event-form-field">
-            <label htmlFor="end_date">End Date</label>
-            <input id="end_date" name="end_date" type="date" />
+            <label htmlFor="start_date">
+              {isRecurring ? "First Date *" : "Start Date *"}
+            </label>
+            <input id="start_date" name="start_date" type="date" required />
           </div>
+
+          {!isRecurring && (
+            <div className="event-form-field">
+              <label htmlFor="end_date">End Date</label>
+              <input id="end_date" name="end_date" type="date" />
+            </div>
+          )}
+
+          {isRecurring && (
+            <div className="event-form-field">
+              <label htmlFor="recurrence_end_date">Recurring End Date</label>
+              <input
+                id="recurrence_end_date"
+                name="recurrence_end_date"
+                type="date"
+              />
+            </div>
+          )}
 
           <div className="event-form-field">
             <label htmlFor="start_time">Start Time</label>
@@ -124,6 +179,39 @@ export default function EventForm({
             <label htmlFor="end_time">End Time</label>
             <input id="end_time" name="end_time" type="time" />
           </div>
+
+          {isRecurring && (
+            <>
+              <div className="event-form-field">
+                <label htmlFor="recurrence_type">Repeats</label>
+                <select
+                  id="recurrence_type"
+                  name="recurrence_type"
+                  defaultValue="weekly"
+                >
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+              </div>
+
+              <div className="event-form-field event-form-full">
+                <label>Recurring Days</label>
+
+                <div className="recurring-days">
+                  {recurringDays.map((day) => (
+                    <label key={day} className="recurring-day-option">
+                      <input
+                        type="checkbox"
+                        name="recurrence_days"
+                        value={day}
+                      />
+                      {day}
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
 
           <div className="event-form-field">
             <label htmlFor="city">City</label>

@@ -274,9 +274,40 @@ export default function ExplorePage() {
           <Link href="/hot-springs-ar-cabins" className="btn">
             Cabins
           </Link>
+          <Link href="/hot-springs-local-spots" className="btn">
+  Local Hidden Gems
+</Link>
         </div>
       </section>
+<section className="section pt-0">
+  <div className="container">
+    <Link
+      href="/hot-springs-local-spots"
+      className="block rounded-3xl border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-8"
+      style={{
+        background: "var(--surface)",
+        borderColor: "var(--border)",
+      }}
+    >
+      <p className="hero-eyebrow">Locals’ Picks</p>
 
+      <h2 className="mb-4">Want the spots visitors usually miss?</h2>
+
+      <p className="max-w-3xl" style={{ color: "var(--muted)" }}>
+        Explore local hidden gems, family-friendly finds, Ouachita Avenue stops,
+        Bathhouse Row tips, small shops, coffee spots, local food, and community
+        suggestions from people who actually know Hot Springs.
+      </p>
+
+      <span
+        className="mt-5 inline-block font-bold"
+        style={{ color: "var(--accent-dark)" }}
+      >
+        See local hidden gems →
+      </span>
+    </Link>
+  </div>
+</section>
       <section className="section">
         <div className="container">
           <div className="section-heading">

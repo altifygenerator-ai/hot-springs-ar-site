@@ -30,6 +30,10 @@ export type TourismEvent = {
   needs_review?: boolean | null;
   created_at?: string | null;
   updated_at?: string | null;
+  is_recurring?: boolean;
+recurrence_type?: string | null;
+recurrence_days?: string[] | null;
+recurrence_end_date?: string | null;
 };
 
 export function createEventSlug(title: string, date?: string) {

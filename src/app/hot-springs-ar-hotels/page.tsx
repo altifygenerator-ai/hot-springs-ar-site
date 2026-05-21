@@ -2,7 +2,7 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import { hotelsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
-
+import LynLiliRentalCleaningBanner from "@/components/ads/LynLiliRentalCleaningBanner";
 export const metadata = {
   title:
     "Hotels in Hot Springs, Arkansas | Downtown, Bathhouse Row, Oaklawn & Lake Hamilton",
@@ -208,7 +208,7 @@ export default function HotelsPage() {
           </Link>
         </div>
       </section>
-
+<LynLiliRentalCleaningBanner context="cabins" />
       {mainHotel && (
         <section className="section">
           <div className="container">
@@ -346,7 +346,61 @@ export default function HotelsPage() {
           </div>
         </section>
       )}
+<section className="section pt-0">
+  <div className="container">
+    <div
+      className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm md:p-8"
+      style={{ borderColor: "var(--border)" }}
+    >
+      <p
+        className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+        style={{ color: "var(--accent-dark)" }}
+      >
+        Community Tip
+      </p>
 
+      <h2 className="mb-4 text-3xl font-semibold">
+        There’s more tucked inside The Arlington than just hotel rooms.
+      </h2>
+
+     <p className="max-w-3xl leading-relaxed" style={{ color: "var(--muted)" }}>
+  A local reader mentioned the mall level inside The Arlington Resort Hotel &
+  Spa, with small shops like{" "}
+  <a
+    href="https://www.facebook.com/profile.php?id=100093909771807"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-semibold underline underline-offset-4"
+    style={{ color: "var(--accent-dark)" }}
+  >
+    Black Ribbon Books
+  </a>
+  ,{" "}
+  <a
+    href="https://www.facebook.com/mamooscreamery/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-semibold underline underline-offset-4"
+    style={{ color: "var(--accent-dark)" }}
+  >
+    Mamoo’s Ice Cream
+  </a>
+  , a record store, and{" "}
+  <a
+    href="https://www.facebook.com/GoldenFeatherAR/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-semibold underline underline-offset-4"
+    style={{ color: "var(--accent-dark)" }}
+  >
+    Golden Feather
+  </a>
+  . It’s one of those easy-to-miss downtown spots that can be worth checking
+  out if you’re already around Bathhouse Row.
+</p>
+    </div>
+  </div>
+</section>
       <section className="section">
         <div className="container">
           <div className="section-heading">

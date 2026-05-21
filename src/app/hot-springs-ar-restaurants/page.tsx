@@ -221,9 +221,51 @@ export default function RestaurantsPage() {
           <Link href="/explore" className="btn">
             Explore Hot Springs
           </Link>
+          <Link href="/hot-springs-local-spots" className="btn">
+  Local Hidden Gems
+</Link>
+
+<Link href="/hot-springs-ouachita-avenue" className="btn">
+  Ouachita Avenue
+</Link>
+
+<Link href="/hot-springs-family-friendly" className="btn">
+  Family-Friendly Finds
+</Link>
         </div>
       </section>
+<section className="section pt-0">
+  <div className="container">
+    <Link
+      href="/hot-springs-local-spots"
+      className="block rounded-3xl border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-8"
+      style={{
+        background: "var(--surface)",
+        borderColor: "var(--border)",
+      }}
+    >
+      <p className="hero-eyebrow">Locals’ Picks</p>
 
+      <h2 className="mb-4">
+        Looking for the food spots locals actually mention?
+      </h2>
+
+      <p className="max-w-3xl" style={{ color: "var(--muted)" }}>
+        Along with the main restaurant guide, we’re also building a local picks
+        section with easy-to-miss food stops, Ouachita Avenue restaurants,
+        classic dairy bars, Vietnamese food, coffee shops, sweets, and small
+        local places visitors may not find first.
+      </p>
+
+      <span
+        className="mt-5 inline-block font-bold"
+        style={{ color: "var(--accent-dark)" }}
+      >
+        See local hidden gems →
+      </span>
+    </Link>
+  </div>
+</section>
       {mainRestaurant && (
         <section className="section">
           <div className="container">
@@ -641,7 +683,17 @@ export default function RestaurantsPage() {
                 >
                   Get Listed
                 </Link>
-
+<Link
+  href="/hot-springs-local-spots"
+  className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"
+  style={{
+    borderColor: "rgba(255,255,255,0.65)",
+    color: "#ffffff",
+    background: "rgba(255,255,255,0.08)",
+  }}
+>
+  View Local Picks
+</Link>
                 <Link
                   href="/contact"
                   className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"

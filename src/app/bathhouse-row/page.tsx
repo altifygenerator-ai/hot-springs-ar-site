@@ -249,9 +249,46 @@ export default function BathhouseRowPage() {
           <Link href="/explore" className="btn">
             Explore Hot Springs
           </Link>
+          <Link href="/hot-springs-bathhouse-row-local-finds" className="btn">
+  Bathhouse Row Local Finds
+</Link>
+
+<Link href="/hot-springs-local-spots" className="btn">
+  Local Hidden Gems
+</Link>
         </div>
       </section>
-      
+      <section className="section pt-0">
+  <div className="container">
+    <Link
+      href="/hot-springs-bathhouse-row-local-finds"
+      className="block rounded-3xl border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-8"
+      style={{
+        background: "var(--surface)",
+        borderColor: "var(--border)",
+      }}
+    >
+      <p className="hero-eyebrow">Local Tip</p>
+
+      <h2 className="mb-4">
+        There are a few easy-to-miss stops around Bathhouse Row.
+      </h2>
+
+      <p className="max-w-3xl" style={{ color: "var(--muted)" }}>
+        Locals pointed out the mall level inside The Arlington, small shops,
+        books, ice cream, breakfast spots, and classic downtown stops that
+        visitors can walk right past if they only focus on the bathhouses.
+      </p>
+
+      <span
+        className="mt-5 inline-block font-bold"
+        style={{ color: "var(--accent-dark)" }}
+      >
+        See Bathhouse Row local finds →
+      </span>
+    </Link>
+  </div>
+</section>
 
       <section className="section">
         <div className="container">
@@ -548,6 +585,17 @@ export default function BathhouseRowPage() {
                 >
                   Find Hotels
                 </Link>
+                <Link
+  href="/hot-springs-bathhouse-row-local-finds"
+  className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"
+  style={{
+    borderColor: "rgba(255,255,255,0.65)",
+    color: "#ffffff",
+    background: "rgba(255,255,255,0.08)",
+  }}
+>
+  Local Finds Nearby
+</Link>
 
                 <Link
                   href="/things-to-do-in-hot-springs-ar"

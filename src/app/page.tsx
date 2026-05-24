@@ -14,6 +14,7 @@ import NearbyDestinations from "@/components/home/NearbyDestinations";
 import { homeHero } from "@/data/hero";
 import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 import LocalSpotsPreview from "@/components/home/LocalSpotsPreview";
+import RecentUpdates from "@/components/home/RecentUpdates";
 export default function HomePage() {
   return (
     <main>
@@ -27,7 +28,7 @@ export default function HomePage() {
       />
 
       <QuickLinks />
-
+<RecentUpdates />
       <IntroSection />
 <HomeEventsPreview />
 <LocalSpotsPreview />

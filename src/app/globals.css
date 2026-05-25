@@ -1506,3 +1506,31 @@ p {
 .recurring-day-option input {
   width: auto !important;
 }
+.dark-copy p,
+.dark-copy li,
+.dark-copy span {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.dark-copy h1,
+.dark-copy h2,
+.dark-copy h3,
+.dark-copy h4 {
+  color: white;
+}
+.dark-copy p,
+.dark-copy li,
+.dark-copy span {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.dark-copy h1,
+.dark-copy h2,
+.dark-copy h3,
+.dark-copy h4 {
+  color: white;
+}
+
+.dark-copy a {
+  color: inherit;
+}

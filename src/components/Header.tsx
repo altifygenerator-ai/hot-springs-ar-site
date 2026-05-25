@@ -4,10 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const exploreLinks = [
-
-  { href: "/explore", label: "Explore Hot Springs" }
-  ,{ href: "/events", label: "Events" },
-{ href: "/this-weekend", label: "This Weekend" },
+  { href: "/explore", label: "Explore Hot Springs" },
+  { href: "/events", label: "Events" },
+  { href: "/this-weekend", label: "This Weekend" },
   { href: "/things-to-do-in-hot-springs-ar", label: "Things To Do" },
   { href: "/lake-hamilton", label: "Lake Hamilton" },
   { href: "/bathhouse-row", label: "Bathhouse Row" },
@@ -41,6 +40,14 @@ const localLinks = [
     label: "Lake Hamilton Restaurants",
   },
   { href: "/local-businesses", label: "Local Businesses" },
+];
+
+const articleLinks = [
+  { href: "/articles", label: "All Articles" },
+  {
+    href: "/articles/bathhouse-row",
+    label: "Bathhouse Row: Why It Still Matters",
+  },
 ];
 
 const sisterSites = [
@@ -92,6 +99,18 @@ export default function Header() {
 
             <div className="dropdown-menu">
               {localLinks.map((link) => (
+                <Link key={link.href} href={link.href}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="nav-dropdown">
+            <button type="button">Articles</button>
+
+            <div className="dropdown-menu">
+              {articleLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   {link.label}
                 </Link>
@@ -170,6 +189,19 @@ export default function Header() {
             <div className="hot-mobile-menu-group">
               <p>Local Guide</p>
               {localLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="hot-mobile-menu-group">
+              <p>Articles</p>
+              {articleLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

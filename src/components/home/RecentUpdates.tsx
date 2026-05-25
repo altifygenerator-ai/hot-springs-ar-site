@@ -8,16 +8,16 @@ const updates = [
     href: "/this-weekend",
   },
   {
+    label: "New article",
+    title: "Bathhouse Row: Why It Still Matters",
+    text: "A deeper local look at Bathhouse Row, the thermal water, the historic bathhouses, preservation, and why it is still the heart of Hot Springs.",
+    href: "/articles/bathhouse-row",
+  },
+  {
     label: "Local guide",
     title: "Locals’ Picks & Hidden Gems",
     text: "A growing guide to local shops, food stops, family finds, downtown corners, and places visitors might miss.",
     href: "/hot-springs-local-spots",
-  },
-  {
-    label: "Trip planning",
-    title: "Free Things To Do in Hot Springs",
-    text: "A practical guide for visitors looking for budget-friendly stops, outdoor areas, downtown walks, and easy local ideas.",
-    href: "/free-things-to-do-hot-springs",
   },
 ];
 
@@ -33,25 +33,29 @@ export default function RecentUpdates() {
 
             <p>
               The Hot Springs guide is growing with more local events, helpful
-              visitor pages, family-friendly ideas, and places worth checking
-              out around town.
+              visitor pages, history articles, family-friendly ideas, and places
+              worth checking out around town.
             </p>
           </div>
 
           <div className="home-events-actions">
-            <Link href="/this-weekend" className="btn-primary">
-              This Weekend
+            <Link href="/articles" className="btn-primary">
+              Read Articles
             </Link>
 
-            <Link href="/submit-event" className="btn-secondary">
-              Submit Event
+            <Link href="/this-weekend" className="btn-secondary">
+              This Weekend
             </Link>
           </div>
         </div>
 
         <div className="categories-grid">
           {updates.map((update) => (
-            <Link key={update.title} href={update.href} className="category-card">
+            <Link
+              key={update.title}
+              href={update.href}
+              className="category-card"
+            >
               <div className="category-content">
                 <p className="hero-eyebrow">{update.label}</p>
 

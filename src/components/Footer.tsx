@@ -23,6 +23,14 @@ const visitorLinks = [
   { href: "/hot-springs-ar-hotels", label: "Hotels" },
 ];
 
+const articleLinks = [
+  { href: "/articles", label: "All Articles" },
+  {
+    href: "/articles/bathhouse-row",
+    label: "Bathhouse Row: Why It Still Matters",
+  },
+];
+
 const eventLinks = [
   { href: "/events", label: "Events" },
   { href: "/this-weekend", label: "This Weekend" },
@@ -88,6 +96,13 @@ export default function Footer() {
         <div>
           <h4>Local Businesses</h4>
           {businessLinks.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
+
+          <h4 className="footer-subheading">Articles</h4>
+          {articleLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
             </Link>

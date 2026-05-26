@@ -64,6 +64,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
 
     {
+      path: "/hot-springs-antique-thrift-flea-markets",
+      priority: 0.9,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-antique-stores",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-thrift-stores",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-flea-markets",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+
+    {
       path: "/things-to-do-in-hot-springs-ar",
       priority: 0.95,
       changeFrequency: "weekly" as const,
@@ -135,7 +156,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     {
       path: "/local-businesses",
-      priority: 0.8,
+      priority: 0.88,
       changeFrequency: "weekly" as const,
     },
     {

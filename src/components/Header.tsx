@@ -3,33 +3,17 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const exploreLinks = [
-  { href: "/explore", label: "Explore Hot Springs" },
-  { href: "/events", label: "Events" },
-  { href: "/this-weekend", label: "This Weekend" },
+const thingsToDoLinks = [
   { href: "/things-to-do-in-hot-springs-ar", label: "Things To Do" },
-  { href: "/lake-hamilton", label: "Lake Hamilton" },
+  { href: "/explore", label: "Explore Hot Springs" },
   { href: "/bathhouse-row", label: "Bathhouse Row" },
+  { href: "/lake-hamilton", label: "Lake Hamilton" },
   { href: "/history", label: "History" },
   { href: "/free-things-to-do-hot-springs", label: "Free Things To Do" },
-];
-
-const stayLinks = [
-  { href: "/hot-springs-ar-hotels", label: "Hotels" },
-  { href: "/hotels-near-bathhouse-row", label: "Hotels Near Bathhouse Row" },
-  { href: "/hotels-near-oaklawn", label: "Hotels Near Oaklawn" },
-  { href: "/hot-springs-ar-cabins", label: "Cabins" },
-  { href: "/lake-hamilton-cabins", label: "Lake Hamilton Cabins" },
-];
-
-const localLinks = [
-  { href: "/hot-springs-local-spots", label: "Local Hidden Gems" },
   { href: "/hot-springs-family-friendly", label: "Family-Friendly Finds" },
-  { href: "/hot-springs-ouachita-avenue", label: "Ouachita Avenue" },
-  {
-    href: "/hot-springs-bathhouse-row-local-finds",
-    label: "Bathhouse Row Local Finds",
-  },
+];
+
+const foodLocalLinks = [
   { href: "/hot-springs-ar-restaurants", label: "Restaurants" },
   {
     href: "/restaurants-near-bathhouse-row",
@@ -39,7 +23,25 @@ const localLinks = [
     href: "/lake-hamilton-restaurants",
     label: "Lake Hamilton Restaurants",
   },
+  {
+  href: "/hot-springs-antique-thrift-flea-markets",
+  label: "Antique, Thrift & Flea Markets",
+},
+  { href: "/hot-springs-local-spots", label: "Local Hidden Gems" },
+  { href: "/hot-springs-ouachita-avenue", label: "Ouachita Avenue" },
+  {
+    href: "/hot-springs-bathhouse-row-local-finds",
+    label: "Bathhouse Row Local Finds",
+  },
   { href: "/local-businesses", label: "Local Businesses" },
+];
+
+const stayLinks = [
+  { href: "/hot-springs-ar-hotels", label: "Hotels" },
+  { href: "/hotels-near-bathhouse-row", label: "Hotels Near Bathhouse Row" },
+  { href: "/hotels-near-oaklawn", label: "Hotels Near Oaklawn" },
+  { href: "/hot-springs-ar-cabins", label: "Cabins" },
+  { href: "/lake-hamilton-cabins", label: "Lake Hamilton Cabins" },
 ];
 
 const articleLinks = [
@@ -71,10 +73,22 @@ export default function Header() {
           <Link href="/">Home</Link>
 
           <div className="nav-dropdown">
-            <button type="button">Explore</button>
+            <button type="button">Things To Do</button>
 
             <div className="dropdown-menu">
-              {exploreLinks.map((link) => (
+              {thingsToDoLinks.map((link) => (
+                <Link key={link.href} href={link.href}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="nav-dropdown">
+            <button type="button">Food & Local</button>
+
+            <div className="dropdown-menu">
+              {foodLocalLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   {link.label}
                 </Link>
@@ -94,17 +108,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="nav-dropdown">
-            <button type="button">Local Guide</button>
-
-            <div className="dropdown-menu">
-              {localLinks.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          <Link href="/events">Events</Link>
 
           <div className="nav-dropdown">
             <button type="button">Articles</button>
@@ -118,24 +122,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="nav-dropdown">
-            <button type="button">Sister Sites</button>
-
-            <div className="dropdown-menu">
-              {sisterSites.map((site) => (
-                <a
-                  key={site.href}
-                  href={site.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {site.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <Link className="nav-cta" href="/local-businesses">
+          <Link className="nav-cta" href="/contact">
             Get Listed
           </Link>
         </nav>
@@ -161,8 +148,21 @@ export default function Header() {
             </Link>
 
             <div className="hot-mobile-menu-group">
-              <p>Explore</p>
-              {exploreLinks.map((link) => (
+              <p>Things To Do</p>
+              {thingsToDoLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="hot-mobile-menu-group">
+              <p>Food & Local</p>
+              {foodLocalLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -187,16 +187,13 @@ export default function Header() {
             </div>
 
             <div className="hot-mobile-menu-group">
-              <p>Local Guide</p>
-              {localLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <p>Events</p>
+              <Link href="/events" onClick={() => setOpen(false)}>
+                Events
+              </Link>
+              <Link href="/this-weekend" onClick={() => setOpen(false)}>
+                This Weekend
+              </Link>
             </div>
 
             <div className="hot-mobile-menu-group">

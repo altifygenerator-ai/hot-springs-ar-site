@@ -1,6 +1,6 @@
 import Link from "next/link";
 import AdvertiseQuoteForm from "@/components/AdvertiseQuoteForm";
-
+import SuggestionForm from "@/components/SuggestionForm";
 export const metadata = {
   title: "Advertise With Hot Springs Arkansas Guide | Get Listed Locally",
   description:
@@ -127,7 +127,67 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+<section className="section pt-0">
+  <div className="container">
+    <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <div>
+        <p
+          className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+          style={{ color: "var(--accent-dark)" }}
+        >
+          Help Improve the Guide
+        </p>
 
+        <h2 className="max-w-3xl text-4xl font-semibold leading-tight md:text-5xl">
+          Have a local suggestion, business idea, or update?
+        </h2>
+
+        <p
+          className="mt-5 max-w-2xl text-lg leading-relaxed"
+          style={{ color: "var(--muted)" }}
+        >
+          This form is for everything that is not a direct advertising request:
+          businesses we should add, shops we missed, page ideas, corrections,
+          local tips, photo ideas, or places around Hot Springs that deserve more
+          attention.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div
+            className="rounded-3xl border bg-[color:var(--surface)] p-5 shadow-sm"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <h3 className="text-xl font-semibold">Business suggestions</h3>
+            <p
+              className="mt-2 text-sm leading-relaxed"
+              style={{ color: "var(--muted)" }}
+            >
+              Antique stores, thrift shops, restaurants, cabins, attractions,
+              local shops, service businesses, and places visitors should know
+              about.
+            </p>
+          </div>
+
+          <div
+            className="rounded-3xl border bg-[color:var(--surface)] p-5 shadow-sm"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <h3 className="text-xl font-semibold">Guide updates</h3>
+            <p
+              className="mt-2 text-sm leading-relaxed"
+              style={{ color: "var(--muted)" }}
+            >
+              Send page ideas, missing info, corrections, outdated details,
+              hidden places, or local suggestions for future Hot Springs guides.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <SuggestionForm />
+    </div>
+  </div>
+</section>
       <section className="section pt-0">
         <div className="container">
           <div className="section-heading">

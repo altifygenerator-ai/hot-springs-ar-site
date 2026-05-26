@@ -551,4 +551,112 @@ export const businesses: Business[] = [
       "https://www.google.com/maps/search/?api=1&query=Kollective+Coffee+Tea+110+Central+Ave+Hot+Springs+AR",
     href: "/hot-springs-ar-restaurants",
   },
+  {
+  name: "Safe Harbor Brady Mountain",
+  category: "Outdoor Recreation",
+  type: "Lake Ouachita • Marina • Outdoor Recreation",
+  description:
+    "A Lake Ouachita marina and recreation stop near Hot Springs, useful for visitors planning a lake day, boating trip, or time around the Brady Mountain area.",
+  image: "/images/businesses/safe-harbor-brady-mountain.jpg",
+  address: "Brady Mountain, Royal, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Safe+Harbor+Brady+Mountain+Royal+AR",
+  href: "/things-to-do-in-hot-springs-ar",
+},
+{
+  name: "Brady Mountain Grill",
+  category: "Restaurant",
+  type: "Lake Dining • Grill • Casual Food",
+  description:
+    "A casual lake-area grill near Brady Mountain and Lake Ouachita, useful for visitors looking for food before or after a day on the water.",
+  image: "/images/businesses/brady-mountain-grill.jpg",
+  address: "Brady Mountain, Royal, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Brady+Mountain+Grill+Royal+AR",
+  href: "/hot-springs-ar-restaurants",
+},
+{
+  name: "Sno-A-Lattes",
+  category: "Restaurant",
+  type: "Coffee • Sno Cones • Drinks • Sweet Treats",
+  description:
+    "A casual Hot Springs stop for coffee, lattes, sno cones, cold drinks, and easy sweet treats.",
+  image: "/images/businesses/sno-a-lattes.jpg",
+  address: "Hot Springs, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Sno-A-Lattes+Hot+Springs+AR",
+  href: "/hot-springs-ar-restaurants",
+},
+{
+  name: "421 Beer Garden",
+  category: "Restaurant",
+  type: "Beer Garden • Patio • Live Music • Pet Friendly",
+  description:
+    "A relaxed Hot Springs beer garden with food, drinks, games, live music on weekends, and a pet-friendly patio atmosphere.",
+  image: "/images/businesses/421-beer-garden.jpg",
+  address: "Hot Springs, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=421+Beer+Garden+Hot+Springs+AR",
+  href: "/hot-springs-ar-restaurants",
+},
+{
+  name: "Greg's Rise and Dine Cafe",
+  category: "Restaurant",
+  type: "Breakfast • Lunch • Family Owned Cafe",
+  description:
+    "A family-owned Hot Springs cafe with an affordable breakfast and lunch menu, good for a simple local meal away from the bigger tourist stops.",
+  image: "/images/businesses/gregs-rise-and-dine.jpg",
+  address: "Hot Springs, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Gregs+Rise+and+Dine+Cafe+Hot+Springs+AR",
+  href: "/hot-springs-ar-restaurants",
+},
+{
+  name: "Pupusas Mi Chalateca",
+  category: "Restaurant",
+  type: "Salvadoran Food • Pupusas • Casual Dining",
+  description:
+    "A Salvadoran food stop in Hot Springs known for pupusas and casual Latin American dishes, adding more variety to the local food scene.",
+  image: "/images/businesses/pupusas-mi-chalateca.jpg",
+  address: "Hot Springs, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Pupusas+Mi+Chalateca+Hot+Springs+AR",
+  href: "/hot-springs-ar-restaurants",
+},
+{
+  name: "Via Roma",
+  category: "Restaurant",
+  type: "Italian • Dinner • Sit-Down Dining",
+  description:
+    "An Italian restaurant option in Hot Springs for visitors looking for pasta, dinner, and a more classic sit-down meal.",
+  image: "/images/businesses/via-roma.jpg",
+  address: "Hot Springs, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Via+Roma+Hot+Springs+AR",
+  href: "/hot-springs-ar-restaurants",
+},
+{
+  name: "Lost Creek Grill",
+  category: "Restaurant",
+  type: "American Food • Grill • Casual Dining",
+  description:
+    "A casual grill-style restaurant around Hot Springs, useful for visitors looking for American food, a relaxed meal, and local dining outside the most obvious tourist stops.",
+  image: "/images/businesses/lost-creek-grill.jpg",
+  address: "Hot Springs, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Lost+Creek+Grill+Hot+Springs+AR",
+  href: "/hot-springs-ar-restaurants",
+},
+{
+  name: "The Local",
+  category: "Restaurant",
+  type: "Local Dining • Casual Food",
+  description:
+    "A local Hot Springs dining option for casual meals and visitor-friendly food once you want to look beyond the most familiar restaurant names.",
+  image: "/images/businesses/the-local.jpg",
+  address: "Hot Springs, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=The+Local+Hot+Springs+AR",
+  href: "/hot-springs-ar-restaurants",
+},
 ];

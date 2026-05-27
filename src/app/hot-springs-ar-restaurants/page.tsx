@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { restaurantsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
 import EventsCTA from "@/components/events/EventsCTA";
+
 export const metadata = {
   title:
     "Restaurants in Hot Springs, Arkansas | Downtown Dining, Breakfast, Lakefront Food & Local Favorites",
@@ -54,6 +55,37 @@ const diningAreas = [
   },
 ];
 
+const guideLinks = [
+  {
+    label: "Things To Do",
+    href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    label: "Hotels",
+    href: "/hot-springs-ar-hotels",
+  },
+  {
+    label: "Cabins",
+    href: "/hot-springs-ar-cabins",
+  },
+  {
+    label: "Explore Hot Springs",
+    href: "/explore",
+  },
+  {
+    label: "Local Hidden Gems",
+    href: "/hot-springs-local-spots",
+  },
+  {
+    label: "Ouachita Avenue",
+    href: "/hot-springs-ouachita-avenue",
+  },
+  {
+    label: "Family-Friendly Finds",
+    href: "/hot-springs-family-friendly",
+  },
+];
+
 const faqs = [
   {
     question: "What are the best restaurants in Hot Springs, Arkansas?",
@@ -85,6 +117,8 @@ const faqs = [
 export default function RestaurantsPage() {
   const mainRestaurant = featuredRestaurants[0];
   const sideRestaurants = featuredRestaurants.slice(1, 3);
+  const priorityRestaurants = standardRestaurants.slice(0, 2);
+  const remainingRestaurants = standardRestaurants.slice(2);
 
   return (
     <main>
@@ -205,67 +239,77 @@ export default function RestaurantsPage() {
       </section>
 
       <section className="section pt-0">
-        <div className="container flex flex-wrap justify-center gap-3">
-          <Link href="/things-to-do-in-hot-springs-ar" className="btn">
-            Things To Do
-          </Link>
+        <div className="container">
+          <div
+            className="rounded-[2rem] border bg-[color:var(--surface)] p-6 shadow-sm md:p-8"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+              <div>
+                <p
+                  className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  Plan Around Your Trip
+                </p>
 
-          <Link href="/hot-springs-ar-hotels" className="btn">
-            Hotels
-          </Link>
+                <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                  Pair dinner with the rest of your Hot Springs plans.
+                </h2>
 
-          <Link href="/hot-springs-ar-cabins" className="btn">
-            Cabins
-          </Link>
+                <p
+                  className="mt-4 leading-relaxed"
+                  style={{ color: "var(--muted)" }}
+                >
+                  Find food near attractions, hotels, cabins, local streets,
+                  family stops, and places visitors may not notice first.
+                </p>
+              </div>
 
-          <Link href="/explore" className="btn">
-            Explore Hot Springs
-          </Link>
-          <Link href="/hot-springs-local-spots" className="btn">
-  Local Hidden Gems
-</Link>
-
-<Link href="/hot-springs-ouachita-avenue" className="btn">
-  Ouachita Avenue
-</Link>
-
-<Link href="/hot-springs-family-friendly" className="btn">
-  Family-Friendly Finds
-</Link>
+              <div className="flex flex-wrap gap-3">
+                {guideLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="btn">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-<section className="section pt-0">
-  <div className="container">
-    <Link
-      href="/hot-springs-local-spots"
-      className="block rounded-3xl border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-8"
-      style={{
-        background: "var(--surface)",
-        borderColor: "var(--border)",
-      }}
-    >
-      <p className="hero-eyebrow">Locals’ Picks</p>
 
-      <h2 className="mb-4">
-        Looking for the food spots locals actually mention?
-      </h2>
+      <section className="section pt-0">
+        <div className="container">
+          <div className="section-heading">
+            <h2>Where to Eat Around Hot Springs</h2>
 
-      <p className="max-w-3xl" style={{ color: "var(--muted)" }}>
-        Along with the main restaurant guide, we’re also building a local picks
-        section with easy-to-miss food stops, Ouachita Avenue restaurants,
-        classic dairy bars, Vietnamese food, coffee shops, sweets, and small
-        local places visitors may not find first.
-      </p>
+            <p>
+              Different parts of town fit different kinds of meals. Here’s the
+              simple way to think about it while planning.
+            </p>
+          </div>
 
-      <span
-        className="mt-5 inline-block font-bold"
-        style={{ color: "var(--accent-dark)" }}
-      >
-        See local hidden gems →
-      </span>
-    </Link>
-  </div>
-</section>
+          <div className="grid gap-6 md:grid-cols-2">
+            {diningAreas.map((area) => (
+              <div
+                key={area.title}
+                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <h3 className="text-2xl font-semibold">{area.title}</h3>
+
+                <p
+                  className="mt-3 leading-relaxed"
+                  style={{ color: "var(--muted)" }}
+                >
+                  {area.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {mainRestaurant && (
         <section className="section">
           <div className="container">
@@ -289,10 +333,10 @@ export default function RestaurantsPage() {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] grid lg:grid-cols-[1.1fr_0.9fr] transition hover:-translate-y-1 hover:shadow-2xl"
+                className="grid overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl lg:grid-cols-[1.1fr_0.9fr]"
                 style={{ borderColor: "var(--border)" }}
               >
-                <div className="relative h-[500px] w-full overflow-hidden">
+                <div className="relative h-[360px] w-full overflow-hidden md:h-[500px]">
                   <img
                     src={mainRestaurant.image}
                     alt={mainRestaurant.name}
@@ -409,12 +453,68 @@ export default function RestaurantsPage() {
         </section>
       )}
 
+      <section className="section pt-0">
+        <div className="container">
+          <Link
+            href="/hot-springs-local-spots"
+            className="group block overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:grid md:grid-cols-[0.8fr_1.2fr]"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <div
+              className="min-h-[260px] bg-[color:var(--surface-strong)] p-8 md:p-10"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(155,95,45,0.16), rgba(35,67,54,0.08))",
+              }}
+            >
+              <p className="hero-eyebrow">Locals’ Picks</p>
+
+              <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">
+                Looking for the food spots locals actually mention?
+              </h2>
+            </div>
+
+            <div className="flex flex-col justify-center p-8 md:p-10">
+              <p className="max-w-3xl leading-relaxed" style={{ color: "var(--muted)" }}>
+                Along with the main restaurant guide, we’re also building a
+                local picks section with easy-to-miss food stops, Ouachita
+                Avenue restaurants, classic dairy bars, Vietnamese food, coffee
+                shops, sweets, and small local places visitors may not find
+                first.
+              </p>
+
+              <span
+                className="mt-5 inline-block font-bold"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                See local hidden gems →
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
-          <div className="section-heading">
-            <h2>More Restaurants and Places to Eat Near Hot Springs</h2>
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p
+                className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                More Places to Eat
+              </p>
 
-            <p>
+              <h2 className="max-w-2xl text-4xl font-semibold leading-tight md:text-5xl">
+                Restaurants, cafes, casual stops, and dinner spots around Hot
+                Springs.
+              </h2>
+            </div>
+
+            <p
+              className="max-w-2xl leading-relaxed"
+              style={{ color: "var(--muted)" }}
+            >
               These additional restaurants, cafes, breweries, barbecue spots,
               pizza places, and dinner stops are useful for visitors comparing
               where to eat around downtown, Lake Hamilton, Oaklawn, and nearby
@@ -422,96 +522,179 @@ export default function RestaurantsPage() {
             </p>
           </div>
 
-          <div className="space-y-6">
-            {standardRestaurants.map((place, index) => (
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {priorityRestaurants.map((place) => (
               <div
                 key={place.name}
-                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
+                className="group overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 style={{ borderColor: "var(--border)" }}
               >
-                <div className="grid gap-6 md:grid-cols-[220px_1fr] md:items-center">
-                  <div className="relative h-[170px] overflow-hidden rounded-2xl bg-[color:var(--surface-strong)]">
-                    <img
-                      src={place.image}
-                      alt={place.name}
-                      className="h-full w-full object-cover"
-                    />
+                <div className="relative h-[320px] overflow-hidden bg-[color:var(--surface-strong)]">
+                  <img
+                    src={place.image}
+                    alt={place.name}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                  <div className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-wide backdrop-blur">
+                    {place.type}
                   </div>
+                </div>
 
-                  <div>
-                    <h3 className="text-2xl font-semibold">
-                      {index + 1}. {place.name}
-                    </h3>
+                <div className="p-6 md:p-7">
+                  <h3 className="text-3xl font-semibold leading-tight">
+                    {place.name}
+                  </h3>
 
-                    <p
-                      className="mt-1 text-sm"
-                      style={{ color: "var(--muted)" }}
-                    >
-                      {place.type}
+                  <p
+                    className="mt-4 leading-relaxed"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {place.description}
+                  </p>
+
+                  {place.address && (
+                    <p className="mt-4 text-sm" style={{ color: "var(--muted)" }}>
+                      📍 {place.address}
                     </p>
+                  )}
 
-                    <p
-                      className="mt-4 leading-relaxed"
-                      style={{ color: "var(--muted)" }}
-                    >
-                      {place.description}
-                    </p>
-
-                    {place.address && (
-                      <p
-                        className="mt-3 text-sm"
-                        style={{ color: "var(--muted)" }}
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {place.phone && (
+                      <a
+                        href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
+                        className="inline-flex rounded-full px-5 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
+                        style={{
+                          background: "var(--green)",
+                          color: "#ffffff",
+                        }}
                       >
-                        📍 {place.address}
-                      </p>
+                        Call
+                      </a>
                     )}
 
-                    <div className="mt-4 flex flex-wrap gap-3">
-                      {place.phone && (
-                        <a
-                          href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
-                          className="inline-flex rounded-full px-5 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
-                          style={{
-                            background: "var(--green)",
-                            color: "#ffffff",
-                          }}
-                        >
-                          Call {place.phone}
-                        </a>
-                      )}
+                    {place.website && (
+                      <a
+                        href={place.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--green)",
+                          background: "var(--surface-strong)",
+                        }}
+                      >
+                        Website
+                      </a>
+                    )}
 
-                      {place.website && (
-                        <a
-                          href={place.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
-                          style={{
-                            borderColor: "var(--border)",
-                            color: "var(--green)",
-                            background: "var(--surface-strong)",
-                          }}
-                        >
-                          View Website
-                        </a>
-                      )}
+                    {place.directions && (
+                      <a
+                        href={place.directions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--accent-dark)",
+                          background: "rgba(155,95,45,0.08)",
+                        }}
+                      >
+                        Directions
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-                      {place.directions && (
-                        <a
-                          href={place.directions}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
-                          style={{
-                            borderColor: "var(--border)",
-                            color: "var(--accent-dark)",
-                            background: "rgba(155,95,45,0.08)",
-                          }}
-                        >
-                          Directions
-                        </a>
-                      )}
-                    </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {remainingRestaurants.map((place) => (
+              <div
+                key={place.name}
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <div className="relative h-56 overflow-hidden bg-[color:var(--surface-strong)]">
+                  <img
+                    src={place.image}
+                    alt={place.name}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex flex-1 flex-col p-6">
+                  <p
+                    className="mb-2 text-xs font-bold uppercase tracking-wide"
+                    style={{ color: "var(--accent-dark)" }}
+                  >
+                    {place.type}
+                  </p>
+
+                  <h3 className="text-2xl font-semibold leading-tight">
+                    {place.name}
+                  </h3>
+
+                  <p
+                    className="mt-4 leading-relaxed"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {place.description}
+                  </p>
+
+                  {place.address && (
+                    <p className="mt-4 text-sm" style={{ color: "var(--muted)" }}>
+                      📍 {place.address}
+                    </p>
+                  )}
+
+                  <div className="mt-auto flex flex-wrap gap-3 pt-5">
+                    {place.phone && (
+                      <a
+                        href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
+                        className="inline-flex rounded-full px-4 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
+                        style={{
+                          background: "var(--green)",
+                          color: "#ffffff",
+                        }}
+                      >
+                        Call
+                      </a>
+                    )}
+
+                    {place.website && (
+                      <a
+                        href={place.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-4 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--green)",
+                          background: "var(--surface-strong)",
+                        }}
+                      >
+                        Website
+                      </a>
+                    )}
+
+                    {place.directions && (
+                      <a
+                        href={place.directions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-4 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--accent-dark)",
+                          background: "rgba(155,95,45,0.08)",
+                        }}
+                      >
+                        Directions
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -520,7 +703,7 @@ export default function RestaurantsPage() {
         </div>
       </section>
 
-      <section className="relative min-h-[620px] flex items-end overflow-hidden dark-section">
+      <section className="relative flex min-h-[620px] items-end overflow-hidden dark-section">
         <img
           src="/images/businesses/fishermans-wharf.jpg"
           alt="Lakefront dining in Hot Springs Arkansas"
@@ -565,41 +748,15 @@ export default function RestaurantsPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
-            <h2>Where to Eat Around Hot Springs</h2>
+     <section className="section">
+  <div className="container">
+    <EventsCTA
+      title="Going out around Hot Springs?"
+      text="Check current events before dinner plans. There may be live music, downtown events, markets, or family-friendly things happening nearby."
+    />
+  </div>
+</section>
 
-            <p>
-              Different parts of town fit different kinds of meals. Here’s the
-              simple way to think about it while planning.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {diningAreas.map((area) => (
-              <div
-                key={area.title}
-                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
-                style={{ borderColor: "var(--border)" }}
-              >
-                <h3 className="text-2xl font-semibold">{area.title}</h3>
-
-                <p
-                  className="mt-3 leading-relaxed"
-                  style={{ color: "var(--muted)" }}
-                >
-                  {area.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-<EventsCTA
-  title="Going out around Hot Springs?"
-  text="Check current events before dinner plans. There may be live music, downtown events, markets, or family-friendly things happening nearby."
-/>
       <section className="section">
         <div className="container">
           <div className="section-heading">
@@ -612,7 +769,7 @@ export default function RestaurantsPage() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="grid gap-4 md:grid-cols-2">
             {faqs.map((item) => (
               <div
                 key={item.question}
@@ -683,17 +840,19 @@ export default function RestaurantsPage() {
                 >
                   Get Listed
                 </Link>
-<Link
-  href="/hot-springs-local-spots"
-  className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"
-  style={{
-    borderColor: "rgba(255,255,255,0.65)",
-    color: "#ffffff",
-    background: "rgba(255,255,255,0.08)",
-  }}
->
-  View Local Picks
-</Link>
+
+                <Link
+                  href="/hot-springs-local-spots"
+                  className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"
+                  style={{
+                    borderColor: "rgba(255,255,255,0.65)",
+                    color: "#ffffff",
+                    background: "rgba(255,255,255,0.08)",
+                  }}
+                >
+                  View Local Picks
+                </Link>
+
                 <Link
                   href="/contact"
                   className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"

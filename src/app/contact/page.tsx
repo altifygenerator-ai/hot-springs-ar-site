@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AdvertiseQuoteForm from "@/components/AdvertiseQuoteForm";
 import SuggestionForm from "@/components/SuggestionForm";
+
 export const metadata = {
   title: "Advertise With Hot Springs Arkansas Guide | Get Listed Locally",
   description:
@@ -21,15 +22,18 @@ export const metadata = {
 const listingOptions = [
   {
     title: "Basic Listing",
-    text: "A simple listing with your business name, category, short description, contact info, website or Facebook link, and directions.",
+    price: "Free",
+    text: "A simple listing for local businesses that should be included in the guide. Includes your business name, category, short description, contact info, website or Facebook link, and directions.",
   },
   {
-    title: "Featured Placement",
-    text: "A stronger placement with a larger card, better visibility on category pages, photos, and a more detailed write-up.",
+    title: "Featured Listing",
+    price: "$20/month or $200/year",
+    text: "A stronger listing with better visibility, a larger card, photo, stronger write-up, and featured placement on relevant category pages when space is available.",
   },
   {
-    title: "Sponsored Feature",
-    text: "Premium placement for businesses that want more visibility across relevant guide pages, social posts, or featured sections.",
+    title: "Business Spotlight",
+    price: "$100 one-time",
+    text: "Everything included with a Featured Listing, plus a dedicated full spotlight page with more details, images, links, and a direct link from your business listing.",
   },
 ];
 
@@ -71,10 +75,10 @@ export default function ContactPage() {
                 style={{ color: "var(--muted)" }}
               >
                 Hot Springs Arkansas Guide helps visitors find local places to
-                eat, stay, shop, explore, and plan their trip. If you own a
-                restaurant, cabin, hotel, attraction, shop, rental, or local
-                service that visitors should know about, this is a simple way to
-                get in front of them.
+                eat, stay, shop, explore, and plan their trip. Basic listings
+                are free so the guide stays useful, and featured options are
+                kept affordable for small local businesses that want better
+                visibility.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -89,7 +93,7 @@ export default function ContactPage() {
                   >
                     The guide is organized around what people are already
                     searching for: restaurants, hotels, cabins, lake stays,
-                    attractions, and things to do.
+                    attractions, shops, and things to do.
                   </p>
                 </div>
 
@@ -97,14 +101,14 @@ export default function ContactPage() {
                   className="rounded-3xl border bg-[color:var(--surface)] p-5 shadow-sm"
                   style={{ borderColor: "var(--border)" }}
                 >
-                  <h3 className="text-xl font-semibold">Local visibility</h3>
+                  <h3 className="text-xl font-semibold">Affordable visibility</h3>
                   <p
                     className="mt-2 text-sm leading-relaxed"
                     style={{ color: "var(--muted)" }}
                   >
-                    Listings help put your business in front of people planning
-                    trips, looking for food, comparing stays, or exploring Hot
-                    Springs.
+                    Start with a free listing, upgrade to featured placement,
+                    or add a full Business Spotlight page when you want more
+                    room for details and photos.
                   </p>
                 </div>
               </div>
@@ -127,67 +131,60 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-<section className="section pt-0">
-  <div className="container">
-    <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-      <div>
-        <p
-          className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
-          style={{ color: "var(--accent-dark)" }}
-        >
-          Help Improve the Guide
-        </p>
 
-        <h2 className="max-w-3xl text-4xl font-semibold leading-tight md:text-5xl">
-          Have a local suggestion, business idea, or update?
-        </h2>
-
-        <p
-          className="mt-5 max-w-2xl text-lg leading-relaxed"
-          style={{ color: "var(--muted)" }}
-        >
-          This form is for everything that is not a direct advertising request:
-          businesses we should add, shops we missed, page ideas, corrections,
-          local tips, photo ideas, or places around Hot Springs that deserve more
-          attention.
-        </p>
-
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <div
-            className="rounded-3xl border bg-[color:var(--surface)] p-5 shadow-sm"
-            style={{ borderColor: "var(--border)" }}
-          >
-            <h3 className="text-xl font-semibold">Business suggestions</h3>
-            <p
-              className="mt-2 text-sm leading-relaxed"
-              style={{ color: "var(--muted)" }}
-            >
-              Antique stores, thrift shops, restaurants, cabins, attractions,
-              local shops, service businesses, and places visitors should know
-              about.
+      <section className="section pt-0">
+        <div className="container">
+          <div className="section-heading">
+            <h2>Simple listing options</h2>
+            <p>
+              We keep advertising low-cost and straightforward. Local businesses
+              can start free, upgrade for more visibility, or add a full
+              spotlight page with more details and images.
             </p>
           </div>
 
-          <div
-            className="rounded-3xl border bg-[color:var(--surface)] p-5 shadow-sm"
-            style={{ borderColor: "var(--border)" }}
-          >
-            <h3 className="text-xl font-semibold">Guide updates</h3>
-            <p
-              className="mt-2 text-sm leading-relaxed"
-              style={{ color: "var(--muted)" }}
-            >
-              Send page ideas, missing info, corrections, outdated details,
-              hidden places, or local suggestions for future Hot Springs guides.
-            </p>
-          </div>
-        </div>
-      </div>
+          <div className="grid gap-6 md:grid-cols-3">
+  {listingOptions.map((option) => (
+    <div
+      key={option.title}
+      className="flex h-full flex-col rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
+      style={{ borderColor: "var(--border)" }}
+    >
+      <h3 className="text-2xl font-semibold">{option.title}</h3>
 
-      <SuggestionForm />
+      <p
+        className="mt-3 text-2xl font-bold"
+        style={{ color: "var(--green)" }}
+      >
+        {option.price}
+      </p>
+
+      <p
+        className="mt-4 leading-relaxed"
+        style={{ color: "var(--muted)" }}
+      >
+        {option.text}
+      </p>
+
+      <a href="#advertise-form" className="btn-secondary mt-auto">
+        Ask About This
+      </a>
     </div>
-  </div>
-</section>
+  ))}
+</div>
+
+          <p
+            className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed"
+            style={{ color: "var(--muted)" }}
+          >
+            Featured placement depends on fit, page layout, and available space.
+            Business Spotlight pages are best for restaurants, cabins, shops,
+            attractions, event venues, outdoor recreation, and other businesses
+            visitors may want to learn more about before they go.
+          </p>
+        </div>
+      </section>
+
       <section className="section pt-0">
         <div className="container">
           <div className="section-heading">
@@ -207,37 +204,6 @@ export default function ContactPage() {
               >
                 <p className="font-semibold" style={{ color: "var(--green)" }}>
                   {type}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
-            <h2>Listing & advertising options</h2>
-            <p>
-              We keep it simple. Businesses can start with a basic listing or
-              ask about featured placement for more visibility.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {listingOptions.map((option) => (
-              <div
-                key={option.title}
-                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
-                style={{ borderColor: "var(--border)" }}
-              >
-                <h3 className="text-2xl font-semibold">{option.title}</h3>
-
-                <p
-                  className="mt-3 leading-relaxed"
-                  style={{ color: "var(--muted)" }}
-                >
-                  {option.text}
                 </p>
               </div>
             ))}
@@ -280,12 +246,77 @@ export default function ContactPage() {
             </p>
 
             <a
-              href="#top"
+              href="#advertise-form"
               className="mt-7 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold transition hover:bg-white/90"
               style={{ color: "var(--green)" }}
             >
               Fill Out the Form
             </a>
+          </div>
+        </div>
+      </section>
+
+     
+
+      <section className="section pt-0">
+        <div className="container">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <p
+                className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                Help Improve the Guide
+              </p>
+
+              <h2 className="max-w-3xl text-4xl font-semibold leading-tight md:text-5xl">
+                Have a local suggestion, business idea, or update?
+              </h2>
+
+              <p
+                className="mt-5 max-w-2xl text-lg leading-relaxed"
+                style={{ color: "var(--muted)" }}
+              >
+                This form is for everything that is not a direct advertising
+                request: businesses we should add, shops we missed, page ideas,
+                corrections, local tips, photo ideas, or places around Hot
+                Springs that deserve more attention.
+              </p>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div
+                  className="rounded-3xl border bg-[color:var(--surface)] p-5 shadow-sm"
+                  style={{ borderColor: "var(--border)" }}
+                >
+                  <h3 className="text-xl font-semibold">Business suggestions</h3>
+                  <p
+                    className="mt-2 text-sm leading-relaxed"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    Antique stores, thrift shops, restaurants, cabins,
+                    attractions, local shops, service businesses, and places
+                    visitors should know about.
+                  </p>
+                </div>
+
+                <div
+                  className="rounded-3xl border bg-[color:var(--surface)] p-5 shadow-sm"
+                  style={{ borderColor: "var(--border)" }}
+                >
+                  <h3 className="text-xl font-semibold">Guide updates</h3>
+                  <p
+                    className="mt-2 text-sm leading-relaxed"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    Send page ideas, missing info, corrections, outdated
+                    details, hidden places, or local suggestions for future Hot
+                    Springs guides.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <SuggestionForm />
           </div>
         </div>
       </section>

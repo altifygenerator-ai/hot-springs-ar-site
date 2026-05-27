@@ -4,6 +4,7 @@ import { cabinsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
 import EventsCTA from "@/components/events/EventsCTA";
 import LynLiliRentalCleaningBanner from "@/components/ads/LynLiliRentalCleaningBanner";
+
 export const metadata = {
   title:
     "Cabins in Hot Springs, Arkansas | Lake Hamilton Cabins, Treehouses & Quiet Stays",
@@ -51,6 +52,25 @@ const stayStyles = [
   },
 ];
 
+const guideLinks = [
+  {
+    label: "Things To Do",
+    href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    label: "Restaurants",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    label: "Hotels",
+    href: "/hot-springs-ar-hotels",
+  },
+  {
+    label: "Explore Hot Springs",
+    href: "/explore",
+  },
+];
+
 const faqs = [
   {
     question: "Are there cabins in Hot Springs, Arkansas?",
@@ -82,6 +102,8 @@ const faqs = [
 export default function CabinsPage() {
   const mainCabin = featuredCabins[0];
   const sideCabins = featuredCabins.slice(1, 3);
+  const priorityCabins = standardCabins.slice(0, 2);
+  const remainingCabins = standardCabins.slice(2);
 
   return (
     <main>
@@ -194,25 +216,83 @@ export default function CabinsPage() {
       </section>
 
       <section className="section pt-0">
-        <div className="container flex flex-wrap justify-center gap-3">
-          <Link href="/things-to-do-in-hot-springs-ar" className="btn">
-            Things To Do
-          </Link>
+        <div className="container">
+          <div
+            className="rounded-[2rem] border bg-[color:var(--surface)] p-6 shadow-sm md:p-8"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+              <div>
+                <p
+                  className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  Plan Around Your Stay
+                </p>
 
-          <Link href="/hot-springs-ar-restaurants" className="btn">
-            Restaurants
-          </Link>
+                <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                  Pick the kind of stay before you pick the cabin.
+                </h2>
 
-          <Link href="/hot-springs-ar-hotels" className="btn">
-            Hotels
-          </Link>
+                <p
+                  className="mt-4 leading-relaxed"
+                  style={{ color: "var(--muted)" }}
+                >
+                  Some trips are better near the lake, some are better tucked in
+                  the trees, and some need quick access to downtown, restaurants,
+                  bathhouses, and family attractions.
+                </p>
+              </div>
 
-          <Link href="/explore" className="btn">
-            Explore Hot Springs
-          </Link>
+              <div className="flex flex-wrap gap-3">
+                {guideLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="btn">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-<LynLiliRentalCleaningBanner context="cabins" />
+
+      <section className="section pt-0">
+        <div className="container">
+          <div className="section-heading">
+            <h2>Best Types of Cabin Stays Around Hot Springs</h2>
+
+            <p>
+              A cabin trip can mean a lot of different things here. Some people
+              want lake access, some want romance, some want space for family,
+              and some just want somewhere quiet after a full day in town.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {stayStyles.map((area) => (
+              <div
+                key={area.title}
+                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <h3 className="text-2xl font-semibold">{area.title}</h3>
+
+                <p
+                  className="mt-3 leading-relaxed"
+                  style={{ color: "var(--muted)" }}
+                >
+                  {area.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="pb-4">
+        <LynLiliRentalCleaningBanner context="cabins" />
+      </div>
+
       {mainCabin && (
         <section className="section">
           <div className="container">
@@ -228,13 +308,15 @@ export default function CabinsPage() {
 
             <div className="space-y-8">
               <a
-                href={mainCabin.website ?? mainCabin.directions ?? mainCabin.href ?? "#"}
+                href={
+                  mainCabin.website ?? mainCabin.directions ?? mainCabin.href ?? "#"
+                }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] grid lg:grid-cols-[1.1fr_0.9fr] transition hover:-translate-y-1 hover:shadow-2xl"
+                className="grid overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl lg:grid-cols-[1.1fr_0.9fr]"
                 style={{ borderColor: "var(--border)" }}
               >
-                <div className="relative h-[500px] w-full overflow-hidden">
+                <div className="relative h-[360px] w-full overflow-hidden md:h-[500px]">
                   <img
                     src={mainCabin.image}
                     alt={mainCabin.name}
@@ -351,10 +433,24 @@ export default function CabinsPage() {
 
       <section className="section">
         <div className="container">
-          <div className="section-heading">
-            <h2>More Cabins, Cottages, and Quiet Stays Near Hot Springs</h2>
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p
+                className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                More Cabin-Style Stays
+              </p>
 
-            <p>
+              <h2 className="max-w-2xl text-4xl font-semibold leading-tight md:text-5xl">
+                Cabins, cottages, RV resorts, and quiet places near Hot Springs.
+              </h2>
+            </div>
+
+            <p
+              className="max-w-2xl leading-relaxed"
+              style={{ color: "var(--muted)" }}
+            >
               These additional cabin-style stays and lodging options are useful
               for visitors comparing treehouses, lake cottages, wooded retreats,
               RV resorts, romantic getaways, and vacation rentals near local
@@ -362,96 +458,179 @@ export default function CabinsPage() {
             </p>
           </div>
 
-          <div className="space-y-6">
-            {standardCabins.map((place, index) => (
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {priorityCabins.map((place) => (
               <div
                 key={place.name}
-                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
+                className="group overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 style={{ borderColor: "var(--border)" }}
               >
-                <div className="grid gap-6 md:grid-cols-[220px_1fr] md:items-center">
-                  <div className="relative h-[170px] overflow-hidden rounded-2xl bg-[color:var(--surface-strong)]">
-                    <img
-                      src={place.image}
-                      alt={place.name}
-                      className="h-full w-full object-cover"
-                    />
+                <div className="relative h-[320px] overflow-hidden bg-[color:var(--surface-strong)]">
+                  <img
+                    src={place.image}
+                    alt={place.name}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                  <div className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-wide backdrop-blur">
+                    {place.type}
                   </div>
+                </div>
 
-                  <div>
-                    <h3 className="text-2xl font-semibold">
-                      {index + 1}. {place.name}
-                    </h3>
+                <div className="p-6 md:p-7">
+                  <h3 className="text-3xl font-semibold leading-tight">
+                    {place.name}
+                  </h3>
 
-                    <p
-                      className="mt-1 text-sm"
-                      style={{ color: "var(--muted)" }}
-                    >
-                      {place.type}
+                  <p
+                    className="mt-4 leading-relaxed"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {place.description}
+                  </p>
+
+                  {place.address && (
+                    <p className="mt-4 text-sm" style={{ color: "var(--muted)" }}>
+                      📍 {place.address}
                     </p>
+                  )}
 
-                    <p
-                      className="mt-4 leading-relaxed"
-                      style={{ color: "var(--muted)" }}
-                    >
-                      {place.description}
-                    </p>
-
-                    {place.address && (
-                      <p
-                        className="mt-3 text-sm"
-                        style={{ color: "var(--muted)" }}
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {place.phone && (
+                      <a
+                        href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
+                        className="inline-flex rounded-full px-5 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
+                        style={{
+                          background: "var(--green)",
+                          color: "#ffffff",
+                        }}
                       >
-                        📍 {place.address}
-                      </p>
+                        Call
+                      </a>
                     )}
 
-                    <div className="mt-4 flex flex-wrap gap-3">
-                      {place.phone && (
-                        <a
-                          href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
-                          className="inline-flex rounded-full px-5 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
-                          style={{
-                            background: "var(--green)",
-                            color: "#ffffff",
-                          }}
-                        >
-                          Call {place.phone}
-                        </a>
-                      )}
+                    {place.website && (
+                      <a
+                        href={place.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--green)",
+                          background: "var(--surface-strong)",
+                        }}
+                      >
+                        Website
+                      </a>
+                    )}
 
-                      {place.website && (
-                        <a
-                          href={place.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
-                          style={{
-                            borderColor: "var(--border)",
-                            color: "var(--green)",
-                            background: "var(--surface-strong)",
-                          }}
-                        >
-                          View Website
-                        </a>
-                      )}
+                    {place.directions && (
+                      <a
+                        href={place.directions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--accent-dark)",
+                          background: "rgba(155,95,45,0.08)",
+                        }}
+                      >
+                        Directions
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-                      {place.directions && (
-                        <a
-                          href={place.directions}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
-                          style={{
-                            borderColor: "var(--border)",
-                            color: "var(--accent-dark)",
-                            background: "rgba(155,95,45,0.08)",
-                          }}
-                        >
-                          Directions
-                        </a>
-                      )}
-                    </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {remainingCabins.map((place) => (
+              <div
+                key={place.name}
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <div className="relative h-56 overflow-hidden bg-[color:var(--surface-strong)]">
+                  <img
+                    src={place.image}
+                    alt={place.name}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex flex-1 flex-col p-6">
+                  <p
+                    className="mb-2 text-xs font-bold uppercase tracking-wide"
+                    style={{ color: "var(--accent-dark)" }}
+                  >
+                    {place.type}
+                  </p>
+
+                  <h3 className="text-2xl font-semibold leading-tight">
+                    {place.name}
+                  </h3>
+
+                  <p
+                    className="mt-4 leading-relaxed"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {place.description}
+                  </p>
+
+                  {place.address && (
+                    <p className="mt-4 text-sm" style={{ color: "var(--muted)" }}>
+                      📍 {place.address}
+                    </p>
+                  )}
+
+                  <div className="mt-auto flex flex-wrap gap-3 pt-5">
+                    {place.phone && (
+                      <a
+                        href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
+                        className="inline-flex rounded-full px-4 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
+                        style={{
+                          background: "var(--green)",
+                          color: "#ffffff",
+                        }}
+                      >
+                        Call
+                      </a>
+                    )}
+
+                    {place.website && (
+                      <a
+                        href={place.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-4 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--green)",
+                          background: "var(--surface-strong)",
+                        }}
+                      >
+                        Website
+                      </a>
+                    )}
+
+                    {place.directions && (
+                      <a
+                        href={place.directions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-4 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--accent-dark)",
+                          background: "rgba(155,95,45,0.08)",
+                        }}
+                      >
+                        Directions
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -460,7 +639,7 @@ export default function CabinsPage() {
         </div>
       </section>
 
-      <section className="relative min-h-[620px] flex items-end overflow-hidden dark-section">
+      <section className="relative flex min-h-[620px] items-end overflow-hidden dark-section">
         <img
           src="/images/businesses/in-the-trees.jpg"
           alt="Cabin stay near Hot Springs Arkansas"
@@ -505,42 +684,13 @@ export default function CabinsPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
-            <h2>Best Types of Cabin Stays Around Hot Springs</h2>
+      <div className="pt-16 md:pt-20">
+        <EventsCTA
+          title="Staying in Hot Springs soon?"
+          text="Before you book out your weekend, check what’s happening around town so you can plan around festivals, live music, markets, and local events."
+        />
+      </div>
 
-            <p>
-              A cabin trip can mean a lot of different things here. Some people
-              want lake access, some want romance, some want space for family,
-              and some just want somewhere quiet after a full day in town.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {stayStyles.map((area) => (
-              <div
-                key={area.title}
-                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
-                style={{ borderColor: "var(--border)" }}
-              >
-                <h3 className="text-2xl font-semibold">{area.title}</h3>
-
-                <p
-                  className="mt-3 leading-relaxed"
-                  style={{ color: "var(--muted)" }}
-                >
-                  {area.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-<EventsCTA
-  title="Staying in Hot Springs soon?"
-  text="Before you book out your weekend, check what’s happening around town so you can plan around festivals, live music, markets, and local events."
-/>
       <section className="section">
         <div className="container">
           <div className="section-heading">
@@ -553,7 +703,7 @@ export default function CabinsPage() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="grid gap-4 md:grid-cols-2">
             {faqs.map((item) => (
               <div
                 key={item.question}

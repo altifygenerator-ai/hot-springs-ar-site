@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { hotelsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
 import LynLiliRentalCleaningBanner from "@/components/ads/LynLiliRentalCleaningBanner";
+
 export const metadata = {
   title:
     "Hotels in Hot Springs, Arkansas | Downtown, Bathhouse Row, Oaklawn & Lake Hamilton",
@@ -47,6 +48,29 @@ const stayAreas = [
   },
 ];
 
+const guideLinks = [
+  {
+    label: "Things To Do",
+    href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    label: "Restaurants",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    label: "Cabins",
+    href: "/hot-springs-ar-cabins",
+  },
+  {
+    label: "Hotels Near Oaklawn",
+    href: "/hotels-near-oaklawn",
+  },
+  {
+    label: "Explore Hot Springs",
+    href: "/explore",
+  },
+];
+
 const faqs = [
   {
     question: "Where should I stay in Hot Springs, Arkansas?",
@@ -78,6 +102,8 @@ const faqs = [
 export default function HotelsPage() {
   const mainHotel = featuredHotels[0];
   const sideHotels = featuredHotels.slice(1, 3);
+  const priorityHotels = standardHotels.slice(0, 2);
+  const remainingHotels = standardHotels.slice(2);
 
   return (
     <main>
@@ -181,8 +207,15 @@ export default function HotelsPage() {
                 >
                   restaurants
                 </Link>
-                , Oaklawn, Lake Hamilton, spas, trails, and downtown Hot
-                Springs.
+                ,{" "}
+                <Link
+                  href="/hotels-near-oaklawn"
+                  className="font-semibold underline underline-offset-4"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  Oaklawn
+                </Link>
+                , Lake Hamilton, spas, trails, and downtown Hot Springs.
               </p>
             </div>
           </div>
@@ -190,25 +223,83 @@ export default function HotelsPage() {
       </section>
 
       <section className="section pt-0">
-        <div className="container flex flex-wrap justify-center gap-3">
-          <Link href="/things-to-do-in-hot-springs-ar" className="btn">
-            Things To Do
-          </Link>
+        <div className="container">
+          <div
+            className="rounded-[2rem] border bg-[color:var(--surface)] p-6 shadow-sm md:p-8"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+              <div>
+                <p
+                  className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  Plan Around Your Stay
+                </p>
 
-          <Link href="/hot-springs-ar-restaurants" className="btn">
-            Restaurants
-          </Link>
+                <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                  Pick the area first, then compare the rooms.
+                </h2>
 
-          <Link href="/hot-springs-ar-cabins" className="btn">
-            Cabins
-          </Link>
+                <p
+                  className="mt-4 leading-relaxed"
+                  style={{ color: "var(--muted)" }}
+                >
+                  A Hot Springs trip feels different depending on where you
+                  stay. Downtown is easier for walking, Oaklawn is better for
+                  race and casino weekends, and Lake Hamilton gives the trip a
+                  slower water-side feel.
+                </p>
+              </div>
 
-          <Link href="/explore" className="btn">
-            Explore Hot Springs
-          </Link>
+              <div className="flex flex-wrap gap-3">
+                {guideLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="btn">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-<LynLiliRentalCleaningBanner context="cabins" />
+
+      <section className="section pt-0">
+        <div className="container">
+          <div className="section-heading">
+            <h2>Best Areas to Stay Around Hot Springs</h2>
+
+            <p>
+              Different parts of town work better for different kinds of trips.
+              Here’s the simple way to think about it before booking.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {stayAreas.map((area) => (
+              <div
+                key={area.title}
+                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <h3 className="text-2xl font-semibold">{area.title}</h3>
+
+                <p
+                  className="mt-3 leading-relaxed"
+                  style={{ color: "var(--muted)" }}
+                >
+                  {area.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="pb-4">
+        <LynLiliRentalCleaningBanner context="cabins" />
+      </div>
+
       {mainHotel && (
         <section className="section">
           <div className="container">
@@ -217,22 +308,29 @@ export default function HotelsPage() {
 
               <p>
                 These featured stays are useful starting points for visitors
-                looking near downtown, Bathhouse Row, <Link href="/hotels-near-oaklawn" className="btn">
-  Oaklawn
-</Link>, Lake Hamilton,
-                restaurants, spas, and local attractions.
+                looking near downtown, Bathhouse Row,{" "}
+                <Link
+                  href="/hotels-near-oaklawn"
+                  className="font-semibold underline underline-offset-4"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  Oaklawn
+                </Link>
+                , Lake Hamilton, restaurants, spas, and local attractions.
               </p>
             </div>
 
             <div className="space-y-8">
               <a
-                href={mainHotel.website ?? mainHotel.directions ?? mainHotel.href ?? "#"}
+                href={
+                  mainHotel.website ?? mainHotel.directions ?? mainHotel.href ?? "#"
+                }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] grid lg:grid-cols-[1.1fr_0.9fr] transition hover:-translate-y-1 hover:shadow-2xl"
+                className="grid overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl lg:grid-cols-[1.1fr_0.9fr]"
                 style={{ borderColor: "var(--border)" }}
               >
-                <div className="relative h-[500px] w-full overflow-hidden">
+                <div className="relative h-[360px] w-full overflow-hidden md:h-[500px]">
                   <img
                     src={mainHotel.image}
                     alt={mainHotel.name}
@@ -346,163 +444,281 @@ export default function HotelsPage() {
           </div>
         </section>
       )}
-<section className="section pt-0">
-  <div className="container">
-    <div
-      className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm md:p-8"
-      style={{ borderColor: "var(--border)" }}
-    >
-      <p
-        className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
-        style={{ color: "var(--accent-dark)" }}
-      >
-        Community Tip
-      </p>
 
-      <h2 className="mb-4 text-3xl font-semibold">
-        There’s more tucked inside The Arlington than just hotel rooms.
-      </h2>
+      <section className="section pt-0">
+        <div className="container">
+          <div
+            className="grid gap-8 overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-sm md:grid-cols-[0.8fr_1.2fr]"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <div
+              className="min-h-[260px] p-8 md:p-10"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(155,95,45,0.16), rgba(35,67,54,0.08))",
+              }}
+            >
+              <p
+                className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                Community Tip
+              </p>
 
-     <p className="max-w-3xl leading-relaxed" style={{ color: "var(--muted)" }}>
-  A local reader mentioned the mall level inside The Arlington Resort Hotel &
-  Spa, with small shops like{" "}
-  <a
-    href="https://www.facebook.com/profile.php?id=100093909771807"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-semibold underline underline-offset-4"
-    style={{ color: "var(--accent-dark)" }}
-  >
-    Black Ribbon Books
-  </a>
-  ,{" "}
-  <a
-    href="https://www.facebook.com/mamooscreamery/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-semibold underline underline-offset-4"
-    style={{ color: "var(--accent-dark)" }}
-  >
-    Mamoo’s Ice Cream
-  </a>
-  , a record store, and{" "}
-  <a
-    href="https://www.facebook.com/GoldenFeatherAR/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-semibold underline underline-offset-4"
-    style={{ color: "var(--accent-dark)" }}
-  >
-    Golden Feather
-  </a>
-  . It’s one of those easy-to-miss downtown spots that can be worth checking
-  out if you’re already around Bathhouse Row.
-</p>
-    </div>
-  </div>
-</section>
+              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                There’s more tucked inside The Arlington than just hotel rooms.
+              </h2>
+            </div>
+
+            <div className="flex flex-col justify-center p-8 md:p-10">
+              <p className="leading-relaxed" style={{ color: "var(--muted)" }}>
+                A local reader mentioned the mall level inside The Arlington
+                Resort Hotel & Spa, with small shops like{" "}
+                <a
+                  href="https://www.facebook.com/profile.php?id=100093909771807"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline underline-offset-4"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  Black Ribbon Books
+                </a>
+                ,{" "}
+                <a
+                  href="https://www.facebook.com/mamooscreamery/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline underline-offset-4"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  Mamoo’s Ice Cream
+                </a>
+                , a record store, and{" "}
+                <a
+                  href="https://www.facebook.com/GoldenFeatherAR/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline underline-offset-4"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  Golden Feather
+                </a>
+                . It’s one of those easy-to-miss downtown spots that can be
+                worth checking out if you’re already around Bathhouse Row.
+              </p>
+
+              <Link
+                href="/bathhouse-row"
+                className="mt-5 inline-block font-bold"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                Explore Bathhouse Row →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
-          <div className="section-heading">
-            <h2>More Hotels and Places to Stay Near Hot Springs</h2>
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p
+                className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                More Places to Stay
+              </p>
 
-            <p>
+              <h2 className="max-w-2xl text-4xl font-semibold leading-tight md:text-5xl">
+                Hotels, inns, historic stays, and lodging options around Hot
+                Springs.
+              </h2>
+            </div>
+
+            <p
+              className="max-w-2xl leading-relaxed"
+              style={{ color: "var(--muted)" }}
+            >
               These additional hotels, inns, and lodging options are useful for
               visitors comparing downtown stays, lake-area stays, historic
               hotels, romantic getaways, and places near local attractions.
             </p>
           </div>
 
-          <div className="space-y-6">
-            {standardHotels.map((place, index) => (
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {priorityHotels.map((place) => (
               <div
                 key={place.name}
-                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
+                className="group overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 style={{ borderColor: "var(--border)" }}
               >
-                <div className="grid gap-6 md:grid-cols-[220px_1fr] md:items-center">
-                  <div className="relative h-[170px] overflow-hidden rounded-2xl bg-[color:var(--surface-strong)]">
-                    <img
-                      src={place.image}
-                      alt={place.name}
-                      className="h-full w-full object-cover"
-                    />
+                <div className="relative h-[320px] overflow-hidden bg-[color:var(--surface-strong)]">
+                  <img
+                    src={place.image}
+                    alt={place.name}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                  <div className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-wide backdrop-blur">
+                    {place.type}
                   </div>
+                </div>
 
-                  <div>
-                    <h3 className="text-2xl font-semibold">
-                      {index + 1}. {place.name}
-                    </h3>
+                <div className="p-6 md:p-7">
+                  <h3 className="text-3xl font-semibold leading-tight">
+                    {place.name}
+                  </h3>
 
-                    <p
-                      className="mt-1 text-sm"
-                      style={{ color: "var(--muted)" }}
-                    >
-                      {place.type}
+                  <p
+                    className="mt-4 leading-relaxed"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {place.description}
+                  </p>
+
+                  {place.address && (
+                    <p className="mt-4 text-sm" style={{ color: "var(--muted)" }}>
+                      📍 {place.address}
                     </p>
+                  )}
 
-                    <p
-                      className="mt-4 leading-relaxed"
-                      style={{ color: "var(--muted)" }}
-                    >
-                      {place.description}
-                    </p>
-
-                    {place.address && (
-                      <p
-                        className="mt-3 text-sm"
-                        style={{ color: "var(--muted)" }}
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {place.phone && (
+                      <a
+                        href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
+                        className="inline-flex rounded-full px-5 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
+                        style={{
+                          background: "var(--green)",
+                          color: "#ffffff",
+                        }}
                       >
-                        📍 {place.address}
-                      </p>
+                        Call
+                      </a>
                     )}
 
-                    <div className="mt-4 flex flex-wrap gap-3">
-                      {place.phone && (
-                        <a
-                          href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
-                          className="inline-flex rounded-full px-5 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
-                          style={{
-                            background: "var(--green)",
-                            color: "#ffffff",
-                          }}
-                        >
-                          Call {place.phone}
-                        </a>
-                      )}
+                    {place.website && (
+                      <a
+                        href={place.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--green)",
+                          background: "var(--surface-strong)",
+                        }}
+                      >
+                        Website
+                      </a>
+                    )}
 
-                      {place.website && (
-                        <a
-                          href={place.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
-                          style={{
-                            borderColor: "var(--border)",
-                            color: "var(--green)",
-                            background: "var(--surface-strong)",
-                          }}
-                        >
-                          View Website
-                        </a>
-                      )}
+                    {place.directions && (
+                      <a
+                        href={place.directions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--accent-dark)",
+                          background: "rgba(155,95,45,0.08)",
+                        }}
+                      >
+                        Directions
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-                      {place.directions && (
-                        <a
-                          href={place.directions}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
-                          style={{
-                            borderColor: "var(--border)",
-                            color: "var(--accent-dark)",
-                            background: "rgba(155,95,45,0.08)",
-                          }}
-                        >
-                          Directions
-                        </a>
-                      )}
-                    </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {remainingHotels.map((place) => (
+              <div
+                key={place.name}
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <div className="relative h-56 overflow-hidden bg-[color:var(--surface-strong)]">
+                  <img
+                    src={place.image}
+                    alt={place.name}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex flex-1 flex-col p-6">
+                  <p
+                    className="mb-2 text-xs font-bold uppercase tracking-wide"
+                    style={{ color: "var(--accent-dark)" }}
+                  >
+                    {place.type}
+                  </p>
+
+                  <h3 className="text-2xl font-semibold leading-tight">
+                    {place.name}
+                  </h3>
+
+                  <p
+                    className="mt-4 leading-relaxed"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {place.description}
+                  </p>
+
+                  {place.address && (
+                    <p className="mt-4 text-sm" style={{ color: "var(--muted)" }}>
+                      📍 {place.address}
+                    </p>
+                  )}
+
+                  <div className="mt-auto flex flex-wrap gap-3 pt-5">
+                    {place.phone && (
+                      <a
+                        href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
+                        className="inline-flex rounded-full px-4 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
+                        style={{
+                          background: "var(--green)",
+                          color: "#ffffff",
+                        }}
+                      >
+                        Call
+                      </a>
+                    )}
+
+                    {place.website && (
+                      <a
+                        href={place.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-4 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--green)",
+                          background: "var(--surface-strong)",
+                        }}
+                      >
+                        Website
+                      </a>
+                    )}
+
+                    {place.directions && (
+                      <a
+                        href={place.directions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex rounded-full border px-4 py-2 text-sm font-bold transition hover:opacity-90"
+                        style={{
+                          borderColor: "var(--border)",
+                          color: "var(--accent-dark)",
+                          background: "rgba(155,95,45,0.08)",
+                        }}
+                      >
+                        Directions
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -511,7 +727,7 @@ export default function HotelsPage() {
         </div>
       </section>
 
-      <section className="relative min-h-[620px] flex items-end overflow-hidden dark-section">
+      <section className="relative flex min-h-[620px] items-end overflow-hidden dark-section">
         <img
           src="/images/businesses/the-waters-hotel.jpg"
           alt="Hotel stay in downtown Hot Springs Arkansas"
@@ -559,50 +775,23 @@ export default function HotelsPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <h2>Best Areas to Stay Around Hot Springs</h2>
-
-            <p>
-              Different parts of town work better for different kinds of trips.
-              Here’s the simple way to think about it before booking.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {stayAreas.map((area) => (
-              <div
-                key={area.title}
-                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
-                style={{ borderColor: "var(--border)" }}
-              >
-                <h3 className="text-2xl font-semibold">{area.title}</h3>
-
-                <p
-                  className="mt-3 leading-relaxed"
-                  style={{ color: "var(--muted)" }}
-                >
-                  {area.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
             <h2>Hot Springs Hotel FAQs</h2>
 
             <p>
               Quick answers for visitors comparing hotels, downtown stays,
-              lake-area lodging, <Link href="/hotels-near-oaklawn" className="btn">
-  Oaklawn
-</Link> trips, cabins, restaurants, and
-              attractions.
+              lake-area lodging,{" "}
+              <Link
+                href="/hotels-near-oaklawn"
+                className="font-semibold underline underline-offset-4"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                Oaklawn
+              </Link>{" "}
+              trips, cabins, restaurants, and attractions.
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="grid gap-4 md:grid-cols-2">
             {faqs.map((item) => (
               <div
                 key={item.question}
@@ -658,10 +847,15 @@ export default function HotelsPage() {
                 style={{ color: "rgba(255,255,255,0.86)" }}
               >
                 This Hot Springs lodging guide helps visitors compare places to
-                stay while planning trips around Bathhouse Row, Lake Hamilton,
-                <Link href="/hotels-near-oaklawn" className="btn">
-  Hotels Near Oaklawn
-</Link>, restaurants, spas, and local attractions.
+                stay while planning trips around Bathhouse Row, Lake Hamilton,{" "}
+                <Link
+                  href="/hotels-near-oaklawn"
+                  className="font-semibold underline underline-offset-4"
+                  style={{ color: "#ffffff" }}
+                >
+                  Oaklawn
+                </Link>
+                , restaurants, spas, and local attractions.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">

@@ -21,6 +21,12 @@ export default function AdminPage() {
           <Link href="/admin/events/new" className="btn-secondary">
             Add Event Manually
           </Link>
+          <Link href="/admin/photos" className="btn-primary">
+  Manage Photos
+</Link>
+<Link href="/community-photos" className="btn-secondary">
+  View Community Photos
+</Link>
         </div>
       </div>
     </section>

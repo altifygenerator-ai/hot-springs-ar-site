@@ -13,12 +13,12 @@ const updates = [
     text: "The local business page has been cleaned up and expanded with a better look at shops, attractions, outdoor recreation, spas, visitor-friendly businesses, and places that do not fit neatly into one category.",
     href: "/local-businesses",
   },
-  {
-    label: "Events updated",
-    title: "This Weekend in Hot Springs",
-    text: "New local events and things happening around Hot Springs have been added for visitors and locals planning the next few days.",
-    href: "/this-weekend",
-  },
+ {
+  title: "Community photo submissions are now open",
+  text: "You can now send in local photos from around Hot Springs, Lake Hamilton, Bathhouse Row, events, restaurants, trails, and nearby places. Approved photos may be featured in future guides, posts, and community updates.",
+  href: "/submit-photo",
+  label: "Submit a Photo",
+},
 ];
 
 export default function RecentUpdates() {

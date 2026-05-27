@@ -47,6 +47,28 @@ export default async function HomeEventsPreview() {
             </Link>
           </div>
         )}
+
+        <div className="home-photo-cta">
+          <div>
+            <p className="hero-eyebrow">Community Photos</p>
+            <h3>Have photos from around Hot Springs?</h3>
+            <p>
+              Send in local photos from events, Bathhouse Row, Lake Hamilton,
+              restaurants, trails, or nearby spots. Approved photos may be
+              featured in future guides and community updates.
+            </p>
+          </div>
+
+          <div className="home-photo-cta-actions">
+            <Link href="/submit-photo" className="btn-primary">
+              Submit a Photo
+            </Link>
+
+            <Link href="/community-photos" className="btn-secondary">
+              View Photos
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

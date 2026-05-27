@@ -57,6 +57,10 @@ const footerGroups = [
   {
     title: "Business",
     links: [
+      {
+  label: "Submit a Photo",
+  href: "/submit-photo",
+},
       { href: "/local-businesses", label: "Local Businesses" },
       { href: "/contact", label: "Get Listed" },
       { href: "/submit-event", label: "Submit an Event" },
@@ -127,6 +131,7 @@ export default function Footer() {
             <Link href="/events" className="footer-button footer-button-outline">
               View Events
             </Link>
+            
           </div>
         </div>
 

@@ -43,6 +43,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
 
     {
+      path: "/community-photos",
+      priority: 0.82,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/submit-photo",
+      priority: 0.6,
+      changeFrequency: "monthly" as const,
+    },
+
+    {
       path: "/hot-springs-local-spots",
       priority: 0.9,
       changeFrequency: "weekly" as const,

@@ -155,6 +155,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
     },
     {
+      path: "/things-to-do-near-bathhouse-row",
+      priority: 0.9,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/shopping-near-bathhouse-row",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/rainy-day-near-bathhouse-row",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+    {
       path: "/lake-hamilton",
       priority: 0.9,
       changeFrequency: "monthly" as const,

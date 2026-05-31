@@ -220,11 +220,11 @@ export default function BathhouseRowPage() {
                 </Link>
                 ,{" "}
                 <Link
-                  href="/things-to-do-in-hot-springs-ar"
+                  href="/things-to-do-near-bathhouse-row"
                   className="font-semibold underline underline-offset-4"
                   style={{ color: "var(--accent-dark)" }}
                 >
-                  things to do
+                  things to do nearby
                 </Link>
                 , spas, hiking, shopping, and exploring downtown Hot Springs.
               </p>
@@ -242,12 +242,16 @@ export default function BathhouseRowPage() {
             Hotels Near Downtown
           </Link>
 
-          <Link href="/things-to-do-in-hot-springs-ar" className="btn">
+          <Link href="/things-to-do-near-bathhouse-row" className="btn">
             Things To Do Nearby
           </Link>
 
-          <Link href="/explore" className="btn">
-            Explore Hot Springs
+          <Link href="/shopping-near-bathhouse-row" className="btn">
+            Shopping Nearby
+          </Link>
+
+          <Link href="/rainy-day-near-bathhouse-row" className="btn">
+            Rainy Day Ideas
           </Link>
           <Link href="/hot-springs-bathhouse-row-local-finds" className="btn">
   Bathhouse Row Local Finds

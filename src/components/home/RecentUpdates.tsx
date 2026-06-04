@@ -2,6 +2,12 @@ import Link from "next/link";
 
 const updates = [
   {
+    label: "New history article",
+    title: "History of Hot Springs Gambling Museum",
+    text: "A new Hot Springs history feature has been added covering the city’s gambling era, restored slot machines, casino rooms, 1967 raids, and why this small museum preserves an important side of Spa City history.",
+    href: "/articles/history-of-hot-springs-gambling-museum",
+  },
+  {
     label: "New shopping guide",
     title: "Antique, Thrift & Flea Markets",
     text: "A new Hot Springs shopping guide has been added for antique stores, thrift shops, flea markets, vendor malls, vintage finds, resale shops, and local places worth wandering through.",
@@ -13,12 +19,12 @@ const updates = [
     text: "The local business page has been cleaned up and expanded with a better look at shops, attractions, outdoor recreation, spas, visitor-friendly businesses, and places that do not fit neatly into one category.",
     href: "/local-businesses",
   },
- {
-  title: "Community photo submissions are now open",
-  text: "You can now send in local photos from around Hot Springs, Lake Hamilton, Bathhouse Row, events, restaurants, trails, and nearby places. Approved photos may be featured in future guides, posts, and community updates.",
-  href: "/submit-photo",
-  label: "Submit a Photo",
-},
+  {
+    title: "Community photo submissions are now open",
+    text: "You can now send in local photos from around Hot Springs, Lake Hamilton, Bathhouse Row, events, restaurants, trails, and nearby places. Approved photos may be featured in future guides, posts, and community updates.",
+    href: "/submit-photo",
+    label: "Submit a Photo",
+  },
 ];
 
 export default function RecentUpdates() {
@@ -40,8 +46,11 @@ export default function RecentUpdates() {
           </div>
 
           <div className="home-events-actions">
-            <Link href="/hot-springs-antique-thrift-flea-markets" className="btn-primary">
-              Shopping Guide
+            <Link
+              href="/articles/history-of-hot-springs-gambling-museum"
+              className="btn-primary"
+            >
+              New History Article
             </Link>
 
             <Link href="/this-weekend" className="btn-secondary">

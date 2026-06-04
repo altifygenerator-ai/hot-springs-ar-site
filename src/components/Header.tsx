@@ -52,6 +52,10 @@ const articleLinks = [
     href: "/articles/bathhouse-row",
     label: "Bathhouse Row: Why It Still Matters",
   },
+  {
+    href: "/articles/history-of-hot-springs-gambling-museum",
+    label: "History of Hot Springs Gambling Museum",
+  },
 ];
 
 const sisterSites = [

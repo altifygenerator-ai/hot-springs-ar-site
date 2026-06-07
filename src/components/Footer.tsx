@@ -28,6 +28,7 @@ const footerGroups = [
         href: "/hot-springs-antique-thrift-flea-markets",
         label: "Antique, Thrift & Flea Markets",
       },
+      { href: "/hot-springs-spas-wellness", label: "Spas & Wellness" },
       { href: "/hot-springs-local-spots", label: "Local Hidden Gems" },
       { href: "/hot-springs-family-friendly", label: "Family-Friendly Finds" },
     ],

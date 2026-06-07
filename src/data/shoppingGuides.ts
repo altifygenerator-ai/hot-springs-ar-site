@@ -304,6 +304,190 @@ export const shoppingPlaces: ShoppingPlace[] = [
     bestFor: ["Collectibles", "Unique items", "Flea market browsing"],
     note: "Verify current status and hours before publishing.",
   },
+  {
+  name: "Gently Worn Consignment",
+  category: "thrift",
+  label: "Consignment • Resale • Clothing",
+  address: "Albert Pike Rd, Hot Springs, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A Hot Springs consignment and resale stop on Albert Pike, useful for clothing-focused thrifting, secondhand finds, and shoppers making a wider thrift route around town.",
+  bestFor: ["Consignment", "Clothing", "Resale finds", "Thrift route stop"],
+  note: "Address and current hours should be checked before making a special trip.",
+},
+{
+  name: "Just Swanky Consignment",
+  category: "thrift",
+  label: "Consignment • Resale • Local Shopping",
+  address: "340 Ouachita Ave, Hot Springs, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A consignment and resale shop on Ouachita Avenue that fits well into a Hot Springs secondhand shopping day, especially for shoppers looking beyond standard thrift stores.",
+  bestFor: ["Consignment", "Resale shopping", "Clothing", "Local finds"],
+  note: "A good fit for resale shoppers, though current hours should be verified before visiting.",
+},
+{
+  name: "Goodwill Hot Springs - Central Avenue",
+  category: "thrift",
+  label: "Thrift Store • Clothing • Household Goods",
+  address: "Central Ave, Hot Springs, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A Goodwill location on Central Avenue that gives thrift shoppers another practical stop for clothing, household items, books, small goods, and everyday secondhand finds.",
+  bestFor: ["Clothing", "Household goods", "Everyday thrift", "Budget finds"],
+  note: "Goodwill inventory changes often, so this is usually best as part of a multi-stop thrift route.",
+},
+{
+  name: "Salvation Army Family Store - Malvern Avenue",
+  category: "thrift",
+  label: "Thrift Store • Donation-Based • Resale",
+  address: "Malvern Ave, Hot Springs, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A Salvation Army thrift location around Malvern Avenue, useful for shoppers looking for donation-based resale, clothing, household items, and practical secondhand finds.",
+  bestFor: [
+    "Cause-based thrift",
+    "Clothing",
+    "Household goods",
+    "Donation-based resale",
+  ],
+  note: "Check current location and hours before making a special trip.",
+},
+{
+  name: "Salvation Army Family Store - Hot Springs Village",
+  category: "thrift",
+  label: "Thrift Store • Resale • Nearby Stop",
+  address: "Hot Springs Village, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A Salvation Army thrift stop near Hot Springs Village, often mentioned by local thrift shoppers as part of a wider Hot Springs-area resale route.",
+  bestFor: [
+    "Cause-based thrift",
+    "Nearby thrift route",
+    "Clothing",
+    "Household goods",
+  ],
+  note: "Best treated as a nearby-area stop rather than a central Hot Springs thrift shop.",
+},
+{
+  name: "Habitat ReStore - Highway 70 West",
+  category: "thrift",
+  label: "ReStore • Furniture • Home Projects",
+  address: "Highway 70 West, Hot Springs, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A Habitat ReStore location west of Hot Springs, useful for furniture, building materials, home goods, project pieces, and practical secondhand finds.",
+  bestFor: ["Furniture", "Home projects", "Building materials", "Household goods"],
+  note: "Local shoppers describe this as being on 70W past the N. Moore / S. Moore Junction area. Verify the exact address before visiting.",
+},
+{
+  name: "Habitat ReStore - Hot Springs Village",
+  category: "thrift",
+  label: "ReStore • Home Goods • Nearby Stop",
+  address: "Hot Springs Village, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A Habitat ReStore location near Hot Springs Village, useful for resale furniture, home goods, building materials, and shoppers willing to drive a little outside Hot Springs.",
+  bestFor: ["Furniture", "Home goods", "Project pieces", "Nearby thrift route"],
+  note: "Better listed as a nearby-area resale stop. Check current hours and location before driving out.",
+},
+{
+  name: "First United Methodist Thrift",
+  category: "thrift",
+  label: "Church Thrift • Resale • Local Stop",
+  address: "Albert Pike Rd, Hot Springs, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A church-connected thrift stop on Albert Pike near Albert Pike Tire, useful for local thrifting, small household finds, clothing, and shoppers checking multiple stops in one route.",
+  bestFor: [
+    "Church thrift",
+    "Cause-based resale",
+    "Clothing",
+    "Small household finds",
+  ],
+  note: "This appears separate from Bargain Box at First Presbyterian. Verify exact address and hours before visiting.",
+},
+{
+  name: "Re-Treasured by Recovery Point",
+  category: "thrift",
+  label: "Thrift Store • Resale • Cause-Based",
+  address: "Grand Ave, Hot Springs, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A resale and thrift stop on Grand Avenue across from ReStore, fitting well into a Hot Springs thrift route for shoppers looking for practical secondhand finds.",
+  bestFor: [
+    "Cause-based resale",
+    "Thrift route stop",
+    "Household finds",
+    "Clothing",
+  ],
+  note: "Local shoppers mention it as being on Grand Avenue across from ReStore. Verify hours before visiting.",
+},
+{
+  name: "Teen Challenge Thrift",
+  category: "thrift",
+  label: "Thrift Store • Mission-Based • Nearby Stop",
+  address: "Near Hot Springs Village, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A mission-connected thrift stop near Hot Springs Village, useful for shoppers making a wider resale route outside central Hot Springs.",
+  bestFor: [
+    "Mission-based thrift",
+    "Nearby thrift route",
+    "Clothing",
+    "Household items",
+  ],
+  note: "Best for shoppers already heading toward the Hot Springs Village area. Check current hours before going.",
+},
+{
+  name: "Gusthemie Outreach",
+  category: "thrift",
+  label: "Outreach Thrift • Local Resale • Check First",
+  address: "Albert Pike Rd, Hot Springs, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A small outreach-style thrift stop on Albert Pike near Shipley’s Donuts. Local shoppers mention it, but also note that it may not be open consistently.",
+  bestFor: [
+    "Local thrift route",
+    "Outreach resale",
+    "Small thrift stop",
+    "Check before visiting",
+  ],
+  note: "Local note: this place is mentioned as seeming to rarely be open. Call or verify before making a special trip.",
+},
+{
+  name: "Senior Center Thrift",
+  category: "thrift",
+  label: "Thrift Store • Worth the Drive • Budget Finds",
+  address: "Mount Ida, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A Mount Ida thrift stop mentioned by local resellers as worth the drive from Hot Springs, especially for shoppers looking for good prices and a wider thrift route.",
+  bestFor: ["Worth the drive", "Budget finds", "Small-town thrift", "Reseller route"],
+  note: "About a 40-minute drive from Hot Springs depending on starting point. Verify current hours before heading over.",
+},
+{
+  name: "Happy Gray Resale",
+  category: "thrift",
+  label: "Resale Shop • Worth the Drive • Clean Stop",
+  address: "Benton, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A resale stop off I-30 in Benton that local thrift shoppers mention as clean, fairly priced, and worth considering if you are already making a wider shopping loop.",
+  bestFor: ["Worth the drive", "Resale shopping", "Clean store", "Budget finds"],
+  note: "This is outside Hot Springs, so it fits best as a worth-the-drive nearby resale stop.",
+},
+{
+  name: "Goodwill Bryant",
+  category: "thrift",
+  label: "Thrift Store • Large Goodwill • Worth the Drive",
+  address: "5914 Hwy 5, Bryant, AR",
+  image: "/images/shopping/thrift-stores-hero.png",
+  description:
+    "A large Goodwill location in Bryant that local thrift shoppers mention as a bigger store and a stronger stop than the Benton location.",
+  bestFor: ["Worth the drive", "Large thrift store", "Clothing", "Household goods"],
+  note: "Outside Hot Springs, but useful for serious thrifters and resellers building a wider Arkansas thrift route.",
+},
 ];
 
 export const hubFeaturedPlaces = shoppingPlaces.filter(

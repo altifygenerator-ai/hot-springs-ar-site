@@ -12,7 +12,7 @@ import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 import LocalSpotsPreview from "@/components/home/LocalSpotsPreview";
 import RecentUpdates from "@/components/home/RecentUpdates";
 import ArticlesPreview from "@/components/home/ArticlesPreview";
-
+import FourthOfJulyFeature from "@/components/home/FourthOfJulyFeature";
 export default function HomePage() {
   return (
     <main>
@@ -29,9 +29,11 @@ export default function HomePage() {
 
       <RecentUpdates />
 
-      <HomeEventsPreview />
+<HomeEventsPreview />
 
-      <CategoryGrid />
+<FourthOfJulyFeature />
+
+<CategoryGrid />
 
       <LocalSpotsPreview />
 

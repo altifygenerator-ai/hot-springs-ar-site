@@ -37,6 +37,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily" as const,
     },
     {
+      path: "/hot-springs-fourth-of-july",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+    {
       path: "/submit-event",
       priority: 0.6,
       changeFrequency: "monthly" as const,
@@ -153,6 +158,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       path: "/bathhouse-row",
       priority: 0.9,
       changeFrequency: "monthly" as const,
+    },
+    {
+      path: "/hot-springs-spas-wellness",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
     },
     {
       path: "/things-to-do-near-bathhouse-row",

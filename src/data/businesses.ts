@@ -88,7 +88,21 @@ export const businesses: Business[] = [
   /* =======================
      SPAS & BATHHOUSES
   ======================= */
-
+{
+  name: "Spa City Aesthetics",
+  category: "Spa & Bathhouse",
+  type: "Aesthetics • Skin Health • Body Sculpting • Wellness",
+  description:
+    "A modern Hot Springs aesthetics studio offering personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic therapy, hair restoration, and non-invasive skin health services.",
+ image: "/images/businesses/bathhouse-row.webp",
+  phone: "501-443-3883",
+  address: "998 Shady Grove Rd. Suite B, Hot Springs, AR 71901",
+  website: "https://spacityaesthetics.com/",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Spa+City+Aesthetics+998+Shady+Grove+Rd+Suite+B+Hot+Springs+AR+71901",
+  href: "/spa-city-aesthetics-hot-springs",
+  featured: true,
+},
   {
     name: "Quapaw Baths & Spa",
     category: "Spa & Bathhouse",

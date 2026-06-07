@@ -134,7 +134,7 @@ const faqs = [
 ];
 
 function getBusinessHref(business: (typeof businesses)[number]) {
-  return business.website ?? business.directions ?? business.href ?? "#";
+  return business.href ?? business.website ?? business.directions ?? "#";
 }
 
 function BusinessCard({

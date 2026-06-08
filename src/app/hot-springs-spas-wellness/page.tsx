@@ -31,10 +31,10 @@ const hero = {
 const featuredBusiness = {
   name: "Spa City Aesthetics",
   label: "Featured Aesthetics Studio",
-  type: "Regenerative Skin • Body Sculpting • Facial Analysis • Wellness",
+  type: "Regenerative Skin • Facial Analysis • Body Sculpting • Wellness",
   description:
-    "A modern Hot Springs aesthetics studio offering personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic support, hair and scalp restoration, and non-invasive skin health services.",
-  image: "/images/businesses/bathhouse-row.webp",
+    "A modern Hot Springs aesthetics studio offering personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic support, hair and scalp restoration, and non-invasive skin health services shaped by Amy Jo Stader’s study in South Korea.",
+  image: "/images/businesses/spa-city-aesthetics/spa-city-aesthetics-1.png",
   href: "/spa-city-aesthetics-hot-springs",
   website: "https://spacityaesthetics.com/",
   phone: "501-443-3883",
@@ -254,121 +254,188 @@ export default function HotSpringsSpasWellnessPage() {
         </div>
       </section>
 
-      <section id="featured" className="section">
-        <div className="container">
-          <div className="section-heading">
-            <p className="hero-eyebrow">Featured Partner</p>
+   <section id="featured" className="section">
+  <div className="container">
+    <div className="section-heading">
+      <p className="hero-eyebrow">Featured Partner</p>
 
-            <h2>Featured Hot Springs wellness business</h2>
+      <h2>Featured Hot Springs aesthetics and wellness business</h2>
 
-            <p>
-              This featured placement highlights a local business offering a
-              more specialized wellness or aesthetic experience in the Hot
-              Springs area.
-            </p>
+      <p>
+        A closer look at a local Hot Springs business offering personalized
+        skin health, regenerative aesthetics, body sculpting, and
+        consultation-first care.
+      </p>
+    </div>
+
+    <article
+      className="overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-[var(--shadow)]"
+      style={{ borderColor: "var(--border)" }}
+    >
+      <div className="grid lg:grid-cols-[0.95fr_1.05fr]">
+        <Link
+          href={featuredBusiness.href}
+          className="group relative block min-h-[360px] overflow-hidden bg-[color:var(--surface-strong)] lg:min-h-[620px]"
+        >
+          <Image
+            src={featuredBusiness.image}
+            alt={`${featuredBusiness.name} in Hot Springs Arkansas`}
+            fill
+            sizes="(max-width: 900px) 100vw, 50vw"
+            className="object-cover transition duration-700 group-hover:scale-105"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/62 via-black/12 to-transparent" />
+
+          <div className="absolute left-5 top-5 rounded-full bg-black/72 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white backdrop-blur">
+            Featured Wellness Business
           </div>
 
-          <article
-            className="overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-[var(--shadow)]"
-            style={{ borderColor: "var(--border)" }}
+          <div className="absolute bottom-5 left-5 right-5">
+            <p className="max-w-md text-sm font-bold uppercase tracking-[0.18em] text-white/75">
+              Spa City Aesthetics
+            </p>
+            <p className="mt-2 max-w-md text-2xl font-semibold leading-tight text-white">
+              Regenerative skin, body, and aesthetics care in Hot Springs.
+            </p>
+          </div>
+        </Link>
+
+        <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
+          <p
+            className="mb-3 text-sm font-black uppercase tracking-[0.22em]"
+            style={{ color: "var(--accent-dark)" }}
           >
-            <div className="grid lg:grid-cols-[0.95fr_1.05fr]">
-              <Link
-                href={featuredBusiness.href}
-                className="group relative block min-h-[360px] overflow-hidden lg:min-h-[620px]"
+            {featuredBusiness.label}
+          </p>
+
+          <h2 className="text-4xl font-semibold leading-tight md:text-6xl">
+            {featuredBusiness.name}
+          </h2>
+
+          <p
+            className="mt-4 text-sm font-black uppercase tracking-[0.14em]"
+            style={{ color: "var(--accent-dark)" }}
+          >
+            {featuredBusiness.type}
+          </p>
+
+          <p className="mt-5 text-lg leading-8">
+            {featuredBusiness.description}
+          </p>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div
+              className="rounded-2xl border bg-white/55 p-4"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text)",
+              }}
+            >
+              <p
+                className="text-xs font-black uppercase tracking-[0.16em]"
+                style={{ color: "var(--accent-dark)" }}
               >
-                <Image
-                  src={featuredBusiness.image}
-                  alt={featuredBusiness.name}
-                  fill
-                  sizes="(max-width: 900px) 100vw, 50vw"
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/58 via-black/12 to-transparent" />
-
-                <div className="absolute left-5 top-5 rounded-full bg-black/72 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white backdrop-blur">
-                  Featured
-                </div>
-              </Link>
-
-              <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
-                <p
-                  className="mb-3 text-sm font-black uppercase tracking-[0.22em]"
-                  style={{ color: "var(--accent-dark)" }}
-                >
-                  {featuredBusiness.label}
-                </p>
-
-                <h2 className="text-4xl font-semibold leading-tight md:text-6xl">
-                  {featuredBusiness.name}
-                </h2>
-
-                <p
-                  className="mt-4 text-sm font-black uppercase tracking-[0.14em]"
-                  style={{ color: "var(--accent-dark)" }}
-                >
-                  {featuredBusiness.type}
-                </p>
-
-                <p className="mt-5 text-lg leading-8">
-                  {featuredBusiness.description}
-                </p>
-
-                <div className="mt-6 grid gap-3 text-sm font-bold sm:grid-cols-2">
-                  <p
-                    className="rounded-2xl border bg-white/55 p-4"
-                    style={{
-                      borderColor: "var(--border)",
-                      color: "var(--text)",
-                    }}
-                  >
-                    {featuredBusiness.address}
-                  </p>
-
-                  <a
-                    href={featuredBusiness.phoneHref}
-                    className="rounded-2xl border bg-white/55 p-4 transition hover:-translate-y-0.5"
-                    style={{
-                      borderColor: "var(--border)",
-                      color: "var(--text)",
-                    }}
-                  >
-                    Call {featuredBusiness.phone}
-                  </a>
-                </div>
-
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Link
-                    href={featuredBusiness.href}
-                    className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-black transition hover:-translate-y-0.5"
-                    style={{
-                      background: "var(--accent-dark)",
-                      color: "#ffffff",
-                    }}
-                  >
-                    Read the Spotlight
-                  </Link>
-
-                  <a
-                    href={featuredBusiness.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-bold transition hover:-translate-y-0.5"
-                    style={{
-                      borderColor: "var(--border)",
-                      background: "#ffffff",
-                      color: "var(--green)",
-                    }}
-                  >
-                    Visit Website
-                  </a>
-                </div>
-              </div>
+                Location
+              </p>
+              <p className="mt-2 text-sm font-semibold">
+                {featuredBusiness.address}
+              </p>
             </div>
-          </article>
+
+            <a
+              href={featuredBusiness.phoneHref}
+              className="rounded-2xl border bg-white/55 p-4 transition hover:-translate-y-0.5 hover:shadow-md"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text)",
+              }}
+            >
+              <p
+                className="text-xs font-black uppercase tracking-[0.16em]"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                Call
+              </p>
+              <p className="mt-2 text-sm font-semibold">
+                {featuredBusiness.phone}
+              </p>
+            </a>
+          </div>
+
+          <div className="mt-7 grid gap-3 sm:grid-cols-2">
+            <div
+              className="rounded-2xl border bg-white/55 p-4 text-sm font-semibold"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text)",
+              }}
+            >
+              Personalized facial analysis
+            </div>
+
+            <div
+              className="rounded-2xl border bg-white/55 p-4 text-sm font-semibold"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text)",
+              }}
+            >
+              Amy Jo Stader studied in South Korea
+            </div>
+
+            <div
+              className="rounded-2xl border bg-white/55 p-4 text-sm font-semibold"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text)",
+              }}
+            >
+              Regenerative skin treatments
+            </div>
+
+            <div
+              className="rounded-2xl border bg-white/55 p-4 text-sm font-semibold"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text)",
+              }}
+            >
+              Body sculpting and lymphatic support
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href={featuredBusiness.href}
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-black transition hover:-translate-y-0.5"
+              style={{
+                background: "var(--accent-dark)",
+                color: "#ffffff",
+              }}
+            >
+              Read the Spotlight
+            </Link>
+
+            <a
+              href={featuredBusiness.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-bold transition hover:-translate-y-0.5"
+              style={{
+                borderColor: "var(--border)",
+                background: "#ffffff",
+                color: "var(--green)",
+              }}
+            >
+              Visit Website
+            </a>
+          </div>
         </div>
-      </section>
+      </div>
+    </article>
+  </div>
+</section>
 
       <section id="spa-guide" className="section bg-white/35">
         <div className="container">

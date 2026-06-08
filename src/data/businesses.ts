@@ -93,8 +93,8 @@ export const businesses: Business[] = [
   category: "Spa & Bathhouse",
   type: "Aesthetics • Skin Health • Body Sculpting • Wellness",
   description:
-    "A modern Hot Springs aesthetics studio offering personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic therapy, hair restoration, and non-invasive skin health services.",
- image: "/images/businesses/bathhouse-row.webp",
+    "A modern Hot Springs aesthetics studio offering personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic therapy, hair restoration, and non-invasive skin health services shaped by Amy Jo Stader’s study in South Korea.",
+  image: "/images/businesses/spa-city-aesthetics/spa-city-aesthetics-1.png",
   phone: "501-443-3883",
   address: "998 Shady Grove Rd. Suite B, Hot Springs, AR 71901",
   website: "https://spacityaesthetics.com/",

@@ -2,22 +2,22 @@ import Link from "next/link";
 
 const updates = [
   {
+    label: "Featured business",
+    title: "Spa City Aesthetics Spotlight",
+    text: "A new featured business spotlight has been added for Spa City Aesthetics, a Hot Springs aesthetics studio focused on personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic support, hair and scalp care, and skin longevity.",
+    href: "/spa-city-aesthetics-hot-springs",
+  },
+  {
+    label: "New wellness guide",
+    title: "Spas & Wellness in Hot Springs",
+    text: "The Hot Springs spa and wellness guide has been updated with historic bathhouses, thermal baths, resort spa options, modern aesthetics, skin care, body sculpting, and relaxing ways to plan a wellness-focused visit.",
+    href: "/hot-springs-spas-wellness",
+  },
+  {
     label: "Seasonal guide",
     title: "Fourth of July in Hot Springs",
-    text: "A new seasonal guide has been added for July 4 in Hot Springs, including verified fireworks, downtown events, Lake Hamilton tips, Magic Springs, the farmers market, and ways to plan the holiday around town.",
+    text: "A seasonal guide has been added for July 4 in Hot Springs, including verified fireworks, downtown events, Lake Hamilton tips, Magic Springs, the farmers market, and ways to plan the holiday around town.",
     href: "/hot-springs-fourth-of-july",
-  },
-  {
-    label: "New history article",
-    title: "History of Hot Springs Gambling Museum",
-    text: "A new Hot Springs history feature has been added covering the city’s gambling era, restored slot machines, casino rooms, 1967 raids, and why this small museum preserves an important side of Spa City history.",
-    href: "/articles/history-of-hot-springs-gambling-museum",
-  },
-  {
-    label: "New shopping guide",
-    title: "Antique, Thrift & Flea Markets",
-    text: "A new Hot Springs shopping guide has been added for antique stores, thrift shops, flea markets, vendor malls, vintage finds, resale shops, and local places worth wandering through.",
-    href: "/hot-springs-antique-thrift-flea-markets",
   },
 ];
 
@@ -34,18 +34,21 @@ export default function RecentUpdates() {
             <p>
               The Hot Springs guide is growing with more local events, seasonal
               guides, helpful visitor pages, shopping guides, business listings,
-              history articles, family-friendly ideas, and places worth checking
-              out around town.
+              history articles, family-friendly ideas, wellness stops, and
+              places worth checking out around town.
             </p>
           </div>
 
           <div className="home-events-actions">
-            <Link href="/hot-springs-fourth-of-july" className="btn-primary">
-              Fourth of July Guide
+            <Link
+              href="/spa-city-aesthetics-hot-springs"
+              className="btn-primary"
+            >
+              Spa City Spotlight
             </Link>
 
-            <Link href="/this-weekend" className="btn-secondary">
-              This Weekend
+            <Link href="/hot-springs-spas-wellness" className="btn-secondary">
+              Spas & Wellness
             </Link>
           </div>
         </div>

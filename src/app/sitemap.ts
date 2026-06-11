@@ -25,6 +25,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
       changeFrequency: "monthly" as const,
     },
+    {
+      path: "/articles/history-of-hot-springs-gambling-museum",
+      priority: 0.84,
+      changeFrequency: "monthly" as const,
+    },
 
     {
       path: "/events",
@@ -163,6 +168,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       path: "/hot-springs-spas-wellness",
       priority: 0.86,
       changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/spa-city-aesthetics-hot-springs",
+      priority: 0.82,
+      changeFrequency: "monthly" as const,
     },
     {
       path: "/things-to-do-near-bathhouse-row",

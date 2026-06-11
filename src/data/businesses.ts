@@ -90,6 +90,21 @@ export const businesses: Business[] = [
   ======================= */
 
   {
+    name: "Spa City Aesthetics",
+    category: "Spa & Bathhouse",
+    type: "Aesthetics • Skin Health • Body Sculpting • Wellness",
+    description:
+      "A modern Hot Springs aesthetics studio offering personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic therapy, hair restoration, and non-invasive skin health services shaped by Amy Jo Stader’s study in South Korea.",
+    image: "/images/businesses/spa-city-aesthetics/spa-city-aesthetics-1.png",
+    phone: "501-443-3883",
+    address: "998 Shady Grove Rd. Suite B, Hot Springs, AR 71901",
+    website: "https://spacityaesthetics.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Spa+City+Aesthetics+998+Shady+Grove+Rd+Suite+B+Hot+Springs+AR+71901",
+    href: "/spa-city-aesthetics-hot-springs",
+    featured: true,
+  },
+  {
     name: "Quapaw Baths & Spa",
     category: "Spa & Bathhouse",
     type: "Thermal Bathhouse • Spa • Bathhouse Row",
@@ -341,34 +356,35 @@ export const businesses: Business[] = [
       "https://www.google.com/maps/search/?api=1&query=The+Reserve+at+Hot+Springs+2330+Central+Ave+Hot+Springs+AR",
     href: "/hot-springs-ar-hotels",
   },
-{
-  name: "Tiffany's Bed and Breakfast",
-  category: "Hotel",
-  type: "Bed & Breakfast • Quiet Stay • Near Hot Springs & DeGray Lake",
-  description:
-    "A peaceful bed and breakfast on 60 private acres near Hot Springs and DeGray Lake, offering a quieter hosted stay outside the busier downtown area.",
-  image: "/images/businesses/tiffanys-bed-and-breakfast.webp",
-  phone: "501-865-6060",
-  address: "1632 Hwy 347, Bismarck, AR 71929",
-  website: "https://www.tiffanysbedandbreakfast.com/",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Tiffanys+Bed+and+Breakfast+1632+Hwy+347+Bismarck+AR+71929",
-  href: "/hot-springs-ar-hotels",
-},
-{
-  name: "1890 Williams House Bed & Breakfast",
-  category: "Hotel",
-  type: "Historic Bed & Breakfast • Downtown Hot Springs",
-  description:
-    "A historic Hot Springs bed and breakfast on Quapaw Avenue, located close to downtown, Bathhouse Row, restaurants, galleries, spas, and Oaklawn.",
-  image: "/images/businesses/1890-williams-house.webp",
-  phone: "501-624-4275",
-  address: "420 Quapaw Ave, Hot Springs, AR 71901",
-  website: "https://1890williamshouse.com/",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=1890+Williams+House+420+Quapaw+Ave+Hot+Springs+AR+71901",
-  href: "/hot-springs-ar-hotels",
-},
+  {
+    name: "Tiffany's Bed and Breakfast",
+    category: "Hotel",
+    type: "Bed & Breakfast • Quiet Stay • Near Hot Springs & DeGray Lake",
+    description:
+      "A peaceful bed and breakfast on 60 private acres near Hot Springs and DeGray Lake, offering a quieter hosted stay outside the busier downtown area.",
+    image: "/images/businesses/tiffanys-bed-and-breakfast.webp",
+    phone: "501-865-6060",
+    address: "1632 Hwy 347, Bismarck, AR 71929",
+    website: "https://www.tiffanysbedandbreakfast.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Tiffanys+Bed+and+Breakfast+1632+Hwy+347+Bismarck+AR+71929",
+    href: "/hot-springs-ar-hotels",
+  },
+  {
+    name: "1890 Williams House Bed & Breakfast",
+    category: "Hotel",
+    type: "Historic Bed & Breakfast • Downtown Hot Springs",
+    description:
+      "A historic Hot Springs bed and breakfast on Quapaw Avenue, located close to downtown, Bathhouse Row, restaurants, galleries, spas, and Oaklawn.",
+    image: "/images/businesses/1890-williams-house.webp",
+    phone: "501-624-4275",
+    address: "420 Quapaw Ave, Hot Springs, AR 71901",
+    website: "https://1890williamshouse.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=1890+Williams+House+420+Quapaw+Ave+Hot+Springs+AR+71901",
+    href: "/hot-springs-ar-hotels",
+  },
+
   /* =======================
      CABINS / RESORTS
   ======================= */
@@ -416,49 +432,48 @@ export const businesses: Business[] = [
     href: "/hot-springs-ar-cabins",
     featured: true,
   },
-  
-{
-  name: "Lone Cedar Cabins",
-  category: "Cabins & Lodging",
-  type: "Secluded Cabins • Ouachita Foothills • Near DeGray Lake",
-  description:
-    "A quiet cabin getaway on secluded acreage near DeGray Lake and Hot Springs National Park, with rustic lodging, fireplaces, covered porches, and a peaceful outdoor setting.",
-  image: "/images/businesses/lone-cedar-cabins.jpeg",
-  phone: "501-865-6782",
-  address: "1873 Lone Cedar Cabins Rd, Bismarck, AR 71929",
-  website: "https://www.lonecedarcabins.com/",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Lone+Cedar+Cabins+1873+Lone+Cedar+Cabins+Rd+Bismarck+AR+71929",
-  href: "/hot-springs-ar-cabins",
-},
-{
-  name: "Five Points Lake Hamilton",
-  category: "Cabins & Lodging",
-  type: "Lake Hamilton Cabins • Wooded Lake Stay",
-  description:
-    "A Lake Hamilton cabin property on wooded acreage near Hot Springs, with cabins spread across a hillside sloping toward the lake and convenient access to the city.",
-  image: "/images/businesses/five-points-lake-hamilton.jpg",
-  phone: "501-525-1622",
-  address: "155 Five Points Circle, Hot Springs, AR 71913",
-  website: "https://fivepointslakehamilton.com/",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Five+Points+Lake+Hamilton+155+Five+Points+Circle+Hot+Springs+AR+71913",
-  href: "/lake-hamilton-cabins",
-},
-{
-  name: "Hot Springs Camper Rentals",
-  category: "Cabins & Lodging",
-  type: "Camper Rentals • Delivery & Setup • Family-Friendly",
-  description:
-    "A Hot Springs camper rental service offering clean, cozy campers with delivery and setup for visitors wanting a camping-style stay without hauling their own RV.",
-  image: "/images/businesses/hot-springs-camper-rentals.png",
-  phone: "501-226-7560",
-  address: "Hot Springs, AR",
-  website: "https://hotspringscamperrentals.com/",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Hot+Springs+Camper+Rentals+Hot+Springs+AR",
-  href: "/hot-springs-ar-cabins",
-},
+  {
+    name: "Lone Cedar Cabins",
+    category: "Cabins & Lodging",
+    type: "Secluded Cabins • Ouachita Foothills • Near DeGray Lake",
+    description:
+      "A quiet cabin getaway on secluded acreage near DeGray Lake and Hot Springs National Park, with rustic lodging, fireplaces, covered porches, and a peaceful outdoor setting.",
+    image: "/images/businesses/lone-cedar-cabins.jpeg",
+    phone: "501-865-6782",
+    address: "1873 Lone Cedar Cabins Rd, Bismarck, AR 71929",
+    website: "https://www.lonecedarcabins.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Lone+Cedar+Cabins+1873+Lone+Cedar+Cabins+Rd+Bismarck+AR+71929",
+    href: "/hot-springs-ar-cabins",
+  },
+  {
+    name: "Five Points Lake Hamilton",
+    category: "Cabins & Lodging",
+    type: "Lake Hamilton Cabins • Wooded Lake Stay",
+    description:
+      "A Lake Hamilton cabin property on wooded acreage near Hot Springs, with cabins spread across a hillside sloping toward the lake and convenient access to the city.",
+    image: "/images/businesses/five-points-lake-hamilton.jpg",
+    phone: "501-525-1622",
+    address: "155 Five Points Circle, Hot Springs, AR 71913",
+    website: "https://fivepointslakehamilton.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Five+Points+Lake+Hamilton+155+Five+Points+Circle+Hot+Springs+AR+71913",
+    href: "/lake-hamilton-cabins",
+  },
+  {
+    name: "Hot Springs Camper Rentals",
+    category: "Cabins & Lodging",
+    type: "Camper Rentals • Delivery & Setup • Family-Friendly",
+    description:
+      "A Hot Springs camper rental service offering clean, cozy campers with delivery and setup for visitors wanting a camping-style stay without hauling their own RV.",
+    image: "/images/businesses/hot-springs-camper-rentals.png",
+    phone: "501-226-7560",
+    address: "Hot Springs, AR",
+    website: "https://hotspringscamperrentals.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Hot+Springs+Camper+Rentals+Hot+Springs+AR",
+    href: "/hot-springs-ar-cabins",
+  },
 
   /* =======================
      OUTDOOR / FAMILY ATTRACTIONS
@@ -552,111 +567,111 @@ export const businesses: Business[] = [
     href: "/hot-springs-ar-restaurants",
   },
   {
-  name: "Safe Harbor Brady Mountain",
-  category: "Outdoor Recreation",
-  type: "Lake Ouachita • Marina • Outdoor Recreation",
-  description:
-    "A Lake Ouachita marina and recreation stop near Hot Springs, useful for visitors planning a lake day, boating trip, or time around the Brady Mountain area.",
-  image: "/images/businesses/safe-harbor-brady-mountain.jpg",
-  address: "Brady Mountain, Royal, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Safe+Harbor+Brady+Mountain+Royal+AR",
-  href: "/things-to-do-in-hot-springs-ar",
-},
-{
-  name: "Brady Mountain Grill",
-  category: "Restaurant",
-  type: "Lake Dining • Grill • Casual Food",
-  description:
-    "A casual lake-area grill near Brady Mountain and Lake Ouachita, useful for visitors looking for food before or after a day on the water.",
-  image: "/images/businesses/brady-mountain-grill.jpg",
-  address: "Brady Mountain, Royal, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Brady+Mountain+Grill+Royal+AR",
-  href: "/hot-springs-ar-restaurants",
-},
-{
-  name: "Sno-A-Lattes",
-  category: "Restaurant",
-  type: "Coffee • Sno Cones • Drinks • Sweet Treats",
-  description:
-    "A casual Hot Springs stop for coffee, lattes, sno cones, cold drinks, and easy sweet treats.",
-  image: "/images/businesses/sno-a-lattes.jpg",
-  address: "Hot Springs, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Sno-A-Lattes+Hot+Springs+AR",
-  href: "/hot-springs-ar-restaurants",
-},
-{
-  name: "421 Beer Garden",
-  category: "Restaurant",
-  type: "Beer Garden • Patio • Live Music • Pet Friendly",
-  description:
-    "A relaxed Hot Springs beer garden with food, drinks, games, live music on weekends, and a pet-friendly patio atmosphere.",
-  image: "/images/businesses/421-beer-garden.jpg",
-  address: "Hot Springs, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=421+Beer+Garden+Hot+Springs+AR",
-  href: "/hot-springs-ar-restaurants",
-},
-{
-  name: "Greg's Rise and Dine Cafe",
-  category: "Restaurant",
-  type: "Breakfast • Lunch • Family Owned Cafe",
-  description:
-    "A family-owned Hot Springs cafe with an affordable breakfast and lunch menu, good for a simple local meal away from the bigger tourist stops.",
-  image: "/images/businesses/gregs-rise-and-dine.jpg",
-  address: "Hot Springs, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Gregs+Rise+and+Dine+Cafe+Hot+Springs+AR",
-  href: "/hot-springs-ar-restaurants",
-},
-{
-  name: "Pupusas Mi Chalateca",
-  category: "Restaurant",
-  type: "Salvadoran Food • Pupusas • Casual Dining",
-  description:
-    "A Salvadoran food stop in Hot Springs known for pupusas and casual Latin American dishes, adding more variety to the local food scene.",
-  image: "/images/businesses/pupusas-mi-chalateca.jpg",
-  address: "Hot Springs, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Pupusas+Mi+Chalateca+Hot+Springs+AR",
-  href: "/hot-springs-ar-restaurants",
-},
-{
-  name: "Via Roma",
-  category: "Restaurant",
-  type: "Italian • Dinner • Sit-Down Dining",
-  description:
-    "An Italian restaurant option in Hot Springs for visitors looking for pasta, dinner, and a more classic sit-down meal.",
-  image: "/images/businesses/via-roma.jpg",
-  address: "Hot Springs, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Via+Roma+Hot+Springs+AR",
-  href: "/hot-springs-ar-restaurants",
-},
-{
-  name: "Lost Creek Grill",
-  category: "Restaurant",
-  type: "American Food • Grill • Casual Dining",
-  description:
-    "A casual grill-style restaurant around Hot Springs, useful for visitors looking for American food, a relaxed meal, and local dining outside the most obvious tourist stops.",
-  image: "/images/businesses/lost-creek-grill.jpg",
-  address: "Hot Springs, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Lost+Creek+Grill+Hot+Springs+AR",
-  href: "/hot-springs-ar-restaurants",
-},
-{
-  name: "The Local",
-  category: "Restaurant",
-  type: "Local Dining • Casual Food",
-  description:
-    "A local Hot Springs dining option for casual meals and visitor-friendly food once you want to look beyond the most familiar restaurant names.",
-  image: "/images/businesses/the-local.jpg",
-  address: "Hot Springs, AR",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=The+Local+Hot+Springs+AR",
-  href: "/hot-springs-ar-restaurants",
-},
+    name: "Safe Harbor Brady Mountain",
+    category: "Outdoor Recreation",
+    type: "Lake Ouachita • Marina • Outdoor Recreation",
+    description:
+      "A Lake Ouachita marina and recreation stop near Hot Springs, useful for visitors planning a lake day, boating trip, or time around the Brady Mountain area.",
+    image: "/images/businesses/safe-harbor-brady-mountain.jpg",
+    address: "Brady Mountain, Royal, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Safe+Harbor+Brady+Mountain+Royal+AR",
+    href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    name: "Brady Mountain Grill",
+    category: "Restaurant",
+    type: "Lake Dining • Grill • Casual Food",
+    description:
+      "A casual lake-area grill near Brady Mountain and Lake Ouachita, useful for visitors looking for food before or after a day on the water.",
+    image: "/images/businesses/brady-mountain-grill.jpg",
+    address: "Brady Mountain, Royal, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Brady+Mountain+Grill+Royal+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Sno-A-Lattes",
+    category: "Restaurant",
+    type: "Coffee • Sno Cones • Drinks • Sweet Treats",
+    description:
+      "A casual Hot Springs stop for coffee, lattes, sno cones, cold drinks, and easy sweet treats.",
+    image: "/images/businesses/sno-a-lattes.jpg",
+    address: "Hot Springs, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Sno-A-Lattes+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "421 Beer Garden",
+    category: "Restaurant",
+    type: "Beer Garden • Patio • Live Music • Pet Friendly",
+    description:
+      "A relaxed Hot Springs beer garden with food, drinks, games, live music on weekends, and a pet-friendly patio atmosphere.",
+    image: "/images/businesses/421-beer-garden.jpg",
+    address: "Hot Springs, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=421+Beer+Garden+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Greg's Rise and Dine Cafe",
+    category: "Restaurant",
+    type: "Breakfast • Lunch • Family Owned Cafe",
+    description:
+      "A family-owned Hot Springs cafe with an affordable breakfast and lunch menu, good for a simple local meal away from the bigger tourist stops.",
+    image: "/images/businesses/gregs-rise-and-dine.jpg",
+    address: "Hot Springs, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Gregs+Rise+and+Dine+Cafe+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Pupusas Mi Chalateca",
+    category: "Restaurant",
+    type: "Salvadoran Food • Pupusas • Casual Dining",
+    description:
+      "A Salvadoran food stop in Hot Springs known for pupusas and casual Latin American dishes, adding more variety to the local food scene.",
+    image: "/images/businesses/pupusas-mi-chalateca.jpg",
+    address: "Hot Springs, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Pupusas+Mi+Chalateca+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Via Roma",
+    category: "Restaurant",
+    type: "Italian • Dinner • Sit-Down Dining",
+    description:
+      "An Italian restaurant option in Hot Springs for visitors looking for pasta, dinner, and a more classic sit-down meal.",
+    image: "/images/businesses/via-roma.jpg",
+    address: "Hot Springs, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Via+Roma+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Lost Creek Grill",
+    category: "Restaurant",
+    type: "American Food • Grill • Casual Dining",
+    description:
+      "A casual grill-style restaurant around Hot Springs, useful for visitors looking for American food, a relaxed meal, and local dining outside the most obvious tourist stops.",
+    image: "/images/businesses/lost-creek-grill.jpg",
+    address: "Hot Springs, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Lost+Creek+Grill+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "The Local",
+    category: "Restaurant",
+    type: "Local Dining • Casual Food",
+    description:
+      "A local Hot Springs dining option for casual meals and visitor-friendly food once you want to look beyond the most familiar restaurant names.",
+    image: "/images/businesses/the-local.jpg",
+    address: "Hot Springs, AR",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=The+Local+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
 ];

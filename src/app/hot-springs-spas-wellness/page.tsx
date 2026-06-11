@@ -4,19 +4,21 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Spas, Wellness & Bathhouses in Hot Springs, Arkansas | Thermal Baths, Resort Spas & Relaxation",
+    "Spas, Wellness & Aesthetic Care in Hot Springs, Arkansas | Bathhouses, Facials, Skin Care & Relaxation",
   description:
-    "Explore spas, wellness stops, historic bathhouses, thermal baths, resort spas, massage, facials, salon services, and relaxing experiences in Hot Springs, Arkansas.",
+    "Explore spas, wellness stops, bathhouses, aesthetic care, facials, skin health, body sculpting, thermal baths, resort spas, massage, salon services, and relaxing experiences in Hot Springs, Arkansas.",
   keywords: [
     "Hot Springs Arkansas spas",
     "spas in Hot Springs AR",
     "Hot Springs wellness",
-    "Hot Springs bathhouses",
-    "Hot Springs thermal baths",
-    "Hot Springs massage",
+    "Hot Springs aesthetics",
     "Hot Springs facials",
+    "Hot Springs bathhouses",
+    "Hot Springs skin care",
+    "Hot Springs body sculpting",
+    "Hot Springs Arkansas massage",
+    "Hot Springs thermal baths",
     "Hot Springs resort spa",
-    "Bathhouse Row spas",
     "Hot Springs Arkansas spa guide",
   ],
   alternates: {
@@ -26,6 +28,20 @@ export const metadata: Metadata = {
 
 const hero = {
   image: "/images/businesses/bathhouse-row.webp",
+};
+
+const featuredBusiness = {
+  name: "Spa City Aesthetics",
+  label: "Featured Aesthetics Studio",
+  type: "Regenerative Skin • Facial Analysis • Body Sculpting • Wellness",
+  description:
+    "A modern Hot Springs aesthetics studio offering personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic support, hair and scalp restoration, and non-invasive skin health services shaped by Amy Jo Stader’s study in South Korea.",
+  image: "/images/businesses/spa-city-aesthetics/spa-city-aesthetics-1.png",
+  href: "/spa-city-aesthetics-hot-springs",
+  website: "https://spacityaesthetics.com/",
+  phone: "501-443-3883",
+  phoneHref: "tel:5014433883",
+  address: "998 Shady Grove Rd. Suite B, Hot Springs, AR 71901",
 };
 
 const spaBusinesses = [
@@ -38,7 +54,6 @@ const spaBusinesses = [
     href: "https://www.quapawbaths.com/",
     phone: "501-609-9822",
     address: "413 Central Ave, Hot Springs, AR 71901",
-    featured: true,
   },
   {
     name: "Buckstaff Bathhouse",
@@ -49,7 +64,6 @@ const spaBusinesses = [
     href: "https://www.buckstaffbaths.com/",
     phone: "501-623-2308",
     address: "509 Central Ave, Hot Springs, AR 71901",
-    featured: true,
   },
   {
     name: "Astral Spa at Oaklawn",
@@ -60,7 +74,6 @@ const spaBusinesses = [
     href: "https://oaklawn.com/resort/spa/",
     phone: "501-363-4670",
     address: "2705 Central Ave, Hot Springs, AR 71901",
-    featured: false,
   },
   {
     name: "The Arlington Resort Salon & Spa",
@@ -71,7 +84,6 @@ const spaBusinesses = [
     href: "https://www.arlingtonhotel.com/pamper-relax/salon-spa",
     phone: "501-623-7771",
     address: "239 Central Ave, Hot Springs, AR 71901",
-    featured: false,
   },
 ];
 
@@ -83,10 +95,10 @@ const guideCards = [
     cta: "Explore Bathhouse Row",
   },
   {
-    title: "Thermal Baths",
-    text: "Buckstaff and Quapaw are two of the best-known stops for visitors looking for a traditional Hot Springs bathing experience.",
-    href: "#spa-guide",
-    cta: "Browse Bathhouses",
+    title: "Modern Aesthetics",
+    text: "Spa City Aesthetics is the featured stop for facial analysis, regenerative skin care, body sculpting, and personalized non-invasive treatments.",
+    href: "/spa-city-aesthetics-hot-springs",
+    cta: "Read Spa City Spotlight",
   },
   {
     title: "Resort Spa Days",
@@ -103,9 +115,9 @@ const faqs = [
       "Yes. Hot Springs has a long wellness and bathing history tied to its thermal water, Bathhouse Row, historic bathhouses, resort spas, and modern wellness businesses.",
   },
   {
-    question: "What is the difference between a bathhouse and a resort spa?",
+    question: "What is the difference between a bathhouse and a modern aesthetics studio?",
     answer:
-      "A bathhouse is usually tied to thermal bathing, soaking, massage, and the historic Hot Springs bathing tradition. A resort spa is usually connected to a hotel or resort and may include massage, facials, salon services, body treatments, and relaxation amenities.",
+      "A bathhouse is usually tied to thermal bathing, soaking, massage, and the historic Hot Springs bathing tradition. A modern aesthetics studio is more focused on services like facial analysis, skin health, body sculpting, regenerative treatments, and non-invasive aesthetic care.",
   },
   {
     question: "Where should I start if I want a traditional Hot Springs bath?",
@@ -113,9 +125,9 @@ const faqs = [
       "Visitors looking for a traditional Hot Springs bathhouse experience usually start with Buckstaff Bathhouse or Quapaw Baths & Spa on Bathhouse Row.",
   },
   {
-    question: "Can I plan a spa day around downtown Hot Springs?",
+    question: "Where should I start for facials, skin care, or body sculpting?",
     answer:
-      "Yes. Bathhouse Row, downtown restaurants, hotels, shops, museums, and national park stops are close together, so it is easy to pair a spa or bathhouse visit with the rest of a Hot Springs day.",
+      "For modern facial analysis, regenerative skin care, body sculpting, lymphatic support, and non-invasive aesthetic treatments, Spa City Aesthetics is featured on this guide.",
   },
 ];
 
@@ -124,9 +136,6 @@ function isExternal(href: string) {
 }
 
 export default function HotSpringsSpasWellnessPage() {
-  const featuredStops = spaBusinesses.filter((place) => place.featured);
-  const otherStops = spaBusinesses.filter((place) => !place.featured);
-
   return (
     <main>
       <script
@@ -136,21 +145,23 @@ export default function HotSpringsSpasWellnessPage() {
             {
               "@context": "https://schema.org",
               "@type": "ItemList",
-              name: "Spas, Wellness and Bathhouses in Hot Springs, Arkansas",
+              name: "Spas, Wellness and Aesthetic Care in Hot Springs, Arkansas",
               description:
-                "A local guide to spas, bathhouses, wellness businesses, thermal baths, resort spas, massage, facials, salon services, and relaxation in Hot Springs, Arkansas.",
-              itemListElement: spaBusinesses.map((place, index) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                item: {
-                  "@type": "HealthAndBeautyBusiness",
-                  name: place.name,
-                  description: place.description,
-                  telephone: place.phone,
-                  address: place.address,
-                  url: place.href,
-                },
-              })),
+                "A local guide to spas, bathhouses, wellness businesses, aesthetic care, facials, body sculpting, thermal baths, resort spas, massage, salon services, and relaxation in Hot Springs, Arkansas.",
+              itemListElement: [featuredBusiness, ...spaBusinesses].map(
+                (place, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  item: {
+                    "@type": "HealthAndBeautyBusiness",
+                    name: place.name,
+                    description: place.description,
+                    telephone: place.phone,
+                    address: place.address,
+                    url: place.href,
+                  },
+                })
+              ),
             },
             {
               "@context": "https://schema.org",
@@ -171,7 +182,7 @@ export default function HotSpringsSpasWellnessPage() {
       <section className="relative flex min-h-[720px] items-end overflow-hidden bg-[#17251f] pb-16 pt-32">
         <Image
           src={hero.image}
-          alt="Spas, bathhouses, and wellness in Hot Springs Arkansas"
+          alt="Spas, bathhouses, wellness, and aesthetic care in Hot Springs Arkansas"
           fill
           priority
           sizes="100vw"
@@ -184,18 +195,17 @@ export default function HotSpringsSpasWellnessPage() {
         <div className="container relative z-10">
           <div className="max-w-4xl text-white">
             <p className="hero-eyebrow !text-white/72">
-              Spas, Bathhouses & Wellness
+              Spas, Wellness & Aesthetic Care
             </p>
 
             <h1 className="text-white">
-              Relax, reset, and experience the spa side of Hot Springs.
+              Relax, reset, and find the wellness side of Hot Springs.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 !text-white/82">
-              From historic thermal bathhouses to resort spa experiences, Hot
-              Springs has options for soaking, massage, facials, salon services,
-              wellness treatments, and relaxing days built around the city&apos;s
-              famous water.
+              From historic thermal bathhouses to modern aesthetic care, Hot
+              Springs has options for soaking, massage, facials, skin health,
+              body sculpting, resort spas, and wellness-focused visits.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -204,7 +214,7 @@ export default function HotSpringsSpasWellnessPage() {
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-black transition hover:-translate-y-0.5"
                 style={{ color: "var(--green)" }}
               >
-                Start With Featured Stops
+                Featured Wellness Business
               </a>
 
               <a
@@ -219,124 +229,234 @@ export default function HotSpringsSpasWellnessPage() {
       </section>
 
       <section className="section pb-8">
-  <div className="container">
-    <div className="mx-auto mb-10 max-w-3xl text-center">
-      <p className="hero-eyebrow">Choose Your Spa Day</p>
+        <div className="container">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <p className="hero-eyebrow">Choose Your Spa Day</p>
 
-      <h2>Different ways to enjoy the wellness side of Hot Springs.</h2>
+            <h2>Different ways to enjoy the wellness side of Hot Springs.</h2>
 
-      <p className="mt-4 text-lg leading-8">
-        Some visitors come for the historic bathhouse experience, some want a
-        resort spa day, and some just want a relaxing stop while exploring
-        downtown.
-      </p>
-    </div>
+            <p className="mt-4 text-lg leading-8">
+              Some visitors come for the historic bathhouse experience, some
+              want a resort spa day, and some want modern skin, body, and
+              aesthetic care while they are in town.
+            </p>
+          </div>
 
-    <div className="grid gap-5 md:grid-cols-3">
-      {guideCards.map((card) => (
-        <Link
-          href={card.href}
-          key={card.title}
-          className="group rounded-[1.35rem] border bg-[color:var(--surface)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-          style={{ borderColor: "var(--border)" }}
-        >
-          <h3 className="text-2xl font-semibold leading-tight">
-            {card.title}
-          </h3>
+          <div className="grid gap-5 md:grid-cols-3">
+            {guideCards.map((card) => (
+              <Link
+                href={card.href}
+                key={card.title}
+                className="group rounded-[1.35rem] border bg-[color:var(--surface)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <h3 className="text-2xl font-semibold leading-tight">
+                  {card.title}
+                </h3>
 
-          <p className="mt-4 text-base leading-7">{card.text}</p>
+                <p className="mt-4 text-base leading-7">{card.text}</p>
 
-          <span
-            className="mt-5 inline-block text-sm font-black uppercase tracking-[0.12em]"
-            style={{ color: "var(--accent-dark)" }}
-          >
-            {card.cta} →
-          </span>
-        </Link>
-      ))}
-    </div>
-  </div>
-</section>
+                <span
+                  className="mt-5 inline-block text-sm font-black uppercase tracking-[0.12em]"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  {card.cta} →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section id="featured" className="section">
         <div className="container">
           <div className="section-heading">
-            <p className="hero-eyebrow">Featured Spa Stops</p>
+            <p className="hero-eyebrow">Featured Partner</p>
 
-            <h2>Start with two classic Hot Springs spa experiences.</h2>
+            <h2>Featured Hot Springs aesthetics and wellness business</h2>
 
             <p>
-              These stops are tied closely to the Hot Springs bathhouse story,
-              thermal water, downtown walking, and the city&apos;s long history
-              as a wellness destination.
+              A closer look at a local Hot Springs business offering
+              personalized skin health, regenerative aesthetics, body sculpting,
+              and consultation-first care.
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-2">
-            {featuredStops.map((business) => (
-              <article
-                key={business.name}
-                className="group overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-xl"
-                style={{ borderColor: "var(--border)" }}
+          <article
+            className="overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-[var(--shadow)]"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <div className="grid lg:grid-cols-[0.95fr_1.05fr]">
+              <Link
+                href={featuredBusiness.href}
+                className="group relative block min-h-[360px] overflow-hidden bg-[color:var(--surface-strong)] lg:min-h-[620px]"
               >
-                <a
-                  href={business.href}
-                  target={isExternal(business.href) ? "_blank" : undefined}
-                  rel={
-                    isExternal(business.href) ? "noopener noreferrer" : undefined
-                  }
+                <Image
+                  src={featuredBusiness.image}
+                  alt={`${featuredBusiness.name} in Hot Springs Arkansas`}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/62 via-black/12 to-transparent" />
+
+                <div className="absolute left-5 top-5 rounded-full bg-black/72 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white backdrop-blur">
+                  Featured Wellness Business
+                </div>
+
+             <div className="absolute bottom-5 left-5 right-5">
+<div className="absolute bottom-5 left-5 right-5">
+  <p
+    className="max-w-md text-sm font-black uppercase tracking-[0.18em]"
+    style={{ color: "#ffffff" }}
+  >
+    Spa City Aesthetics
+  </p>
+
+  <p
+    className="mt-2 max-w-md text-2xl font-semibold leading-tight"
+    style={{ color: "#ffffff" }}
+  >
+    Regenerative skin, body, and aesthetics care in Hot Springs.
+  </p>
+</div>
+</div>
+              </Link>
+
+              <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
+                <p
+                  className="mb-3 text-sm font-black uppercase tracking-[0.22em]"
+                  style={{ color: "var(--accent-dark)" }}
                 >
-                  <div className="relative h-[360px] overflow-hidden bg-[color:var(--surface-strong)]">
-                    <Image
-                      src={business.image}
-                      alt={business.name}
-                      fill
-                      sizes="(max-width: 900px) 100vw, 50vw"
-                      className="object-cover transition duration-700 group-hover:scale-105"
-                    />
+                  {featuredBusiness.label}
+                </p>
 
-                    <div className="absolute left-5 top-5 rounded-full bg-black/72 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white backdrop-blur">
-                      Featured
-                    </div>
-                  </div>
+                <h2 className="text-4xl font-semibold leading-tight md:text-6xl">
+                  {featuredBusiness.name}
+                </h2>
 
-                  <div className="p-7 md:p-8">
+                <p
+                  className="mt-4 text-sm font-black uppercase tracking-[0.14em]"
+                  style={{ color: "var(--accent-dark)" }}
+                >
+                  {featuredBusiness.type}
+                </p>
+
+                <p className="mt-5 text-lg leading-8">
+                  {featuredBusiness.description}
+                </p>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div
+                    className="rounded-2xl border bg-white/55 p-4"
+                    style={{
+                      borderColor: "var(--border)",
+                      color: "var(--text)",
+                    }}
+                  >
                     <p
-                      className="mb-3 text-xs font-black uppercase tracking-[0.18em]"
+                      className="text-xs font-black uppercase tracking-[0.16em]"
                       style={{ color: "var(--accent-dark)" }}
                     >
-                      {business.type}
+                      Location
                     </p>
-
-                    <h3 className="text-3xl font-semibold leading-tight md:text-4xl">
-                      {business.name}
-                    </h3>
-
-                    <p className="mt-4 text-lg leading-8">
-                      {business.description}
+                    <p className="mt-2 text-sm font-semibold">
+                      {featuredBusiness.address}
                     </p>
-
-                    <div className="mt-5 grid gap-2 text-sm font-semibold">
-                      <span style={{ color: "var(--text)" }}>
-                        {business.address}
-                      </span>
-
-                      <span style={{ color: "var(--accent-dark)" }}>
-                        {business.phone}
-                      </span>
-                    </div>
-
-                    <span
-                      className="mt-6 inline-block font-black"
-                      style={{ color: "var(--accent-dark)" }}
-                    >
-                      View details →
-                    </span>
                   </div>
-                </a>
-              </article>
-            ))}
-          </div>
+
+                  <a
+                    href={featuredBusiness.phoneHref}
+                    className="rounded-2xl border bg-white/55 p-4 transition hover:-translate-y-0.5 hover:shadow-md"
+                    style={{
+                      borderColor: "var(--border)",
+                      color: "var(--text)",
+                    }}
+                  >
+                    <p
+                      className="text-xs font-black uppercase tracking-[0.16em]"
+                      style={{ color: "var(--accent-dark)" }}
+                    >
+                      Call
+                    </p>
+                    <p className="mt-2 text-sm font-semibold">
+                      {featuredBusiness.phone}
+                    </p>
+                  </a>
+                </div>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                  <div
+                    className="rounded-2xl border bg-white/55 p-4 text-sm font-semibold"
+                    style={{
+                      borderColor: "var(--border)",
+                      color: "var(--text)",
+                    }}
+                  >
+                    Personalized facial analysis
+                  </div>
+
+                  <div
+                    className="rounded-2xl border bg-white/55 p-4 text-sm font-semibold"
+                    style={{
+                      borderColor: "var(--border)",
+                      color: "var(--text)",
+                    }}
+                  >
+                    Amy Jo Stader studied in South Korea
+                  </div>
+
+                  <div
+                    className="rounded-2xl border bg-white/55 p-4 text-sm font-semibold"
+                    style={{
+                      borderColor: "var(--border)",
+                      color: "var(--text)",
+                    }}
+                  >
+                    Regenerative skin treatments
+                  </div>
+
+                  <div
+                    className="rounded-2xl border bg-white/55 p-4 text-sm font-semibold"
+                    style={{
+                      borderColor: "var(--border)",
+                      color: "var(--text)",
+                    }}
+                  >
+                    Body sculpting and lymphatic support
+                  </div>
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link
+                    href={featuredBusiness.href}
+                    className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-black transition hover:-translate-y-0.5"
+                    style={{
+                      background: "var(--accent-dark)",
+                      color: "#ffffff",
+                    }}
+                  >
+                    Read the Spotlight
+                  </Link>
+
+                  <a
+                    href={featuredBusiness.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-bold transition hover:-translate-y-0.5"
+                    style={{
+                      borderColor: "var(--border)",
+                      background: "#ffffff",
+                      color: "var(--green)",
+                    }}
+                  >
+                    Visit Website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -348,14 +468,14 @@ export default function HotSpringsSpasWellnessPage() {
             <h2>More spa and wellness stops around Hot Springs</h2>
 
             <p>
-              A few other places to consider for resort spa services, massage,
-              salon services, body treatments, facials, and classic Hot Springs
-              relaxation.
+              A few other places to consider for thermal baths, resort spa
+              services, massage, salon services, body treatments, facials, and
+              classic Hot Springs relaxation.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {otherStops.map((business) => (
+            {spaBusinesses.map((business) => (
               <article
                 key={business.name}
                 className="group overflow-hidden rounded-[1.75rem] border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
@@ -493,8 +613,8 @@ export default function HotSpringsSpasWellnessPage() {
             <h2>Hot Springs spa and wellness FAQ</h2>
 
             <p>
-              Quick answers for visitors comparing bathhouses, thermal bathing,
-              resort spas, and wellness stops.
+              Quick answers for visitors comparing bathhouses, modern aesthetics
+              studios, resort spas, and wellness stops.
             </p>
           </div>
 

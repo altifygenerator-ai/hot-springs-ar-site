@@ -12,6 +12,7 @@ const thingsToDoLinks = [
   { href: "/history", label: "History" },
   { href: "/free-things-to-do-hot-springs", label: "Free Things To Do" },
   { href: "/hot-springs-family-friendly", label: "Family-Friendly Finds" },
+  { href: "/pet-friendly-hot-springs", label: "Pet-Friendly Finds" },
   { href: "/community-photos", label: "Community Photos" },
   { href: "/submit-photo", label: "Submit a Photo" },
 ];

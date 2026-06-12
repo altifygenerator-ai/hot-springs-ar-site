@@ -210,6 +210,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
       changeFrequency: "monthly" as const,
     },
+    {
+  path: "/pet-friendly-hot-springs",
+  priority: 0.88,
+  changeFrequency: "weekly" as const,
+},
   ];
 
   const staticRoutes: MetadataRoute.Sitemap = routes.map((route) => ({

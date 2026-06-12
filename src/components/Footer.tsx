@@ -6,10 +6,12 @@ const footerGroups = [
     links: [
       { href: "/explore", label: "Explore Hot Springs" },
       { href: "/things-to-do-in-hot-springs-ar", label: "Things To Do" },
+      { href: "/free-things-to-do-hot-springs", label: "Free Things To Do" },
+      { href: "/pet-friendly-hot-springs", label: "Pet-Friendly Finds" },
       { href: "/events", label: "Events" },
       { href: "/this-weekend", label: "This Weekend" },
       { href: "/history", label: "History" },
-      { href: "/free-things-to-do-hot-springs", label: "Free Things To Do" },
+      
     ],
   },
   {

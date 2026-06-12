@@ -19,6 +19,12 @@ const updates = [
     text: "A seasonal guide has been added for July 4 in Hot Springs, including verified fireworks, downtown events, Lake Hamilton tips, Magic Springs, the farmers market, and ways to plan the holiday around town.",
     href: "/hot-springs-fourth-of-july",
   },
+    {
+    label: "New visitor guide",
+    title: "Pet-Friendly Hot Springs",
+    text: "A new pet-friendly guide has been added for visitors traveling with dogs, including Hot Springs Bark Park, Bathhouse Row walks, national park trail notes, check-ahead patios, outdoor stops, and pet-friendly lodging tips.",
+    href: "/pet-friendly-hot-springs",
+  },
 ];
 
 export default function RecentUpdates() {

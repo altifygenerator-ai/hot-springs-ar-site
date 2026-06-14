@@ -7,7 +7,7 @@ import { localSpots } from "@/data/local-spots/hiddenGems";
 export const metadata = {
   title: "Local Hidden Gems in Hot Springs Arkansas | Local Spots & Visitor Tips",
   description:
-    "Explore local hidden gems in Hot Springs, Arkansas, including family-friendly stops, Ouachita Avenue spots, Bathhouse Row finds, local restaurants, shops, and creative places locals recommend.",
+    "Explore local hidden gems in Hot Springs, Arkansas, including family-friendly stops, Ouachita Avenue spots, Bathhouse Row finds, local restaurants, boutiques, parks, shops, and creative places locals recommend.",
   keywords: [
     "Hot Springs Arkansas hidden gems",
     "local spots Hot Springs Arkansas",
@@ -16,7 +16,14 @@ export const metadata = {
     "Ouachita Avenue Hot Springs",
     "Bathhouse Row local shops",
     "Hot Springs local restaurants",
+    "MT Savvy Styles Boutique",
+    "The English Muffin Hot Springs",
+    "Cedar Glades Park Hot Springs",
+    "Hot Springs local boutiques",
+    "Hot Springs local breakfast",
+    "Hot Springs parks and trails",
   ],
+
 };
 
 const guideLinks = [
@@ -44,6 +51,9 @@ const featuredSpotIds = [
   "sqzbx",
   "hot-springs-creek-greenway",
   "the-pho-house",
+  "mt-savvy-styles-boutique",
+  "the-english-muffin",
+  "cedar-glades-park",
 ];
 
 const featuredSpots = featuredSpotIds
@@ -56,7 +66,7 @@ export default function HotSpringsLocalSpotsPage() {
       <LocalSpotHero
   eyebrow="Local Picks"
   title="Local hidden gems and community favorites in Hot Springs."
-  description="These are the places locals brought up when we asked what visitors usually miss — from Ouachita Avenue and Bathhouse Row finds to family stops, food spots, shops, coffee, parks, and creative places around town."
+  description="These are the places locals brought up when we asked what visitors usually miss, from Ouachita Avenue and Bathhouse Row finds to family stops, food spots, boutiques, coffee, parks, trails, and creative places around town."
   image="/images/local-spots/hero.png"
 />
 

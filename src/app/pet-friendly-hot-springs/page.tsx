@@ -14,6 +14,10 @@ export const metadata = {
     "pet friendly hotels Hot Springs AR",
     "dogs Hot Springs National Park",
     "pet friendly Bathhouse Row",
+    "Fisherman’s Wharf pet friendly patio",
+"pet friendly patio Hot Springs Arkansas",
+"pet CPR Hot Springs Arkansas",
+"canine first aid Hot Springs Arkansas",
   ],
 };
 
@@ -33,6 +37,10 @@ const quickLinks = [
   {
     href: "#lodging",
     label: "Pet-Friendly Stays",
+  },
+  {
+    href: "#pet-safety",
+    label: "Pet Safety",
   },
 ];
 
@@ -68,6 +76,18 @@ const verifiedPlaces = [
 ];
 
 const patioPlaces = [
+  {
+    title: "Fisherman’s Wharf",
+    text: "A local pet owner mentioned Fisherman’s Wharf as having an extremely pet-friendly patio and said they have taken their baby there multiple times over the years. Since patio policies can still change, check current rules before going.",
+  },
+  {
+    title: "421 Beer Garden",
+    text: "Already listed as a relaxed Hot Springs beer garden with a pet-friendly patio atmosphere. A good one to check for food, drinks, games, live music, and outdoor seating.",
+  },
+  {
+    title: "Superior Bathhouse Brewery",
+    text: "Listed by Visit Hot Springs as a family and dog-friendly restaurant. It is one of the stronger downtown options to check when planning around Bathhouse Row.",
+  },
   {
     title: "SQZBX Brewery & Pizza",
     text: "Reported as dog-friendly by pet travel listings. A good one to check for pizza, drinks, and casual food near downtown.",
@@ -111,19 +131,32 @@ const outdoorStops = [
 
 const lodgingNotes = [
   {
-    title: "Use the official pet-friendly lodging filter.",
-    text: "Visit Hot Springs has a pet-friendly lodging category that is better than trying to guess current hotel rules from old listings.",
+    title: "Do your own check before booking.",
+    text: "Pet-friendly lodging rules can change, and listings are not always updated everywhere. Search current options, then confirm directly with the hotel, cabin, RV park, or rental before you book.",
   },
   {
     title: "Check the exact room or unit.",
-    text: "A hotel, cabin, or rental may be pet-friendly overall, but not every room, cabin, or booking type may allow pets.",
+    text: "A property may allow pets in some rooms or cabins, but not every room, cabin, rental, or booking type may be pet-friendly.",
   },
   {
-    title: "Ask about fees and size limits.",
-    text: "Pet fees, weight limits, number of pets, breed rules, and unattended pet policies can vary a lot by property.",
+    title: "Ask about fees, size limits, and rules.",
+    text: "Pet fees, weight limits, number of pets, breed rules, unattended pet policies, cleaning fees, and outdoor rules can vary a lot by property.",
   },
 ];
-
+const petSafetyNotes = [
+  {
+    title: "Hot Springs Training and Consulting",
+    text: "Hot Springs Training and Consulting mentioned that they teach canine and feline CPR and first aid by booked class. This is not a pet-friendly stop, but it may be useful information for locals, hikers, campers, and travelers who bring pets along.",
+  },
+  {
+    title: "Useful for outdoor trips",
+    text: "Pet first aid can matter when hiking, traveling, camping, or spending long days outside. Heat stress, cuts, bites, poisoning, and common injuries are all things pet owners may want to be prepared for.",
+  },
+  {
+    title: "Book and verify first",
+    text: "Classes may need to be booked ahead of time and may require minimum participation. Message Hot Springs Training and Consulting directly before planning around it.",
+  },
+];
 const relatedGuides = [
   {
     href: "/bathhouse-row",
@@ -408,97 +441,174 @@ export default function PetFriendlyHotSpringsPage() {
         </div>
       </section>
 
-      <section id="lodging" className="section pt-0">
-        <div className="container">
-          <div
-            className="relative overflow-hidden rounded-[32px] border p-8 shadow-2xl md:p-12"
-            style={{
-              background:
-                "linear-gradient(135deg, var(--green) 0%, #1d332a 55%, var(--accent-dark) 100%)",
-              borderColor: "rgba(255,255,255,0.16)",
-            }}
+    <section id="lodging" className="section pt-0">
+  <div className="container">
+    <div
+      className="relative overflow-hidden rounded-[32px] border p-8 shadow-2xl md:p-12"
+      style={{
+        background:
+          "linear-gradient(135deg, var(--green) 0%, #1d332a 55%, var(--accent-dark) 100%)",
+        borderColor: "rgba(255,255,255,0.16)",
+      }}
+    >
+      <div
+        className="absolute right-[-120px] top-[-120px] h-[280px] w-[280px] rounded-full"
+        style={{ background: "rgba(255,255,255,0.08)" }}
+      />
+
+      <div className="relative z-10 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div>
+          <p
+            className="mb-3 text-sm font-semibold uppercase tracking-[0.22em]"
+            style={{ color: "rgba(255,255,255,0.78)" }}
           >
-            <div
-              className="absolute right-[-120px] top-[-120px] h-[280px] w-[280px] rounded-full"
-              style={{ background: "rgba(255,255,255,0.08)" }}
-            />
+            Places To Stay
+          </p>
 
-            <div className="relative z-10 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-              <div>
-                <p
-                  className="mb-3 text-sm font-semibold uppercase tracking-[0.22em]"
-                  style={{ color: "rgba(255,255,255,0.78)" }}
-                >
-                  Places To Stay
-                </p>
+          <h2
+            className="max-w-3xl text-3xl font-semibold leading-tight md:text-5xl"
+            style={{ color: "#ffffff" }}
+          >
+            Pet-friendly lodging depends on the exact property and room.
+          </h2>
 
-                <h2
-                  className="max-w-3xl text-3xl font-semibold leading-tight md:text-5xl"
-                  style={{ color: "#ffffff" }}
-                >
-                  Pet-friendly lodging depends on the exact property and room.
-                </h2>
+          <p
+            className="mt-5 max-w-2xl text-lg leading-relaxed"
+            style={{ color: "rgba(255,255,255,0.9)" }}
+          >
+            Hot Springs has hotels, cabins, RV parks, resorts, and rentals that
+            may allow pets, but the rules can change by property, room type,
+            unit, pet size, fee, and season.
+          </p>
 
-                <p
-                  className="mt-5 max-w-2xl text-lg leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.9)" }}
-                >
-                  Hot Springs has pet-friendly hotels, cabins, resorts, RV
-                  parks, and rentals, but rules can vary by unit, size, fee,
-                  and number of pets.
-                </p>
+          <p
+            className="mt-4 max-w-2xl leading-relaxed"
+            style={{ color: "rgba(255,255,255,0.78)" }}
+          >
+            Use this as a starting point, then do your own current search and
+            confirm directly before booking anything.
+          </p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <a
-                    href="https://www.hotsprings.org/places/lodging/amenity/pet-friendly/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex rounded-full px-6 py-3 text-sm font-bold shadow-md transition hover:opacity-90"
-                    style={{
-                      background: "#ffffff",
-                      color: "var(--green)",
-                    }}
-                  >
-                    Official Pet-Friendly Lodging
-                  </a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="https://www.google.com/search?q=pet+friendly+lodging+Hot+Springs+Arkansas"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex rounded-full px-6 py-3 text-sm font-bold shadow-md transition hover:opacity-90"
+              style={{
+                background: "#ffffff",
+                color: "var(--green)",
+              }}
+            >
+              Search Pet-Friendly Lodging
+            </a>
 
-                  <Link
-                    href="/hot-springs-ar-hotels"
-                    className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"
-                    style={{
-                      borderColor: "rgba(255,255,255,0.65)",
-                      color: "#ffffff",
-                      background: "rgba(255,255,255,0.1)",
-                    }}
-                  >
-                    Hotel Guide
-                  </Link>
-                </div>
-              </div>
+            <Link
+              href="/hot-springs-ar-hotels"
+              className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"
+              style={{
+                borderColor: "rgba(255,255,255,0.65)",
+                color: "#ffffff",
+                background: "rgba(255,255,255,0.1)",
+              }}
+            >
+              Hotel Guide
+            </Link>
 
-              <div className="grid gap-3">
-                {lodgingNotes.map((note) => (
-                  <article
-                    key={note.title}
-                    className="rounded-3xl border p-5"
-                    style={{
-                      background: "rgba(255,255,255,0.09)",
-                      borderColor: "rgba(255,255,255,0.16)",
-                    }}
-                  >
-                    <h3 style={{ color: "#ffffff" }}>{note.title}</h3>
-
-                    <p style={{ color: "rgba(255,255,255,0.86)" }}>
-                      {note.text}
-                    </p>
-                  </article>
-                ))}
-              </div>
-            </div>
+            <Link
+              href="/hot-springs-ar-cabins"
+              className="inline-flex rounded-full border px-6 py-3 text-sm font-bold transition hover:opacity-90"
+              style={{
+                borderColor: "rgba(255,255,255,0.65)",
+                color: "#ffffff",
+                background: "rgba(255,255,255,0.1)",
+              }}
+            >
+              Cabin Guide
+            </Link>
           </div>
         </div>
-      </section>
 
+        <div className="grid gap-3">
+          {lodgingNotes.map((note) => (
+            <article
+              key={note.title}
+              className="rounded-3xl border p-5"
+              style={{
+                background: "rgba(255,255,255,0.09)",
+                borderColor: "rgba(255,255,255,0.16)",
+              }}
+            >
+              <h3 style={{ color: "#ffffff" }}>{note.title}</h3>
+
+              <p style={{ color: "rgba(255,255,255,0.86)" }}>
+                {note.text}
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="pet-safety" className="section pt-0">
+  <div className="container">
+    <div
+      className="rounded-[32px] border p-8 shadow-sm md:p-10"
+      style={{
+        background: "var(--surface)",
+        borderColor: "var(--border)",
+      }}
+    >
+      <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+        <div>
+          <p className="hero-eyebrow">Pet Safety Note</p>
+
+          <h2>One local note for pet owners heading outdoors.</h2>
+
+          <p className="mt-4" style={{ color: "var(--muted)" }}>
+            This is not a pet-friendly attraction or patio listing, but it is a
+            useful local note for people bringing pets on trails, lake days,
+            camping trips, road trips, or long outdoor weekends around Hot
+            Springs.
+          </p>
+        </div>
+
+        <div className="grid gap-3">
+          {petSafetyNotes.map((note) => (
+            <article
+              key={note.title}
+              className="rounded-3xl border p-5"
+              style={{
+                background: "rgba(255,255,255,0.68)",
+                borderColor: "var(--border)",
+              }}
+            >
+              <h3>{note.title}</h3>
+
+              <p style={{ color: "var(--muted)" }}>{note.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-7 flex flex-wrap gap-3">
+        <a
+          href="https://www.google.com/search?q=Hot+Springs+Training+and+Consulting+pet+CPR+first+aid"
+          target="_blank"
+          rel="noreferrer"
+          className="btn-secondary"
+        >
+          Search Pet CPR Info
+        </a>
+
+        <Link href="/pet-friendly-hot-springs" className="btn-primary">
+          Back to Pet-Friendly Guide
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
       <section className="section pt-0">
         <div className="container">
           <div

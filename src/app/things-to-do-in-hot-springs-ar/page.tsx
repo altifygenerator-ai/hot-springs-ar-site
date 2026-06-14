@@ -23,6 +23,13 @@ export const metadata = {
     "Hot Springs restaurants",
     "Hot Springs hotels",
     "Hot Springs cabins",
+    "Hot Springs Gangster Museum",
+"National Park Duck Tours Hot Springs",
+"Cedar Glades Park Hot Springs",
+"Crystal Ridge Distillery Hot Springs",
+"Hot Springs Mountain Tower",
+"West Mountain Hot Springs",
+"North Mountain Hot Springs",
   ],
 };
 
@@ -97,17 +104,45 @@ const thingsToDo = [
     image: "/images/businesses/quapaw-baths.jpg",
   },
   {
+    title: "Visit The Gangster Museum of America",
+    category: "Museum • History • Downtown",
+    description:
+      "The Gangster Museum of America gives visitors a deeper look at Hot Springs’ gangster, gambling, bootlegging, and early 20th-century history in the middle of downtown.",
+    image: "/images/businesses/gangster-museum-of-america.png",
+  },
+  {
+    title: "Take a National Park Duck Tour",
+    category: "Tour • Family Activity • Lake Hamilton",
+    description:
+      "National Park Duck Tours give visitors a land-and-water way to see Hot Springs, with a downtown start, local history, and time around Lake Hamilton.",
+    image: "/images/businesses/national-park-duck-tours.jpg",
+  },
+  {
     title: "Take in Mountain Views",
     category: "Scenic Drives • Overlooks",
     description:
-      "The city is surrounded by mountain scenery, with overlooks, winding roads, trails, and viewpoints that make Hot Springs feel different from a normal downtown trip.",
+      "The city is surrounded by mountain scenery, with overlooks, winding roads, trails, Hot Springs Mountain Tower, North Mountain, and West Mountain viewpoints that make the area feel different from a normal downtown trip.",
     image: "/images/businesses/hot-springs-mountain-tower.webp",
+  },
+  {
+    title: "Explore Cedar Glades Park",
+    category: "Parks • Trails • Outdoor Recreation",
+    description:
+      "Cedar Glades Park is a good outdoor stop for trails, disc golf, open space, and a more local park feel when visitors want to get outside beyond the main downtown attractions.",
+    image: "/images/businesses/cedar-glades-park.png",
+  },
+  {
+    title: "Stop by Crystal Ridge Distillery",
+    category: "Distillery • Tours • Local History",
+    description:
+      "Crystal Ridge Distillery adds another downtown visitor stop with spirits, tastings, tours, cocktails, events, and a connection to Hot Springs’ moonshine and distilling history.",
+    image: "/images/businesses/crystal-ridge-distillery.jpg",
   },
   {
     title: "Find Family Attractions",
     category: "Family • Museums • Activities",
     description:
-      "Families can mix outdoor stops with museums, parks, kid-friendly restaurants, Magic Springs, Mid-America Science Museum, and easy downtown exploring.",
+      "Families can mix outdoor stops with museums, parks, kid-friendly restaurants, Magic Springs, Mid-America Science Museum, Duck Tours, and easy downtown exploring.",
     image: "/images/businesses/mid-america-science-museum.jpg",
   },
   {
@@ -118,7 +153,6 @@ const thingsToDo = [
     image: "/images/businesses/fishermans-wharf.jpg",
   },
 ];
-
 const tripStyles = [
   {
     title: "For a First-Time Visit",

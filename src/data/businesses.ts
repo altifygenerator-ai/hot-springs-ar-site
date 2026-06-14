@@ -674,4 +674,116 @@ export const businesses: Business[] = [
       "https://www.google.com/maps/search/?api=1&query=The+Local+Hot+Springs+AR",
     href: "/hot-springs-ar-restaurants",
   },
+    {
+    name: "The Gangster Museum of America",
+    category: "Attraction",
+    type: "Museum • Hot Springs History • Downtown",
+    description:
+      "A downtown Hot Springs museum focused on the city’s gangster, gambling, bootlegging, and early 20th-century history, giving visitors a deeper look at one of the most talked-about parts of Hot Springs’ past.",
+    image: "/images/businesses/gangster-museum-of-america.jpg",
+    phone: "501-318-1717",
+    address: "510 Central Ave, Hot Springs, AR 71901",
+    website: "https://thegangstermuseum.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=The+Gangster+Museum+of+America+510+Central+Ave+Hot+Springs+AR",
+    href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    name: "Rocky's Corner",
+    category: "Restaurant",
+    type: "Pizza • Italian • Across from Oaklawn",
+    description:
+      "A long-running Hot Springs pizza and Italian food stop across from Oaklawn, known for Chicago-style pizza, casual meals, and a strong local following.",
+    image: "/images/businesses/rockys-corner.jpg",
+    phone: "501-624-0199",
+    address: "2600 Central Ave, Hot Springs, AR 71901",
+    website: "https://www.rockyscorner.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Rockys+Corner+2600+Central+Ave+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Eden at Hotel Hale",
+    category: "Restaurant",
+    type: "Downtown Dining • Hotel Hale • Bathhouse Row",
+    description:
+      "A polished downtown restaurant inside Hotel Hale, known for its garden-like dining room, living wall, skylight setting, brunch, dinner, and a unique Bathhouse Row location.",
+    image: "/images/businesses/eden-at-hotel-hale.jpg",
+    phone: "501-760-9010",
+    address: "341 Central Ave, Hot Springs, AR 71901",
+    website: "https://www.hotelhale.com/Dining2.html",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Eden+at+Hotel+Hale+341+Central+Ave+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "The Rooftop at The Waters Hotel",
+    category: "Restaurant",
+    type: "Rooftop Bar • Downtown Views • Bathhouse Row",
+    description:
+      "A rooftop dining and drink spot above The Waters Hotel with views over Bathhouse Row, locally sourced food, drinks, appetizers, and a downtown Hot Springs setting.",
+    image: "/images/businesses/the-rooftop-at-the-waters.jpg",
+    phone: "501-625-3850",
+    address: "340 Central Ave, Hot Springs, AR 71913",
+    website: "https://www.hotsprings.org/places/restaurants/the-rooftop/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=The+Rooftop+at+The+Waters+Hotel+340+Central+Ave+Hot+Springs+AR",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "National Park Duck Tours",
+    category: "Attraction",
+    type: "Duck Tour • Downtown • Lake Hamilton • Family Activity",
+    description:
+      "A Hot Springs land-and-water duck tour that starts downtown, travels through town, heads toward Lake Hamilton, and gives visitors a fun way to see several parts of Hot Springs in one outing.",
+    image: "/images/businesses/national-park-duck-tours.jpg",
+    phone: "501-321-2911",
+    address: "418 Central Ave, Hot Springs, AR 71901",
+    website: "https://rideaduck.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=National+Park+Duck+Tours+418+Central+Ave+Hot+Springs+AR",
+    href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    name: "Cedar Glades Park",
+    category: "Outdoor Recreation",
+    type: "Park • Trails • Disc Golf • Family-Friendly Outdoors",
+    description:
+      "A Garland County park with trails, outdoor recreation, disc golf, open space, family-friendly amenities, and access to the Northwoods/Cedar Glades outdoor area.",
+    image: "/images/businesses/cedar-glades-park.jpg",
+    phone: "501-627-2826",
+    address: "461 Wildcat Rd, Hot Springs, AR 71913",
+    website: "https://www.garlandcounty.org/263/Cedar-Glades-Park",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Cedar+Glades+Park+461+Wildcat+Rd+Hot+Springs+AR",
+    href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    name: "Crystal Ridge Distillery",
+    category: "Attraction",
+    type: "Distillery • Tours • Tastings • Downtown Hot Springs",
+    description:
+      "A downtown Hot Springs distillery offering spirits, tastings, tours, cocktails, events, and a visitor-friendly stop tied to the city’s moonshine and distilling history.",
+    image: "/images/businesses/crystal-ridge-distillery.jpg",
+    phone: "501-627-0722",
+    address: "455 Broadway St, Hot Springs, AR 71901",
+    website: "https://www.crystalridgedistillery.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Crystal+Ridge+Distillery+455+Broadway+St+Hot+Springs+AR",
+    href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    name: "MT Savvy Styles Boutique",
+    category: "Shopping",
+    type: "Boutique • Clothing • Local Shopping",
+    description:
+      "A Hot Springs clothing boutique offering local shopping for visitors and residents looking for women’s fashion, boutique finds, and specialty retail outside the usual big-box stops.",
+    image: "/images/businesses/mt-savvy-styles-boutique.jpg",
+    phone: "501-445-8469",
+    address: "3814 Central Ave Suite E, Hot Springs, AR 71913",
+    website: "https://mtsavvystyles.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=MT+Savvy+Styles+Boutique+3814+Central+Ave+Suite+E+Hot+Springs+AR",
+    href: "/local-businesses",
+  },
 ];

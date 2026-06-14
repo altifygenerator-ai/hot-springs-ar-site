@@ -107,7 +107,17 @@ const guideCards = [
     cta: "Browse Places To Stay",
   },
 ];
-
+const wellnessSupportNotes = [
+  {
+    name: "Three Rooted Blossoms Maternity Services",
+    type: "Doula • Lactation Counseling • Postpartum Support",
+    description:
+      "A local maternity support service mentioned by the owner, offering doula support and lactation counseling, with experience from 6 years as a labor, delivery, and postpartum nurse.",
+    note:
+      "This is not a spa, bathhouse, or aesthetics listing, but it fits as a local wellness support note for families looking for maternity, birth, or postpartum resources around Hot Springs.",
+    href: "https://www.google.com/search?q=Three+Rooted+Blossoms+Maternity+Services+Hot+Springs+Arkansas",
+  },
+];
 const faqs = [
   {
     question: "Is Hot Springs known for spas?",
@@ -539,7 +549,75 @@ export default function HotSpringsSpasWellnessPage() {
           </div>
         </div>
       </section>
+<section className="section pt-0 bg-white/35">
+  <div className="container">
+    <div
+      className="rounded-[2rem] border bg-[color:var(--surface)] p-7 shadow-sm md:p-9"
+      style={{ borderColor: "var(--border)" }}
+    >
+      <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+        <div>
+          <p className="hero-eyebrow">Local Wellness Support Note</p>
 
+          <h2>Not every wellness resource is a spa day.</h2>
+
+          <p className="mt-4 leading-7" style={{ color: "var(--muted)" }}>
+            Hot Springs wellness can also include family support, maternity
+            resources, postpartum care, and services that do not fit cleanly into
+            a bathhouse or spa listing. This note is included separately so the
+            main guide stays focused on spas, bathhouses, and aesthetic care.
+          </p>
+        </div>
+
+        <div className="grid gap-4">
+          {wellnessSupportNotes.map((item) => (
+            <article
+              key={item.name}
+              className="rounded-3xl border p-6"
+              style={{
+                background: "rgba(255,255,255,0.68)",
+                borderColor: "var(--border)",
+              }}
+            >
+              <p
+                className="mb-2 text-xs font-black uppercase tracking-[0.18em]"
+                style={{ color: "var(--accent-dark)" }}
+              >
+                {item.type}
+              </p>
+
+              <h3 className="text-2xl font-semibold leading-tight">
+                {item.name}
+              </h3>
+
+              <p className="mt-3 leading-7" style={{ color: "var(--muted)" }}>
+                {item.description}
+              </p>
+
+              <p className="mt-3 text-sm leading-6" style={{ color: "var(--muted)" }}>
+                {item.note}
+              </p>
+
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:-translate-y-0.5"
+                style={{
+                  borderColor: "var(--border)",
+                  background: "#ffffff",
+                  color: "var(--green)",
+                }}
+              >
+                Search Current Info
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <section className="section">
         <div className="container">
           <div

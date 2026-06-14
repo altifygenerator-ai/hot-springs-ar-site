@@ -10,7 +10,7 @@ const updates = [
   {
     label: "New wellness guide",
     title: "Spas & Wellness in Hot Springs",
-    text: "The Hot Springs spa and wellness guide has been updated with historic bathhouses, thermal baths, resort spa options, modern aesthetics, skin care, body sculpting, and relaxing ways to plan a wellness-focused visit.",
+    text: "The Hot Springs spa and wellness guide has been updated with historic bathhouses, thermal baths, resort spa options, modern aesthetics, skin care, body sculpting, relaxing ways to plan a wellness-focused visit, and a local maternity support note.",
     href: "/hot-springs-spas-wellness",
   },
   {
@@ -19,11 +19,32 @@ const updates = [
     text: "A seasonal guide has been added for July 4 in Hot Springs, including verified fireworks, downtown events, Lake Hamilton tips, Magic Springs, the farmers market, and ways to plan the holiday around town.",
     href: "/hot-springs-fourth-of-july",
   },
-    {
-    label: "New visitor guide",
-    title: "Pet-Friendly Hot Springs",
-    text: "A new pet-friendly guide has been added for visitors traveling with dogs, including Hot Springs Bark Park, Bathhouse Row walks, national park trail notes, check-ahead patios, outdoor stops, and pet-friendly lodging tips.",
+];
+
+const communityUpdateLinks = [
+  {
     href: "/pet-friendly-hot-springs",
+    label: "Pet-Friendly Hot Springs",
+  },
+  {
+    href: "/restaurants-near-bathhouse-row",
+    label: "Restaurants Near Bathhouse Row",
+  },
+  {
+    href: "/hot-springs-ar-restaurants",
+    label: "Restaurant Guide",
+  },
+  {
+    href: "/hot-springs-family-friendly",
+    label: "Family-Friendly Finds",
+  },
+  {
+    href: "/hot-springs-local-spots",
+    label: "Local Hidden Gems",
+  },
+  {
+    href: "/hot-springs-antique-thrift-flea-markets",
+    label: "Shopping Guide",
   },
 ];
 
@@ -77,6 +98,38 @@ export default function RecentUpdates() {
               </div>
             </Link>
           ))}
+
+          <article className="category-card">
+            <div className="category-content">
+              <p className="hero-eyebrow">Community suggestions</p>
+
+              <h3>Recent local suggestion updates</h3>
+
+              <p>
+                Several places and notes suggested by locals have been worked
+                into the guide, including pet-friendly patio notes, downtown
+                dining updates, family-friendly stops, local shops, parks,
+                wellness notes, and shopping guide cleanup.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {communityUpdateLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="inline-flex rounded-full border px-3 py-2 text-xs font-bold transition hover:-translate-y-0.5"
+                    style={{
+                      borderColor: "var(--border)",
+                      color: "var(--green)",
+                      background: "var(--surface-strong)",
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>

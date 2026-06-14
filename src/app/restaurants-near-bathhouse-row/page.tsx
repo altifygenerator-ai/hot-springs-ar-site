@@ -6,20 +6,24 @@ export const metadata = {
     "Restaurants Near Bathhouse Row | Downtown Hot Springs Arkansas Dining",
   description:
     "Find restaurants near Bathhouse Row in Hot Springs, Arkansas including breakfast spots, historic bars, breweries, pizza, Mexican food, German dining, and downtown favorites.",
-  keywords: [
-    "restaurants near Bathhouse Row",
-    "Bathhouse Row restaurants",
-    "downtown Hot Springs restaurants",
-    "restaurants near Hot Springs National Park",
-    "places to eat near Bathhouse Row",
-    "Hot Springs Arkansas restaurants downtown",
-    "The Pancake Shop Hot Springs",
-    "Ohio Club Hot Springs",
-    "Rolando's Hot Springs",
-    "Superior Bathhouse Brewery",
-    "SQZBX Hot Springs",
-    "Grateful Head Pizza Hot Springs",
-  ],
+ keywords: [
+  "restaurants near Bathhouse Row",
+  "Bathhouse Row restaurants",
+  "downtown Hot Springs restaurants",
+  "restaurants near Hot Springs National Park",
+  "places to eat near Bathhouse Row",
+  "Hot Springs Arkansas restaurants downtown",
+  "The Pancake Shop Hot Springs",
+  "Ohio Club Hot Springs",
+  "Rolando's Hot Springs",
+  "Superior Bathhouse Brewery",
+  "SQZBX Hot Springs",
+  "Grateful Head Pizza Hot Springs",
+  "Eden at Hotel Hale",
+  "The Rooftop at The Waters Hotel",
+  "Hotel Hale restaurant Hot Springs",
+  "rooftop dining Hot Springs Arkansas",
+],
 };
 
 const featuredRestaurants = [
@@ -65,6 +69,24 @@ const otherRestaurants = [
     phone: "501-624-2337",
     href: "https://www.superiorbathhouse.com/",
   },
+  {
+  name: "Eden at Hotel Hale",
+  type: "Downtown Dining • Hotel Hale • Bathhouse Row",
+  description:
+    "A polished downtown restaurant inside Hotel Hale, known for its garden-like dining room, living wall, skylight setting, brunch, dinner, and unique Bathhouse Row location.",
+  address: "341 Central Ave, Hot Springs, AR 71901",
+  phone: "501-760-9010",
+  href: "https://www.hotelhale.com/Dining2.html",
+},
+{
+  name: "The Rooftop at The Waters Hotel",
+  type: "Rooftop Bar • Downtown Views • Bathhouse Row",
+  description:
+    "A rooftop dining and drink spot above The Waters Hotel with views over Bathhouse Row, locally sourced food, drinks, appetizers, and a downtown Hot Springs setting.",
+  address: "340 Central Ave, Hot Springs, AR 71913",
+  phone: "501-625-3850",
+  href: "https://www.hotsprings.org/places/restaurants/the-rooftop/",
+},
   {
     name: "SQZBX Brewery & Pizza Joint",
     type: "Pizza • Brewery • Downtown",
@@ -148,6 +170,11 @@ const faqs = [
     answer:
       "Yes. Downtown Hot Springs is one of the easiest areas to park, eat, walk Bathhouse Row, visit shops, and explore Hot Springs National Park from the same general area.",
   },
+  {
+  question: "What are popular restaurants near Bathhouse Row?",
+  answer:
+    "Popular restaurants near Bathhouse Row include The Ohio Club, The Pancake Shop, Rolando’s Restaurante, Superior Bathhouse Brewery, Eden at Hotel Hale, The Rooftop at The Waters Hotel, SQZBX Brewery & Pizza Joint, Grateful Head Pizza, Steinhaus Keller, and DONS Southern Social.",
+},
 ];
 
 export default function RestaurantsNearBathhouseRowPage() {

@@ -7,6 +7,7 @@ const thingsToDoLinks = [
   { href: "/things-to-do-in-hot-springs-ar", label: "Things To Do" },
   { href: "/explore", label: "Explore Hot Springs" },
   { href: "/bathhouse-row", label: "Bathhouse Row" },
+  { href: "/things-to-do-near-bathhouse-row", label: "Things To Do Near Bathhouse Row" },
   { href: "/hot-springs-spas-wellness", label: "Spas & Wellness" },
   { href: "/lake-hamilton", label: "Lake Hamilton" },
   { href: "/history", label: "History" },

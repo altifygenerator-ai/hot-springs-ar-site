@@ -9,19 +9,24 @@ export const metadata = {
     "Restaurants in Hot Springs, Arkansas | Downtown Dining, Breakfast, Lakefront Food & Local Favorites",
   description:
     "Find restaurants in Hot Springs, Arkansas including downtown dining, breakfast spots, lakefront restaurants, barbecue, pizza, breweries, cafes, steakhouses, Mexican food, and places to eat near Bathhouse Row, Lake Hamilton, Oaklawn, cabins, and hotels.",
-  keywords: [
-    "restaurants in Hot Springs Arkansas",
-    "Hot Springs AR restaurants",
-    "best restaurants Hot Springs Arkansas",
-    "downtown Hot Springs restaurants",
-    "breakfast in Hot Springs Arkansas",
-    "lakefront restaurants Hot Springs Arkansas",
-    "restaurants near Bathhouse Row",
-    "restaurants near Lake Hamilton",
-    "restaurants near Oaklawn Hot Springs",
-    "Hot Springs Arkansas dining",
-    "places to eat in Hot Springs AR",
-  ],
+keywords: [
+  "restaurants in Hot Springs Arkansas",
+  "Hot Springs AR restaurants",
+  "best restaurants Hot Springs Arkansas",
+  "downtown Hot Springs restaurants",
+  "breakfast in Hot Springs Arkansas",
+  "lakefront restaurants Hot Springs Arkansas",
+  "restaurants near Bathhouse Row",
+  "restaurants near Lake Hamilton",
+  "restaurants near Oaklawn Hot Springs",
+  "Hot Springs Arkansas dining",
+  "places to eat in Hot Springs AR",
+  "Rocky's Corner Hot Springs",
+  "Eden at Hotel Hale",
+  "The Rooftop at The Waters Hotel",
+  "Hotel Hale restaurant Hot Springs",
+  "rooftop dining Hot Springs Arkansas",
+],
 };
 
 const allRestaurants = businesses.filter(
@@ -87,11 +92,11 @@ const guideLinks = [
 ];
 
 const faqs = [
-  {
-    question: "What are the best restaurants in Hot Springs, Arkansas?",
-    answer:
-      "Hot Springs has downtown restaurants, breakfast spots, lakefront dining, barbecue, pizza, breweries, cafes, steakhouses, Mexican food, and casual local favorites. Many visitors start around Bathhouse Row, Central Avenue, Lake Hamilton, or Oaklawn depending on where they are staying.",
-  },
+{
+  question: "What are the best restaurants in Hot Springs, Arkansas?",
+  answer:
+    "Hot Springs has downtown restaurants, breakfast spots, lakefront dining, barbecue, pizza, breweries, cafes, steakhouses, Mexican food, and casual local favorites. Many visitors start around Bathhouse Row, Central Avenue, Lake Hamilton, or Oaklawn, with places like The Ohio Club, The Pancake Shop, Rolando’s, Superior Bathhouse Brewery, Fisherman’s Wharf, Rocky’s Corner, Eden at Hotel Hale, and The Rooftop at The Waters Hotel depending on the kind of meal they want.",
+},
   {
     question: "Where should I eat near Bathhouse Row?",
     answer:

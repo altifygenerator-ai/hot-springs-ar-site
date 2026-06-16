@@ -680,7 +680,7 @@ export const businesses: Business[] = [
     type: "Museum • Hot Springs History • Downtown",
     description:
       "A downtown Hot Springs museum focused on the city’s gangster, gambling, bootlegging, and early 20th-century history, giving visitors a deeper look at one of the most talked-about parts of Hot Springs’ past.",
-    image: "/images/businesses/gangster-museum-of-america.jpg",
+    image: "/images/businesses/gangster-museum-of-america.png",
     phone: "501-318-1717",
     address: "510 Central Ave, Hot Springs, AR 71901",
     website: "https://thegangstermuseum.com/",
@@ -694,7 +694,7 @@ export const businesses: Business[] = [
     type: "Pizza • Italian • Across from Oaklawn",
     description:
       "A long-running Hot Springs pizza and Italian food stop across from Oaklawn, known for Chicago-style pizza, casual meals, and a strong local following.",
-    image: "/images/businesses/rockys-corner.jpg",
+    image: "/images/businesses/rockys-corner.webp",
     phone: "501-624-0199",
     address: "2600 Central Ave, Hot Springs, AR 71901",
     website: "https://www.rockyscorner.com/",
@@ -750,7 +750,7 @@ export const businesses: Business[] = [
     type: "Park • Trails • Disc Golf • Family-Friendly Outdoors",
     description:
       "A Garland County park with trails, outdoor recreation, disc golf, open space, family-friendly amenities, and access to the Northwoods/Cedar Glades outdoor area.",
-    image: "/images/businesses/cedar-glades-park.jpg",
+    image: "/images/businesses/cedar-glades-park.png",
     phone: "501-627-2826",
     address: "461 Wildcat Rd, Hot Springs, AR 71913",
     website: "https://www.garlandcounty.org/263/Cedar-Glades-Park",

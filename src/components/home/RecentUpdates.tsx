@@ -8,39 +8,33 @@ const updates = [
     href: "/spa-city-aesthetics-hot-springs",
   },
   {
-    label: "New wellness guide",
-    title: "Spas & Wellness in Hot Springs",
-    text: "The Hot Springs spa and wellness guide has been updated with historic bathhouses, thermal baths, resort spa options, modern aesthetics, skin care, body sculpting, relaxing ways to plan a wellness-focused visit, and a local maternity support note.",
-    href: "/hot-springs-spas-wellness",
-  },
-  {
-    label: "Seasonal guide",
-    title: "Fourth of July in Hot Springs",
-    text: "A seasonal guide has been added for July 4 in Hot Springs, including verified fireworks, downtown events, Lake Hamilton tips, Magic Springs, the farmers market, and ways to plan the holiday around town.",
-    href: "/hot-springs-fourth-of-july",
+    label: "Local listings update",
+    title: "New Hot Springs businesses added",
+    text: "Several local suggestions have been added across the Hot Springs guide, including new restaurant listings, sweet shops, wellness stops, local hidden gems, and a nearby Lake Ouachita area cafe worth knowing about.",
+    href: "/local-businesses",
   },
 ];
 
 const communityUpdateLinks = [
   {
-    href: "/pet-friendly-hot-springs",
-    label: "Pet-Friendly Hot Springs",
+    href: "/hot-springs-ar-restaurants",
+    label: "Restaurant Guide",
   },
   {
     href: "/restaurants-near-bathhouse-row",
     label: "Restaurants Near Bathhouse Row",
   },
   {
-    href: "/hot-springs-ar-restaurants",
-    label: "Restaurant Guide",
+    href: "/hot-springs-local-spots",
+    label: "Local Hidden Gems",
+  },
+  {
+    href: "/hot-springs-spas-wellness",
+    label: "Spas & Wellness",
   },
   {
     href: "/hot-springs-family-friendly",
     label: "Family-Friendly Finds",
-  },
-  {
-    href: "/hot-springs-local-spots",
-    label: "Local Hidden Gems",
   },
   {
     href: "/hot-springs-antique-thrift-flea-markets",
@@ -74,8 +68,8 @@ export default function RecentUpdates() {
               Spa City Spotlight
             </Link>
 
-            <Link href="/hot-springs-spas-wellness" className="btn-secondary">
-              Spas & Wellness
+            <Link href="/local-businesses" className="btn-secondary">
+              Local Businesses
             </Link>
           </div>
         </div>
@@ -106,10 +100,12 @@ export default function RecentUpdates() {
               <h3>Recent local suggestion updates</h3>
 
               <p>
-                Several places and notes suggested by locals have been worked
-                into the guide, including pet-friendly patio notes, downtown
-                dining updates, family-friendly stops, local shops, parks,
-                wellness notes, and shopping guide cleanup.
+                Recent local suggestions have been worked into the guide,
+                including Rock N Roll Sushi, Ambrosia at Angel&apos;s, La
+                Bruja&apos;s Dulceria & Bakery, The Electric Strawberry,
+                Destinations Day Spa, Inner Peace Massage & Facials, Aura Room,
+                and Sunshine Store & Cafe near Royal and the Lake Ouachita side
+                of Hot Springs.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">

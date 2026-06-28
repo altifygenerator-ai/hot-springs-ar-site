@@ -1109,7 +1109,107 @@ export const localSpots: LocalSpot[] = [
     needsFollowUp:
       "Pick exact streets/districts and confirm visitor-friendly viewing routes before publishing detailed directions.",
   },
+
+  {
+    id: "la-brujas-dulceria-bakery",
+    name: "La Bruja's Dulceria & Bakery",
+    shortName: "La Bruja's Dulceria",
+    groupSlugs: ["ouachita-avenue", "family-friendly", "other-local-favorites"],
+    categories: ["Coffee & Sweets", "Food & Drinks", "Downtown"],
+    area: "Ouachita Avenue",
+    address: "246 Ouachita Ave Suite 103, Hot Springs, AR 71901",
+    phone: "501-489-6071",
+    website: "https://www.hotsprings.org/places/restaurants/la-brujas-bakery/",
+    facebook: "https://www.facebook.com/labrujasdulceria/",
+    instagram: "https://www.instagram.com/labrujasdulceria/",
+    sourceUrls: [
+      "https://www.hotsprings.org/places/restaurants/la-brujas-bakery/",
+      "https://www.facebook.com/labrujasdulceria/",
+      "https://www.instagram.com/labrujasdulceria/",
+    ],
+    relatedPages: [
+      { label: "Ouachita Avenue", href: "/hot-springs-ouachita-avenue" },
+      { label: "Family-Friendly Finds", href: "/hot-springs-family-friendly" },
+      { label: "Restaurants", href: "/hot-springs-ar-restaurants" },
+    ],
+    description:
+      "A family-owned candy, snack, and dessert shop on Ouachita Avenue with sweets, treats, and products from around the world.",
+    localAngle:
+      "Locals pointed visitors toward smaller food and sweets stops around downtown and Ouachita Avenue, and this gives families an easy treat stop away from the busiest part of Central Avenue.",
+    goodFor: ["sweets", "snacks", "kids", "Ouachita Avenue", "quick stop"],
+    services: ["candy", "snacks", "desserts", "bakery items", "drinks"],
+    reviewNote:
+      "Visit Hot Springs lists it as a family-owned candy, snack, and dessert shop on Ouachita Avenue.",
+    imageAvailable: false,
+    image: null,
+    verificationStatus: "verified",
+  },
+  {
+    id: "the-electric-strawberry",
+    name: "The Electric Strawberry",
+    groupSlugs: ["other-local-favorites", "family-friendly"],
+    categories: ["Coffee & Sweets", "Shopping", "Arts & Creative"],
+    area: "West Grand Avenue",
+    address: "500 W Grand Ave, Hot Springs, AR 71901",
+    phone: "501-621-4133",
+    website: "https://www.theelectricstrawberry.com/",
+    facebook: "https://www.facebook.com/TheElectricStrawberry/",
+    instagram: "https://www.instagram.com/theelectricstrawberry/",
+    sourceUrls: [
+      "https://www.theelectricstrawberry.com/",
+      "https://www.hotsprings.org/places/activities/the-electric-strawberry/",
+      "https://www.facebook.com/TheElectricStrawberry/",
+    ],
+    relatedPages: [
+      { label: "Local Hidden Gems", href: "/hot-springs-local-spots" },
+      { label: "Family-Friendly Finds", href: "/hot-springs-family-friendly" },
+      { label: "Local Businesses", href: "/local-businesses" },
+    ],
+    description:
+      "An eclectic West Grand Avenue stop with coffee, an independent bookstore, salt cave, and alternative wellness offerings.",
+    localAngle:
+      "This is the kind of offbeat local stop that helps the guide feel less like a standard tourism list and more like something locals would actually point people toward.",
+    goodFor: ["coffee", "books", "wellness", "rainy day", "offbeat local stop"],
+    services: ["coffee", "bookstore", "salt cave", "wellness", "metaphysical shop"],
+    reviewNote:
+      "Official and tourism sources describe it as a coffee, bookstore, salt cave, and alternative wellness stop.",
+    imageAvailable: false,
+    image: null,
+    verificationStatus: "verified",
+  },
+  {
+    id: "sunshine-store-cafe",
+    name: "Sunshine Store & Cafe",
+    groupSlugs: ["other-local-favorites"],
+    categories: ["Food & Drinks", "Family Friendly"],
+    area: "Royal / Lake Ouachita side",
+    address: "3719 Sunshine Rd, Royal, AR 71968",
+    phone: "501-767-4614",
+    facebook: "https://www.facebook.com/p/Sunshine-Store-Cafe-100063558011732/",
+    sourceUrls: [
+      "https://www.facebook.com/p/Sunshine-Store-Cafe-100063558011732/",
+      "https://www.rpmhometownvacations.com/guidebook/dining/diner/sunshine-store-cafe",
+      "https://encyclopediaofarkansas.net/media/sunshine-store-15479/",
+    ],
+    relatedPages: [
+      { label: "Restaurants", href: "/hot-springs-ar-restaurants" },
+      { label: "Lake Hamilton", href: "/lake-hamilton" },
+      { label: "Local Hidden Gems", href: "/hot-springs-local-spots" },
+    ],
+    description:
+      "A country store and cafe in Royal that gives lake-area visitors a casual local food stop outside the main Hot Springs strip.",
+    localAngle:
+      "A local comment pointed people toward Royal, and this fits visitors heading west toward Lake Ouachita, Brady Mountain, or the quieter Garland County side of a Hot Springs trip.",
+    goodFor: ["breakfast", "casual food", "Lake Ouachita route", "Royal", "country store"],
+    services: ["cafe", "country store", "breakfast", "lunch", "to-go orders"],
+    reviewNote:
+      "Good nearby-area listing, but it should be framed as Royal/Lake Ouachita side rather than downtown Hot Springs.",
+    imageAvailable: false,
+    image: null,
+    verificationStatus: "verified",
+  },
 ];
+
 
 export function getLocalSpotsByGroup(groupSlug: LocalSpotGroupSlug) {
   return localSpots.filter((spot) => spot.groupSlugs.includes(groupSlug));

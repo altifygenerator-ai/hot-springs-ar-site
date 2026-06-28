@@ -786,4 +786,120 @@ export const businesses: Business[] = [
       "https://www.google.com/maps/search/?api=1&query=MT+Savvy+Styles+Boutique+3814+Central+Ave+Suite+E+Hot+Springs+AR",
     href: "/local-businesses",
   },
+
+  /* =======================
+     COMMUNITY-SUGGESTED LOCAL ADDITIONS
+  ======================= */
+
+  {
+    name: "Rock N Roll Sushi",
+    category: "Restaurant",
+    type: "Sushi • Hibachi • Central Avenue",
+    description:
+      "A music-themed sushi and hibachi restaurant on Central Avenue with specialty rolls, Japanese-inspired dishes, and a casual, high-energy dining setup for visitors looking for something fun off the downtown strip.",
+    image: "/images/categories/restaurants.png",
+    phone: "501-463-9099",
+    address: "4328 Central Ave Suite P, Hot Springs, AR 71913",
+    website: "https://rocknrollsushi.com/locations/hot-springs-ar/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Rock+N+Roll+Sushi+4328+Central+Ave+Suite+P+Hot+Springs+AR+71913",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Ambrosia at Angel's",
+    category: "Restaurant",
+    type: "Italian • Pizza • Desserts • Downtown",
+    description:
+      "A downtown Hot Springs restaurant on Central Avenue serving Italian dishes, pizza, cakes, pies, and full-bar dining close to Bathhouse Row and the historic district.",
+    image: "/images/categories/restaurants.png",
+    phone: "501-609-9323",
+    address: "600 Central Ave, Hot Springs, AR 71901",
+    website: "https://www.hotsprings.org/places/restaurants/ambrosia-at-angels/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Ambrosia+at+Angel%27s+600+Central+Ave+Hot+Springs+AR+71901",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "La Bruja's Dulceria & Bakery",
+    category: "Restaurant",
+    type: "Candy • Snacks • Desserts • Ouachita Avenue",
+    description:
+      "A family-owned candy, snack, and dessert stop on Ouachita Avenue with sweets and products from around the world, giving visitors an easy local treat stop just off Central Avenue.",
+    image: "/images/categories/restaurants.png",
+    phone: "501-489-6071",
+    address: "246 Ouachita Ave Suite 103, Hot Springs, AR 71901",
+    website: "https://www.hotsprings.org/places/restaurants/la-brujas-bakery/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=La+Bruja%27s+Dulceria+and+Bakery+246+Ouachita+Ave+Suite+103+Hot+Springs+AR+71901",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Sunshine Store & Cafe",
+    category: "Restaurant",
+    type: "Country Store • Cafe • Royal Arkansas",
+    description:
+      "A country store and cafe in Royal that works well for visitors heading toward Lake Ouachita, Brady Mountain, or the west side of Garland County who want a casual local food stop outside the main Hot Springs strip.",
+    image: "/images/categories/restaurants.png",
+    phone: "501-767-4614",
+    address: "3719 Sunshine Rd, Royal, AR 71968",
+    website: "https://www.facebook.com/p/Sunshine-Store-Cafe-100063558011732/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Sunshine+Store+and+Cafe+3719+Sunshine+Rd+Royal+AR+71968",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "The Electric Strawberry",
+    category: "Local Business",
+    type: "Coffee • Bookstore • Salt Cave • Wellness",
+    description:
+      "An eclectic Hot Springs stop on West Grand Avenue with coffee, an independent bookstore, salt cave, and alternative wellness offerings, making it a good fit for visitors looking for something more local and offbeat.",
+    image: "/images/categories/local-business.webp",
+    phone: "501-621-4133",
+    address: "500 W Grand Ave, Hot Springs, AR 71901",
+    website: "https://www.theelectricstrawberry.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=The+Electric+Strawberry+500+W+Grand+Ave+Hot+Springs+AR+71901",
+    href: "/hot-springs-local-spots",
+  },
+  {
+    name: "Destinations Day Spa",
+    category: "Spa & Bathhouse",
+    type: "Day Spa • Aveda Salon • Boutique",
+    description:
+      "A Hot Springs day spa, Aveda salon, and boutique offering spa services, salon care, and a polished relaxation stop for locals and visitors planning a slower wellness-focused day.",
+    image: "/images/categories/local-business.webp",
+    phone: "501-525-3400",
+    address: "250 Cornerstone Blvd, Hot Springs, AR 71913",
+    website: "https://hsdestinationsdayspa.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Destinations+Day+Spa+250+Cornerstone+Blvd+Hot+Springs+AR+71913",
+    href: "/hot-springs-spas-wellness",
+  },
+  {
+    name: "Inner Peace Massage & Facials",
+    category: "Spa & Bathhouse",
+    type: "Massage • Facials • Skincare",
+    description:
+      "A local massage and facial studio in Hot Springs offering relaxation-focused massage, facial, and skincare services for visitors looking to add a quieter wellness stop to their trip.",
+    image: "/images/categories/local-business.webp",
+    address: "2208 Airport Rd, Hot Springs, AR 71913",
+    website: "https://www.facebook.com/p/Inner-Peace-Massage-Facials-61580142231655/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Inner+Peace+Massage+and+Facials+2208+Airport+Rd+Hot+Springs+AR+71913",
+    href: "/hot-springs-spas-wellness",
+  },
+  {
+    name: "Aura Room",
+    category: "Spa & Bathhouse",
+    type: "Color Analysis • Image Consulting • Beauty",
+    description:
+      "A Hot Springs color analysis and image consulting studio offering in-person palette sessions, wardrobe guidance, and group color analysis appointments inside FaceTyme Facial Bar.",
+    image: "/images/categories/local-business.webp",
+    phone: "501-521-4284",
+    address: "3810 Central Ave Suite B, Hot Springs, AR 71913",
+    website: "https://auraroom.glossgenius.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Aura+Room+3810+Central+Ave+Suite+B+Hot+Springs+AR+71913",
+    href: "/hot-springs-spas-wellness",
+  },
 ];

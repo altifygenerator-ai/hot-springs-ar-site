@@ -278,6 +278,19 @@ export const businesses: Business[] = [
       "https://www.google.com/maps/search/?api=1&query=Cafe+1217+1217+Malvern+Ave+Hot+Springs+AR",
     href: "/hot-springs-ar-restaurants",
   },
+  {
+  name: "Simple Nutrition",
+  category: "Restaurant",
+  type: "Teas • Meal Replacement Shakes • Coffee • Protein Snacks",
+  description:
+    "A Hot Springs drink and snack stop offering energizing teas with a variety of supplemental add-ins, healthy meal replacement shakes, hot and iced coffee, and other protein snacks. Online ordering and delivery are available, with a partial menu on the Toast Local app.",
+  image: "/images/businesses/simple-nutrition.webp",
+  phone: "501-463-9349",
+  address: "3539 Central Ave Suite G, Hot Springs, AR",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Simple+Nutrition+3539+Central+Ave+Suite+G+Hot+Springs+AR",
+  href: "/hot-springs-ar-restaurants",
+},
 
   /* =======================
      HOTELS & LODGING

@@ -17,6 +17,10 @@ export const metadata = {
     "thermal springs Arkansas",
     "historic Hot Springs AR",
   ],
+
+  alternates: {
+    canonical: "/history",
+  },
 };
 
 const historySections = [

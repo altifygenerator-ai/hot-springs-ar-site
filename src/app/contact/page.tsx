@@ -17,6 +17,10 @@ export const metadata = {
     "Hot Springs Arkansas hotel listing",
     "Hot Springs Arkansas local guide advertising",
   ],
+
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 const listingOptions = [

@@ -8,6 +8,10 @@ export const metadata = {
   title: "Events in Hot Springs, Arkansas",
   description:
     "Find upcoming events, live music, festivals, family activities, and things happening around Hot Springs, Arkansas.",
+
+  alternates: {
+    canonical: "/events",
+  },
 };
 
 export default async function EventsPage() {

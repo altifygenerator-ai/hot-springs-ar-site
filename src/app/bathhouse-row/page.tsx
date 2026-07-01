@@ -17,6 +17,10 @@ export const metadata = {
     "Hot Springs National Park Bathhouse Row",
     "downtown Hot Springs Arkansas",
   ],
+
+  alternates: {
+    canonical: "/bathhouse-row",
+  },
 };
 
 const hero = {

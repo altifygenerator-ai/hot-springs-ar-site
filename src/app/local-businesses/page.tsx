@@ -20,6 +20,10 @@ export const metadata = {
     "downtown Hot Springs businesses",
     "things to do Hot Springs Arkansas",
   ],
+
+  alternates: {
+    canonical: "/local-businesses",
+  },
 };
 
 const localBusinesses = businesses.filter((business) =>

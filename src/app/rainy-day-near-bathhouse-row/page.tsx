@@ -13,6 +13,10 @@ export const metadata = {
     "Hot Springs rainy day ideas",
     "downtown Hot Springs rainy day",
   ],
+
+  alternates: {
+    canonical: "/rainy-day-near-bathhouse-row",
+  },
 };
 
 const quickLinks = [

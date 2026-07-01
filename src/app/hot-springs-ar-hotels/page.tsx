@@ -6,9 +6,9 @@ import LynLiliRentalCleaningBanner from "@/components/ads/LynLiliRentalCleaningB
 
 export const metadata = {
   title:
-    "Hotels in Hot Springs, Arkansas | Downtown, Bathhouse Row, Oaklawn & Lake Hamilton",
+    "Hotels in Hot Springs, Arkansas | Bathhouse Row, Oaklawn & Lake Hamilton",
   description:
-    "Find hotels in Hot Springs, Arkansas near Bathhouse Row, downtown Hot Springs, Hot Springs National Park, Oaklawn Racing Casino Resort, Lake Hamilton, restaurants, spas, cabins, and local attractions.",
+    "Find hotels in Hot Springs, Arkansas near Bathhouse Row, downtown, Hot Springs National Park, Oaklawn, Lake Hamilton, restaurants, spas, cabins, and local attractions.",
   keywords: [
     "hotels in Hot Springs Arkansas",
     "Hot Springs AR hotels",
@@ -21,6 +21,10 @@ export const metadata = {
     "boutique hotels Hot Springs Arkansas",
     "historic hotels Hot Springs Arkansas",
   ],
+
+  alternates: {
+    canonical: "/hot-springs-ar-hotels",
+  },
 };
 
 const allHotels = businesses.filter((business) => business.category === "Hotel");
@@ -54,6 +58,10 @@ const guideLinks = [
     href: "/things-to-do-in-hot-springs-ar",
   },
   {
+    label: "Hotels Near Bathhouse Row",
+    href: "/hotels-near-bathhouse-row",
+  },
+  {
     label: "Restaurants",
     href: "/hot-springs-ar-restaurants",
   },
@@ -68,6 +76,10 @@ const guideLinks = [
   {
     label: "Explore Hot Springs",
     href: "/explore",
+  },
+  {
+    label: "Lake Hamilton Guide",
+    href: "/lake-hamilton",
   },
 ];
 

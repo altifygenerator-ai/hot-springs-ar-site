@@ -6,9 +6,9 @@ import EventsCTA from "@/components/events/EventsCTA";
 
 export const metadata = {
   title:
-    "Restaurants in Hot Springs, Arkansas | Downtown Dining, Breakfast, Lakefront Food & Local Favorites",
+    "Restaurants in Hot Springs, Arkansas | Downtown, Lake Hamilton & Local Food",
   description:
-    "Find restaurants in Hot Springs, Arkansas including downtown dining, breakfast spots, lakefront restaurants, barbecue, pizza, breweries, cafes, steakhouses, Mexican food, and places to eat near Bathhouse Row, Lake Hamilton, Oaklawn, cabins, and hotels.",
+    "Find restaurants in Hot Springs, Arkansas, including downtown dining, breakfast spots, lakefront food, barbecue, pizza, breweries, cafes, Mexican food, and places to eat near Bathhouse Row, Lake Hamilton, Oaklawn, hotels, and cabins.",
 keywords: [
   "restaurants in Hot Springs Arkansas",
   "Hot Springs AR restaurants",
@@ -27,6 +27,10 @@ keywords: [
   "Hotel Hale restaurant Hot Springs",
   "rooftop dining Hot Springs Arkansas",
 ],
+
+  alternates: {
+    canonical: "/hot-springs-ar-restaurants",
+  },
 };
 
 const allRestaurants = businesses.filter(
@@ -64,6 +68,14 @@ const guideLinks = [
   {
     label: "Things To Do",
     href: "/things-to-do-in-hot-springs-ar",
+  },
+  {
+    label: "Near Bathhouse Row",
+    href: "/restaurants-near-bathhouse-row",
+  },
+  {
+    label: "Lake Hamilton Food",
+    href: "/lake-hamilton-restaurants",
   },
   {
     label: "Hotels",
@@ -200,7 +212,10 @@ export default function RestaurantsPage() {
                 Hot Springs has a better food scene than people expect. You can
                 start with breakfast downtown, grab lunch near Bathhouse Row,
                 plan dinner by Lake Hamilton, or find a casual local stop after
-                hiking, shopping, racing, or exploring the national park.
+                hiking, shopping, racing, or exploring the national park. Newer
+                local additions like Rock N Roll Sushi, Ambrosia at Angel&apos;s,
+                La Bruja&apos;s Dulceria & Bakery, and Sunshine Store & Cafe help
+                fill in more choices beyond the obvious first stops.
               </p>
 
               <p className="leading-relaxed" style={{ color: "var(--muted)" }}>

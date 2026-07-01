@@ -18,6 +18,10 @@ export const metadata = {
     "The Hotel Hot Springs",
     "places to stay near Bathhouse Row",
   ],
+
+  alternates: {
+    canonical: "/hotels-near-bathhouse-row",
+  },
 };
 
 const featuredHotels = [

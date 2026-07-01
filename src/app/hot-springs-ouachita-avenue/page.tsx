@@ -19,6 +19,10 @@ export const metadata = {
     "Static on Ouachita",
     "Hot Springs local spots",
   ],
+
+  alternates: {
+    canonical: "/hot-springs-ouachita-avenue",
+  },
 };
 
 export default function HotSpringsOuachitaAvenuePage() {

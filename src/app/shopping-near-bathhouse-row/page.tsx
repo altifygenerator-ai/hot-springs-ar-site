@@ -13,6 +13,10 @@ export const metadata = {
     "shops near Bathhouse Row Hot Springs",
     "Hot Springs local shops",
   ],
+
+  alternates: {
+    canonical: "/shopping-near-bathhouse-row",
+  },
 };
 
 const quickLinks = [

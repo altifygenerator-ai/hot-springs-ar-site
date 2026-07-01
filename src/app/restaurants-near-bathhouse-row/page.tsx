@@ -24,6 +24,10 @@ export const metadata = {
   "Hotel Hale restaurant Hot Springs",
   "rooftop dining Hot Springs Arkansas",
 ],
+
+  alternates: {
+    canonical: "/restaurants-near-bathhouse-row",
+  },
 };
 
 const featuredRestaurants = [

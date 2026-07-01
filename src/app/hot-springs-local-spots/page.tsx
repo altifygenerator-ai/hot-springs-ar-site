@@ -24,6 +24,10 @@ export const metadata = {
     "Hot Springs parks and trails",
   ],
 
+
+  alternates: {
+    canonical: "/hot-springs-local-spots",
+  },
 };
 
 const guideLinks = [
@@ -115,7 +119,9 @@ export default function HotSpringsLocalSpotsPage() {
               The goal is not to make another generic travel list. These pages
               are for the easy-to-miss shops, older food stops, creative
               corners, family-friendly ideas, and downtown finds locals actually
-              bring up when someone asks what visitors should check out.
+              bring up when someone asks what visitors should check out. Recent
+              suggestions also added more sweets, books, coffee, wellness, and
+              west Garland County food stops to the local guide.
             </p>
           </div>
         </div>

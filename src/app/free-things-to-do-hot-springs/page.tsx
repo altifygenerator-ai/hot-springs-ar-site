@@ -18,6 +18,10 @@ export const metadata = {
     "downtown Hot Springs free things",
     "budget friendly Hot Springs Arkansas",
   ],
+
+  alternates: {
+    canonical: "/free-things-to-do-hot-springs",
+  },
 };
 
 const freeStops = [

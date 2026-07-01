@@ -77,7 +77,7 @@ const categories = [
 
 export default function CategoryGrid() {
   return (
-    <section className="section">
+    <section className="section section-steam-wash">
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>

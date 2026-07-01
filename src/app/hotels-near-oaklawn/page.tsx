@@ -18,6 +18,10 @@ export const metadata = {
     "Microtel Hot Springs Oaklawn",
     "Central Avenue hotels Hot Springs AR",
   ],
+
+  alternates: {
+    canonical: "/hotels-near-oaklawn",
+  },
 };
 
 const featuredHotels = [

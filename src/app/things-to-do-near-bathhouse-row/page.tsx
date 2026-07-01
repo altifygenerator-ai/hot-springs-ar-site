@@ -17,6 +17,10 @@ export const metadata = {
     "National Park Duck Tours Hot Springs",
     "Crystal Ridge Distillery Hot Springs",
   ],
+
+  alternates: {
+    canonical: "/things-to-do-near-bathhouse-row",
+  },
 };
 
 const quickLinks = [

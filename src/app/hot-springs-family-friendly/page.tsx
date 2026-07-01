@@ -20,6 +20,10 @@ export const metadata = {
     "Cedar Glades Park Hot Springs",
     "Gangster Museum Hot Springs families",
   ],
+
+  alternates: {
+    canonical: "/hot-springs-family-friendly",
+  },
 };
 
 const familyHighlights = [

@@ -9,6 +9,10 @@ export const metadata = {
   title: "This Weekend in Hot Springs, Arkansas",
   description:
     "See what’s happening this weekend in Hot Springs, Arkansas, including local events, live music, festivals, markets, restaurants, attractions, and family-friendly things to do.",
+
+  alternates: {
+    canonical: "/this-weekend",
+  },
 };
 
 const weekendIdeas = [

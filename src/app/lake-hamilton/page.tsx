@@ -18,6 +18,10 @@ export const metadata = {
     "Lake Hamilton fishing",
     "Lake Hamilton boat rentals",
   ],
+
+  alternates: {
+    canonical: "/lake-hamilton",
+  },
 };
 
 const featuredRestaurants = [

@@ -16,6 +16,10 @@ export const metadata = {
     "Antique Stores, Thrift Stores & Flea Markets in Hot Springs, Arkansas",
   description:
     "A local guide to antique stores, thrift shops, resale stores, flea markets, vendor malls, vintage shops, and secondhand shopping around Hot Springs, Arkansas.",
+
+  alternates: {
+    canonical: "/hot-springs-antique-thrift-flea-markets",
+  },
 };
 
 const quickStats = [

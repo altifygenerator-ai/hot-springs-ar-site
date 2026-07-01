@@ -4,9 +4,9 @@ import { thingsToDoHero } from "@/data/hero";
 import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title:
-    "Things To Do in Hot Springs, Arkansas | Bathhouse Row, Lake Hamilton & Attractions",
+    "Things To Do in Hot Springs, Arkansas | Bathhouse Row, Lake Hamilton & More",
   description:
-    "Explore the best things to do in Hot Springs, Arkansas including Bathhouse Row, Hot Springs National Park, Lake Hamilton, Oaklawn, Garvan Woodland Gardens, hiking, spas, museums, restaurants, cabins, hotels, and family attractions.",
+    "Plan things to do in Hot Springs, Arkansas with Bathhouse Row, Hot Springs National Park, Lake Hamilton, Oaklawn, Garvan Woodland Gardens, spas, hiking, museums, family stops, restaurants, hotels, and cabins.",
   keywords: [
     "things to do in Hot Springs Arkansas",
     "things to do in Hot Springs AR",
@@ -31,6 +31,10 @@ export const metadata = {
 "West Mountain Hot Springs",
 "North Mountain Hot Springs",
   ],
+
+  alternates: {
+    canonical: "/things-to-do-in-hot-springs-ar",
+  },
 };
 
 const featuredAttractions = [
@@ -339,7 +343,23 @@ export default function ThingsToDoPage() {
           </Link>
 
           <Link href="/bathhouse-row" className="btn">
-            Explore Hot Springs
+            Bathhouse Row
+          </Link>
+
+          <Link href="/free-things-to-do-hot-springs" className="btn">
+            Free Things To Do
+          </Link>
+
+          <Link href="/hot-springs-family-friendly" className="btn">
+            Family-Friendly
+          </Link>
+
+          <Link href="/hot-springs-spas-wellness" className="btn">
+            Spas & Wellness
+          </Link>
+
+          <Link href="/hot-springs-local-spots" className="btn">
+            Local Hidden Gems
           </Link>
         </div>
       </section>

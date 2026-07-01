@@ -72,11 +72,11 @@ const pageLinks = [
   },
   {
     label: "Things To Do",
-    href: "/things-to-do",
+    href: "/things-to-do-in-hot-springs-ar",
   },
   {
     label: "Restaurants",
-    href: "/restaurants",
+    href: "/hot-springs-ar-restaurants",
   },
   {
     label: "This Weekend",

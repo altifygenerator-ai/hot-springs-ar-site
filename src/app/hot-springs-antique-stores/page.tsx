@@ -15,6 +15,10 @@ export const metadata = {
     "Bathhouse Row antiques",
     "Hot Springs Arkansas collectibles",
   ],
+
+  alternates: {
+    canonical: "/hot-springs-antique-stores",
+  },
 };
 
 const featuredAntiquePlaces = antiquePlaces.filter((place) => place.featured);

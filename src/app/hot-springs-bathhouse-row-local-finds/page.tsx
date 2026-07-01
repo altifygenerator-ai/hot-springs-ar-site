@@ -18,6 +18,10 @@ export const metadata = {
     "Hot Springs Arkansas hidden gems",
     "downtown Hot Springs local shops",
   ],
+
+  alternates: {
+    canonical: "/hot-springs-bathhouse-row-local-finds",
+  },
 };
 
 export default function HotSpringsBathhouseRowLocalFindsPage() {

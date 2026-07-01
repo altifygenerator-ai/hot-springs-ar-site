@@ -7,9 +7,9 @@ import LynLiliRentalCleaningBanner from "@/components/ads/LynLiliRentalCleaningB
 
 export const metadata = {
   title:
-    "Cabins in Hot Springs, Arkansas | Lake Hamilton Cabins, Treehouses & Quiet Stays",
+    "Cabins in Hot Springs, Arkansas | Lake Hamilton, Treehouses & Quiet Stays",
   description:
-    "Find cabins in Hot Springs, Arkansas including treehouse stays, lake-area cottages, wooded retreats, romantic getaways, RV resorts, vacation rentals, and places to stay near Lake Hamilton, Lake Catherine, Bathhouse Row, Oaklawn, and Hot Springs National Park.",
+    "Find cabins in Hot Springs, Arkansas, including treehouse stays, lake-area cottages, wooded retreats, romantic getaways, RV resorts, vacation rentals, and quiet places to stay near Lake Hamilton, Lake Catherine, Bathhouse Row, Oaklawn, and Hot Springs National Park.",
   keywords: [
     "cabins in Hot Springs Arkansas",
     "Hot Springs AR cabins",
@@ -23,6 +23,10 @@ export const metadata = {
     "Lake Hamilton cabins",
     "Lake Catherine cabins",
   ],
+
+  alternates: {
+    canonical: "/hot-springs-ar-cabins",
+  },
 };
 
 const allCabins = businesses.filter(
@@ -58,6 +62,14 @@ const guideLinks = [
     href: "/things-to-do-in-hot-springs-ar",
   },
   {
+    label: "Lake Hamilton Cabins",
+    href: "/lake-hamilton-cabins",
+  },
+  {
+    label: "Pet-Friendly Hot Springs",
+    href: "/pet-friendly-hot-springs",
+  },
+  {
     label: "Restaurants",
     href: "/hot-springs-ar-restaurants",
   },
@@ -68,6 +80,10 @@ const guideLinks = [
   {
     label: "Explore Hot Springs",
     href: "/explore",
+  },
+  {
+    label: "Lake Hamilton",
+    href: "/lake-hamilton",
   },
 ];
 

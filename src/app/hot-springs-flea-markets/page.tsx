@@ -15,6 +15,10 @@ export const metadata = {
     "Central Avenue Marketplace Hot Springs",
     "Airport Flea Market Hot Springs",
   ],
+
+  alternates: {
+    canonical: "/hot-springs-flea-markets",
+  },
 };
 
 const featuredFleaPlaces = fleaPlaces.filter((place) => place.featured);

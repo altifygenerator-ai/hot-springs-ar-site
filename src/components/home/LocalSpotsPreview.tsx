@@ -48,7 +48,7 @@ function getSpotTags(spotName: string) {
 
 export default function LocalSpotsPreview() {
   return (
-    <section className="section local-spots-home-preview">
+    <section className="section local-spots-home-preview section-green-wash">
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>

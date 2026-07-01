@@ -19,6 +19,10 @@ export const metadata = {
 "pet CPR Hot Springs Arkansas",
 "canine first aid Hot Springs Arkansas",
   ],
+
+  alternates: {
+    canonical: "/pet-friendly-hot-springs",
+  },
 };
 
 const quickLinks = [

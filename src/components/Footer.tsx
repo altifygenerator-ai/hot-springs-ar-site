@@ -89,6 +89,7 @@ const sisterSites = [
   { href: "https://glenwoodarkansas.org", label: "Glenwood Arkansas" },
   { href: "https://amityarkansas.org", label: "Amity Arkansas" },
   { href: "https://mountidaarkansas.org", label: "Mount Ida Arkansas" },
+  { href: "https://murfreesboroarkansas.org", label: "Murfreesboro Arkansas" },
 ];
 
 function FooterGroup({

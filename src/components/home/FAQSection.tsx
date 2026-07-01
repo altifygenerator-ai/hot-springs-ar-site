@@ -48,7 +48,7 @@ const planningLinks = [
 
 export default function FAQSection() {
   return (
-    <section className="section">
+    <section className="section section-warm-wash">
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div

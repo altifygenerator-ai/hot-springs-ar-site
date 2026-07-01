@@ -15,6 +15,10 @@ export const metadata = {
     "Goodwill Hot Springs Arkansas",
     "Habitat ReStore Hot Springs",
   ],
+
+  alternates: {
+    canonical: "/hot-springs-thrift-stores",
+  },
 };
 
 const featuredThriftPlaces = thriftPlaces.filter((place) => place.featured);

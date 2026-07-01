@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Spas, Wellness & Aesthetic Care in Hot Springs, Arkansas | Bathhouses, Facials, Skin Care & Relaxation",
+    "Hot Springs Spas & Wellness | Bathhouses, Massage, Facials & Relaxation",
   description:
-    "Explore spas, wellness stops, bathhouses, aesthetic care, facials, skin health, body sculpting, thermal baths, resort spas, massage, salon services, and relaxing experiences in Hot Springs, Arkansas.",
+    "Explore Hot Springs spas and wellness stops, including historic bathhouses, thermal baths, massage, facials, skin care, body sculpting, resort spas, salon services, and relaxing ways to plan a visit.",
   keywords: [
     "Hot Springs Arkansas spas",
     "spas in Hot Springs AR",
@@ -248,7 +248,10 @@ export default function HotSpringsSpasWellnessPage() {
             <p className="mt-4 text-lg leading-8">
               Some visitors come for the historic bathhouse experience, some
               want a resort spa day, and some want modern skin, body, and
-              aesthetic care while they are in town.
+              aesthetic care while they are in town. Local wellness suggestions
+              are also being worked into the broader business guide, including
+              massage, facials, color analysis, day spa options, and smaller
+              wellness stops visitors may want to compare before booking.
             </p>
           </div>
 

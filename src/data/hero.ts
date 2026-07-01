@@ -23,7 +23,7 @@ export const homeHero: HeroData = {
   title: "Explore Hot Springs",
 
   description:
-    "Plan a trip around Bathhouse Row, Hot Springs National Park, Lake Hamilton, restaurants, cabins, hotels, hiking trails, spas, mountain views, and local attractions across Hot Springs, Arkansas.",
+    "Plan a Hot Springs, Arkansas trip around Bathhouse Row, Hot Springs National Park, Lake Hamilton, Oaklawn, restaurants, cabins, hotels, hiking trails, spas, mountain views, local shops, and visitor-friendly attractions.",
 
   image: "/images/hero/hot-springs-hero.png",
 

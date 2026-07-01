@@ -4,6 +4,10 @@ export const metadata = {
   title: "Submit an Event | Hot Springs Arkansas",
   description:
     "Submit a local event happening in or near Hot Springs, Arkansas for review.",
+
+  alternates: {
+    canonical: "/submit-event",
+  },
 };
 
 export default function SubmitEventPage() {

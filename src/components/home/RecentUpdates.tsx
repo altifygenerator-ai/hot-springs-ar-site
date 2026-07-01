@@ -44,7 +44,7 @@ const communityUpdateLinks = [
 
 export default function RecentUpdates() {
   return (
-    <section className="section hot-springs-recent-updates">
+    <section className="section hot-springs-recent-updates section-warm-wash">
       <div className="container">
         <div className="home-events-heading">
           <div>

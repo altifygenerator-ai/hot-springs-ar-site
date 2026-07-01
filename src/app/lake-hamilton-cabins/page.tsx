@@ -18,6 +18,10 @@ export const metadata = {
     "cabins on Lake Hamilton Arkansas",
     "lakefront cabins Hot Springs AR",
   ],
+
+  alternates: {
+    canonical: "/lake-hamilton-cabins",
+  },
 };
 
 const featuredStays = [

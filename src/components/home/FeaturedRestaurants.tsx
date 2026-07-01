@@ -62,7 +62,7 @@ export default function FeaturedRestaurants() {
   const side = restaurants.slice(1);
 
   return (
-    <section className="section">
+    <section className="section section-soft-divider">
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>

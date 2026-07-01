@@ -18,6 +18,10 @@ export const metadata = {
     "Trejo's Del Lago",
     "Hot Springs Arkansas lake restaurants",
   ],
+
+  alternates: {
+    canonical: "/lake-hamilton-restaurants",
+  },
 };
 
 const featuredRestaurants = [

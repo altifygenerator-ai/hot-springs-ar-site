@@ -18,6 +18,10 @@ export const metadata = {
     "Hot Springs Arkansas trip planning",
     "Hot Springs areas",
   ],
+
+  alternates: {
+    canonical: "/explore",
+  },
 };
 
 const areas = [

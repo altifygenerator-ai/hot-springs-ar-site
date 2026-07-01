@@ -6,7 +6,7 @@ export default async function HomeEventsPreview() {
   const events = await getUpcomingApprovedEvents(3);
 
   return (
-    <section className="home-events-section">
+    <section className="home-events-section section-green-wash">
       <div className="container">
         <div className="home-events-heading">
           <div>

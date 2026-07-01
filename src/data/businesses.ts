@@ -450,7 +450,7 @@ export const businesses: Business[] = [
     category: "Cabins & Lodging",
     type: "Secluded Cabins • Ouachita Foothills • Near DeGray Lake",
     description:
-  "A quiet family-owned cabin getaway on secluded acreage near DeGray Lake and Hot Springs National Park, with one cabin for romantic stays and another made for families. Both cabins sit a good distance apart, giving guests rustic lodging, fireplaces, covered porches, and a peaceful outdoor setting.",
+      "A quiet cabin getaway on secluded acreage near DeGray Lake and Hot Springs National Park, with rustic lodging, fireplaces, covered porches, and a peaceful outdoor setting.",
     image: "/images/businesses/lone-cedar-cabins.jpeg",
     phone: "501-865-6782",
     address: "1873 Lone Cedar Cabins Rd, Bismarck, AR 71929",

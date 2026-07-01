@@ -8,14 +8,18 @@ const updates = [
     href: "/spa-city-aesthetics-hot-springs",
   },
   {
-    label: "Local listings update",
-    title: "New Hot Springs businesses added",
-    text: "Several local suggestions have been added across the Hot Springs guide, including new restaurant listings, sweet shops, wellness stops, local hidden gems, and a nearby Lake Ouachita area cafe worth knowing about.",
-    href: "/local-businesses",
+    label: "Site update",
+    title: "Search Added to the Hot Springs Guide",
+    text: "A new search bar has been added to help visitors find Hot Springs guides faster, including restaurants, cabins, hotels, Bathhouse Row, Lake Hamilton, spas, events, local spots, shopping, and family-friendly ideas.",
+    href: "/search",
   },
 ];
 
 const communityUpdateLinks = [
+  {
+    href: "/search",
+    label: "Search the Guide",
+  },
   {
     href: "/hot-springs-ar-restaurants",
     label: "Restaurant Guide",
@@ -35,10 +39,6 @@ const communityUpdateLinks = [
   {
     href: "/hot-springs-family-friendly",
     label: "Family-Friendly Finds",
-  },
-  {
-    href: "/hot-springs-antique-thrift-flea-markets",
-    label: "Shopping Guide",
   },
 ];
 
@@ -68,8 +68,8 @@ export default function RecentUpdates() {
               Spa City Spotlight
             </Link>
 
-            <Link href="/local-businesses" className="btn-secondary">
-              Local Businesses
+            <Link href="/search" className="btn-secondary">
+              Search the Guide
             </Link>
           </div>
         </div>
@@ -95,17 +95,15 @@ export default function RecentUpdates() {
 
           <article className="category-card">
             <div className="category-content">
-              <p className="hero-eyebrow">Community suggestions</p>
+              <p className="hero-eyebrow">Guide shortcuts</p>
 
-              <h3>Recent local suggestion updates</h3>
+              <h3>Find Hot Springs pages faster</h3>
 
               <p>
-                Recent local suggestions have been worked into the guide,
-                including Rock N Roll Sushi, Ambrosia at Angel&apos;s, La
-                Bruja&apos;s Dulceria & Bakery, The Electric Strawberry,
-                Destinations Day Spa, Inner Peace Massage & Facials, Aura Room,
-                and Sunshine Store & Cafe near Royal and the Lake Ouachita side
-                of Hot Springs.
+                Visitors can now search across the Hot Springs guide or jump
+                straight into popular planning pages for restaurants, Bathhouse
+                Row, spas and wellness, local hidden gems, family-friendly
+                ideas, and shopping around town.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">

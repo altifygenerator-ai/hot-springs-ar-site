@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import HeaderSearch from "@/components/HeaderSearch";
 
 const thingsToDoLinks = [
   { href: "/things-to-do-in-hot-springs-ar", label: "Things To Do" },
@@ -148,6 +149,8 @@ export default function Header() {
           {open ? "Close" : "Menu"}
         </button>
       </div>
+
+      <HeaderSearch />
 
       {/* MOBILE MENU ONLY */}
       {open && (

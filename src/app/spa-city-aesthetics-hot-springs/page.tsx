@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     canonical: "/spa-city-aesthetics-hot-springs",
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 

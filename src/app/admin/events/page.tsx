@@ -21,9 +21,17 @@ export default async function AdminEventsPage() {
             </p>
           </div>
 
-          <Link href="/admin/events/new" className="btn-primary">
-            Add Event
-          </Link>
+          <div className="admin-row-actions">
+            <Link href="/admin/events/import" className="btn-primary">
+              Quick Import
+            </Link>
+            <Link href="/admin/events/sources" className="btn-secondary">
+              Event Sources
+            </Link>
+            <Link href="/admin/events/new" className="btn-secondary">
+              Add Event
+            </Link>
+          </div>
         </div>
 
         <AdminEventTable events={events} />

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { supabaseAdmin } from "@/lib/supabase/server";
+import { requireAdmin } from "@/lib/admin-auth";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -11,6 +12,9 @@ type RouteBody = {
 };
 
 export async function POST(request: Request) {
+  const admin = await requireAdmin();
+  if (!admin.ok) return admin.response;
+
   try {
     const body = (await request.json()) as RouteBody;
 

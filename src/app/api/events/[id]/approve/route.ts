@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase/server";
+import { requireAdmin } from "@/lib/admin-auth";
 
 type RouteProps = {
   params: Promise<{
@@ -8,6 +9,9 @@ type RouteProps = {
 };
 
 export async function POST(request: Request, { params }: RouteProps) {
+  const admin = await requireAdmin();
+  if (!admin.ok) return admin.response;
+
   try {
     const { id } = await params;
     const body = await request.json();

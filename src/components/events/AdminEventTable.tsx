@@ -89,9 +89,19 @@ export default function AdminEventTable({ events }: { events: TourismEvent[] }) 
 
               <td>
                 <div className="admin-row-actions">
+                  <Link href={`/admin/events/${event.id}/edit`}>
+                    Edit
+                  </Link>
+
                   <button type="button" onClick={() => cleanWithAI(event.id)}>
                     Clean with AI
                   </button>
+
+                  {event.source_url && (
+                    <Link href={event.source_url} target="_blank">
+                      Source
+                    </Link>
+                  )}
 
                   {event.status !== "approved" && (
                     <button

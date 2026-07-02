@@ -4,14 +4,26 @@ const updates = [
   {
     label: "Featured business",
     title: "Spa City Aesthetics Spotlight",
-    text: "A new featured business spotlight has been added for Spa City Aesthetics, a Hot Springs aesthetics studio focused on personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic support, hair and scalp care, and skin longevity.",
+    text: "Spa City Aesthetics is featured in the Hot Springs guide with a dedicated spotlight for personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic support, hair and scalp care, and skin longevity.",
     href: "/spa-city-aesthetics-hot-springs",
   },
   {
-    label: "Site update",
-    title: "Search Added to the Hot Springs Guide",
-    text: "A new search bar has been added to help visitors find Hot Springs guides faster, including restaurants, cabins, hotels, Bathhouse Row, Lake Hamilton, spas, events, local spots, shopping, and family-friendly ideas.",
-    href: "/search",
+    label: "New guide",
+    title: "Hot Springs Boutiques & Shops",
+    text: "A new shopping guide has been added for visitors looking for boutiques, gift shops, local finds, downtown shopping stops, and places to browse around Hot Springs.",
+    href: "/hot-springs-boutiques-shops",
+  },
+  {
+    label: "New guide",
+    title: "Hot Springs Attractions",
+    text: "The attractions guide has been expanded to help visitors find classic Hot Springs stops, family-friendly places, downtown attractions, and popular things to do around town.",
+    href: "/hot-springs-attractions",
+  },
+  {
+    label: "New guide",
+    title: "Outdoor Businesses & Lake Area Stops",
+    text: "A new outdoor business guide helps visitors find lake-area stops, outdoor recreation, local activity providers, and businesses tied to enjoying Hot Springs outside.",
+    href: "/hot-springs-outdoor-businesses",
   },
 ];
 
@@ -21,24 +33,40 @@ const communityUpdateLinks = [
     label: "Search the Guide",
   },
   {
-    href: "/hot-springs-ar-restaurants",
-    label: "Restaurant Guide",
+    href: "/local-businesses",
+    label: "Local Business Directory",
   },
   {
-    href: "/restaurants-near-bathhouse-row",
-    label: "Restaurants Near Bathhouse Row",
+    href: "/hot-springs-boutiques-shops",
+    label: "Boutiques & Shops",
   },
   {
-    href: "/hot-springs-local-spots",
-    label: "Local Hidden Gems",
+    href: "/hot-springs-attractions",
+    label: "Attractions",
+  },
+  {
+    href: "/hot-springs-outdoor-businesses",
+    label: "Outdoor Businesses",
+  },
+  {
+    href: "/hot-springs-local-services",
+    label: "Local Services",
   },
   {
     href: "/hot-springs-spas-wellness",
     label: "Spas & Wellness",
   },
   {
-    href: "/hot-springs-family-friendly",
-    label: "Family-Friendly Finds",
+    href: "/hot-springs-ar-restaurants",
+    label: "Restaurant Guide",
+  },
+  {
+    href: "/hot-springs-ar-cabins",
+    label: "Cabins & Stays",
+  },
+  {
+    href: "/events",
+    label: "Events",
   },
 ];
 
@@ -53,19 +81,17 @@ export default function RecentUpdates() {
             <h2>New and updated Hot Springs guides.</h2>
 
             <p>
-              The Hot Springs guide is growing with more local events, seasonal
-              guides, helpful visitor pages, shopping guides, business listings,
-              history articles, family-friendly ideas, wellness stops, and
-              places worth checking out around town.
+              The Hot Springs guide is getting easier to use with expanded local
+              business categories, better visitor pages, shopping guides,
+              attractions, outdoor stops, local services, events, wellness
+              listings, restaurants, cabins, hotels, and helpful planning pages
+              around town.
             </p>
           </div>
 
           <div className="home-events-actions">
-            <Link
-              href="/spa-city-aesthetics-hot-springs"
-              className="btn-primary"
-            >
-              Spa City Spotlight
+            <Link href="/local-businesses" className="btn-primary">
+              Browse Local Businesses
             </Link>
 
             <Link href="/search" className="btn-secondary">
@@ -100,10 +126,10 @@ export default function RecentUpdates() {
               <h3>Find Hot Springs pages faster</h3>
 
               <p>
-                Visitors can now search across the Hot Springs guide or jump
-                straight into popular planning pages for restaurants, Bathhouse
-                Row, spas and wellness, local hidden gems, family-friendly
-                ideas, and shopping around town.
+                Visitors can search across the guide or jump straight into
+                popular planning pages for local businesses, shopping,
+                attractions, outdoor stops, services, restaurants, spas,
+                cabins, events, and family-friendly things to do.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">

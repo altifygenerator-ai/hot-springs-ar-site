@@ -155,7 +155,7 @@ export const metadata: Metadata = {
     siteName: "Hot Springs Arkansas Guide",
     images: [
       {
-        url: "/images/hero/hot-springs-hero.jpg",
+        url: "/images/hero/hot-springs-hero.png",
         width: 1200,
         height: 630,
         alt: "Hot Springs Arkansas travel guide with Bathhouse Row, Lake Hamilton, restaurants, hotels, cabins, and things to do",
@@ -171,7 +171,7 @@ export const metadata: Metadata = {
       "Hot Springs Arkansas Guide | Things To Do, Restaurants, Hotels, Cabins & Travel Info",
     description:
       "Explore Hot Springs, Arkansas with guides to things to do, restaurants, hotels, cabins, Bathhouse Row, Lake Hamilton, Oaklawn, and local attractions.",
-    images: ["/images/hero/hot-springs-hero.jpg"],
+    images: ["/images/hero/hot-springs-hero.png"],
   },
 
   alternates: {

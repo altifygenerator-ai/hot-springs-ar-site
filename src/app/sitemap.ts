@@ -206,6 +206,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
     },
     {
+      path: "/hot-springs-boutiques-shops",
+      priority: 0.87,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-attractions",
+      priority: 0.9,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-outdoor-businesses",
+      priority: 0.86,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/hot-springs-local-services",
+      priority: 0.84,
+      changeFrequency: "weekly" as const,
+    },
+
+    {
       path: "/contact",
       priority: 0.8,
       changeFrequency: "monthly" as const,

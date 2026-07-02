@@ -181,6 +181,47 @@ const pageSearchItems: SearchItem[] = [
       "local businesses hot springs business directory shops services restaurants hotels cabins spas attractions get listed",
     type: "Guide",
   },
+
+  {
+    title: "Hot Springs Boutiques & Shops",
+    href: "/hot-springs-boutiques-shops",
+    category: "Shopping",
+    description:
+      "Boutiques, gift shops, bookstores, soap shops, specialty food stores, local retail, and visitor-friendly shopping stops around Hot Springs.",
+    keywords:
+      "boutiques shops shopping gifts souvenirs bookstore books soap bath goods central avenue downtown bathhouse row local retail hot springs",
+    type: "Guide",
+  },
+  {
+    title: "Hot Springs Attractions",
+    href: "/hot-springs-attractions",
+    category: "Attractions",
+    description:
+      "Attractions in Hot Springs including museums, family activities, gardens, tours, entertainment, historic places, and visitor activities.",
+    keywords:
+      "attractions hot springs museums family activities tours magic springs oaklawn garvan gardens alligator farm tiny town duck tours mountain tower",
+    type: "Guide",
+  },
+  {
+    title: "Hot Springs Outdoor Businesses",
+    href: "/hot-springs-outdoor-businesses",
+    category: "Outdoor Recreation",
+    description:
+      "Outdoor businesses and recreation stops around Hot Springs including trails, bike rentals, outfitters, parks, marinas, and lake recreation.",
+    keywords:
+      "outdoor businesses recreation hot springs trails bike rentals northwoods greenway outfitters parks lake hamilton lake ouachita marinas hiking biking",
+    type: "Guide",
+  },
+  {
+    title: "Hot Springs Local Services",
+    href: "/hot-springs-local-services",
+    category: "Local Services",
+    description:
+      "Local services in Hot Springs including trolley tours, transportation, rentals, cleaning, property help, bike services, and visitor support.",
+    keywords:
+      "local services hot springs trolley tours transportation rentals cleaning property vacation rental cleaning bike services camper rentals visitor services",
+    type: "Guide",
+  },
   {
     title: "Local Hidden Gems",
     href: "/hot-springs-local-spots",
@@ -414,14 +455,15 @@ const pageSearchItems: SearchItem[] = [
 ];
 
 const businessCategoryHref: Record<Business["category"], string> = {
-  Attraction: "/things-to-do-in-hot-springs-ar",
+  Attraction: "/hot-springs-attractions",
   Restaurant: "/hot-springs-ar-restaurants",
   Hotel: "/hot-springs-ar-hotels",
   "Cabins & Lodging": "/hot-springs-ar-cabins",
   "Spa & Bathhouse": "/hot-springs-spas-wellness",
   "Local Business": "/local-businesses",
-  Shopping: "/hot-springs-antique-thrift-flea-markets",
-  "Outdoor Recreation": "/things-to-do-in-hot-springs-ar",
+  "Local Service": "/hot-springs-local-services",
+  Shopping: "/hot-springs-boutiques-shops",
+  "Outdoor Recreation": "/hot-springs-outdoor-businesses",
 };
 
 function joinSearchParts(parts: Array<string | undefined | null>) {

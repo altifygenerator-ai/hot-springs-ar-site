@@ -6,11 +6,13 @@ import HeaderSearch from "@/components/HeaderSearch";
 
 const thingsToDoLinks = [
   { href: "/things-to-do-in-hot-springs-ar", label: "Things To Do" },
+  { href: "/hot-springs-attractions", label: "Attractions" },
   { href: "/explore", label: "Explore Hot Springs" },
   { href: "/bathhouse-row", label: "Bathhouse Row" },
   { href: "/things-to-do-near-bathhouse-row", label: "Things To Do Near Bathhouse Row" },
   { href: "/hot-springs-spas-wellness", label: "Spas & Wellness" },
   { href: "/lake-hamilton", label: "Lake Hamilton" },
+  { href: "/hot-springs-outdoor-businesses", label: "Outdoor Businesses" },
   { href: "/history", label: "History" },
   { href: "/free-things-to-do-hot-springs", label: "Free Things To Do" },
   { href: "/hot-springs-family-friendly", label: "Family-Friendly Finds" },
@@ -21,6 +23,7 @@ const thingsToDoLinks = [
 
 const foodLocalLinks = [
   { href: "/hot-springs-ar-restaurants", label: "Restaurants" },
+  { href: "/hot-springs-boutiques-shops", label: "Boutiques & Shops" },
   {
     href: "/restaurants-near-bathhouse-row",
     label: "Restaurants Near Bathhouse Row",
@@ -40,6 +43,7 @@ const foodLocalLinks = [
     label: "Bathhouse Row Local Finds",
   },
   { href: "/local-businesses", label: "Local Businesses" },
+  { href: "/hot-springs-local-services", label: "Local Services" },
 ];
 
 const stayLinks = [

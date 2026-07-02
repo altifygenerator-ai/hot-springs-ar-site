@@ -29,6 +29,7 @@ export const metadata = {
 const localBusinesses = businesses.filter((business) =>
   [
     "Local Business",
+    "Local Service",
     "Shopping",
     "Outdoor Recreation",
     "Spa & Bathhouse",
@@ -60,6 +61,10 @@ const attractionBusinesses = localBusinesses.filter(
   (business) => business.category === "Attraction"
 );
 
+const serviceBusinesses = localBusinesses.filter(
+  (business) => business.category === "Local Service"
+);
+
 const otherLocalBusinesses = localBusinesses.filter(
   (business) => business.category === "Local Business"
 );
@@ -68,22 +73,27 @@ const businessTypes = [
   {
     title: "Local shops and visitor stops",
     text: "Boutiques, gift shops, specialty stores, galleries, markets, and places that give visitors something local to browse beyond the usual tourist stops.",
-    href: "/hot-springs-local-spots",
+    href: "/hot-springs-boutiques-shops",
   },
   {
     title: "Spas, bathhouses, and wellness",
     text: "Hot Springs has always been tied to thermal water, rest, bathing, wellness, and slower getaway-style travel.",
-    href: "/bathhouse-row",
+    href: "/hot-springs-spas-wellness",
   },
   {
     title: "Attractions and activities",
     text: "Museums, gardens, family attractions, historic places, entertainment stops, and experiences that help visitors fill out a weekend.",
-    href: "/things-to-do-in-hot-springs-ar",
+    href: "/hot-springs-attractions",
   },
   {
     title: "Outdoor recreation and lake-area businesses",
     text: "Marinas, lake stops, outdoor outfitters, scenic places, and recreation-focused businesses around Hot Springs, Lake Hamilton, and nearby lake areas.",
-    href: "/lake-hamilton",
+    href: "/hot-springs-outdoor-businesses",
+  },
+  {
+    title: "Local services and visitor help",
+    text: "Transportation, rentals, property support, cleaning, bike help, and practical services that fit visitors, hosts, and local business owners.",
+    href: "/hot-springs-local-services",
   },
 ];
 
@@ -107,6 +117,22 @@ const localGuideLinks = [
   {
     label: "Local Hidden Gems",
     href: "/hot-springs-local-spots",
+  },
+  {
+    label: "Boutiques & Shops",
+    href: "/hot-springs-boutiques-shops",
+  },
+  {
+    label: "Attractions",
+    href: "/hot-springs-attractions",
+  },
+  {
+    label: "Outdoor Businesses",
+    href: "/hot-springs-outdoor-businesses",
+  },
+  {
+    label: "Local Services",
+    href: "/hot-springs-local-services",
   },
   {
     label: "Get Listed",
@@ -141,6 +167,12 @@ function getBusinessHref(business: (typeof businesses)[number]) {
   return business.href ?? business.website ?? business.directions ?? "#";
 }
 
+function getListingBadge(business: (typeof businesses)[number]) {
+  if (business.name === "Spa City Aesthetics") return "Featured Partner";
+  if (business.featured) return "Our Pick";
+  return business.category;
+}
+
 function BusinessCard({
   business,
   index,
@@ -164,7 +196,7 @@ function BusinessCard({
           />
 
           <div className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
-            {business.category}
+            {getListingBadge(business)}
           </div>
         </div>
 
@@ -422,7 +454,7 @@ export default function LocalBusinessesPage() {
   />
 
   <div className="absolute left-5 top-5 rounded-full bg-black/75 px-4 py-2 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
-    Featured Local Business
+    {getListingBadge(mainBusiness)}
   </div>
 </div>
 
@@ -531,6 +563,12 @@ export default function LocalBusinessesPage() {
         title="Outdoor recreation and lake-area businesses"
         text="Marinas, lake stops, outdoor recreation, scenic places, and local businesses that help visitors experience the area beyond downtown."
         businesses={outdoorBusinesses}
+      />
+
+      <BusinessRail
+        title="Local services and visitor help"
+        text="Transportation, rentals, property support, cleaning, bike help, and practical services that fit visitors, hosts, and local business owners."
+        businesses={serviceBusinesses}
       />
 
       <BusinessRail

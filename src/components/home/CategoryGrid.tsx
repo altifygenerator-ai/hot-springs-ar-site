@@ -55,6 +55,7 @@ const categories = [
     href: "/explore",
     links: [
       { href: "/hot-springs-local-spots", label: "Hidden Gems" },
+      { href: "/hot-springs-boutiques-shops", label: "Boutiques & Shops" },
       {
         href: "/hot-springs-antique-thrift-flea-markets",
         label: "Antique & Thrift",
@@ -69,8 +70,9 @@ const categories = [
     image: "/images/categories/local-business.webp",
     href: "/local-businesses",
     links: [
-      { href: "/contact", label: "Get Listed" },
-      { href: "/submit-event", label: "Submit an Event" },
+      { href: "/hot-springs-boutiques-shops", label: "Boutiques & Shops" },
+      { href: "/hot-springs-attractions", label: "Attractions" },
+      { href: "/hot-springs-local-services", label: "Local Services" },
     ],
   },
 ];

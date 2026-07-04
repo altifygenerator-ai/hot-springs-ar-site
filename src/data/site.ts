@@ -2,7 +2,7 @@ export const site = {
   name: "Hot Springs Arkansas Guide",
   city: "Hot Springs",
   state: "Arkansas",
-  url: "https://hotspringsarkansas.org",
+  url: "https://www.hotspringsarkansas.org",
 
   title:
     "Hot Springs Arkansas Guide | Things To Do, Restaurants, Cabins & Hotels",

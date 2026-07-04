@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { localSpots } from "@/data/local-spots/hiddenGems";
+import { businessClickTracking } from "@/lib/tracking";
 
 const featuredIds = [
   "ouachita-avenue",
@@ -94,6 +95,13 @@ export default function LocalSpotsPreview() {
           {featuredSpots[0] && (
             <Link
               href="/hot-springs-local-spots"
+              {...businessClickTracking({
+                action: "view-details",
+                business: featuredSpots[0].name,
+                page: "/",
+                placement: "homepage-featured-local-spots-main",
+                placementType: "editorial",
+              })}
               className="group overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl"
               style={{ borderColor: "var(--border)" }}
             >
@@ -167,6 +175,13 @@ export default function LocalSpotsPreview() {
               <Link
                 key={spot.id}
                 href="/hot-springs-local-spots"
+                {...businessClickTracking({
+                  action: "view-details",
+                  business: spot.name,
+                  page: "/",
+                  placement: "homepage-featured-local-spots-side",
+                  placementType: "editorial",
+                })}
                 className="group grid overflow-hidden rounded-[1.75rem] border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:grid-cols-[0.42fr_0.58fr]"
                 style={{ borderColor: "var(--border)" }}
               >

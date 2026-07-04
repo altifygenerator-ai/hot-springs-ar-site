@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnalyticsClickTracker from "@/components/AnalyticsClickTracker";
 import "./globals.css";
 
 const siteUrl = "https://hotspringsarkansas.org";
@@ -205,6 +206,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Analytics />
+        <AnalyticsClickTracker />
       </body>
     </html>
   );

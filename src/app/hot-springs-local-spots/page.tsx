@@ -141,7 +141,13 @@ export default function HotSpringsLocalSpotsPage() {
 
           <div className="local-spots-grid">
             {featuredSpots.map((spot) => (
-              <LocalSpotCard key={spot.id} spot={spot} />
+              <LocalSpotCard
+                key={spot.id}
+                spot={spot}
+                trackingPage="/hot-springs-local-spots"
+                trackingPlacement="local-spots-featured-picks"
+                trackingPlacementType="editorial"
+              />
             ))}
           </div>
         </div>

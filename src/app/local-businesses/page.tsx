@@ -2,6 +2,7 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import { localBusinessesHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
+import { businessClickTracking, getPlacementType } from "@/lib/tracking";
 
 export const metadata = {
   title:
@@ -187,7 +188,20 @@ function BusinessCard({
       className="group overflow-hidden rounded-[1.5rem] border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
       style={{ borderColor: "var(--border)" }}
     >
-      <a href={href} target="_blank" rel="noopener noreferrer">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...(business.featured
+          ? businessClickTracking({
+              action: business.website ? "website" : business.directions ? "directions" : "view-details",
+              business: business.name,
+              page: "/local-businesses",
+              placement: "local-businesses-featured-card",
+              placementType: getPlacementType(business.name),
+            })
+          : {})}
+      >
         <div className="relative h-48 overflow-hidden bg-[color:var(--surface-strong)]">
           <img
             src={business.image}
@@ -443,6 +457,13 @@ export default function LocalBusinessesPage() {
                 href={getBusinessHref(mainBusiness)}
                 target="_blank"
                 rel="noopener noreferrer"
+                {...businessClickTracking({
+                  action: mainBusiness.website ? "website" : mainBusiness.directions ? "directions" : "view-details",
+                  business: mainBusiness.name,
+                  page: "/local-businesses",
+                  placement: "local-businesses-featured-main",
+                  placementType: getPlacementType(mainBusiness.name),
+                })}
                 className="group overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl"
                 style={{ borderColor: "var(--border)" }}
               >

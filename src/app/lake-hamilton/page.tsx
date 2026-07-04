@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import { businessClickTracking } from "@/lib/tracking";
 
 export const metadata = {
   title:
@@ -260,6 +261,13 @@ export default function LakeHamiltonPage() {
               <Link
                 key={place.name}
                 href={place.href}
+                {...businessClickTracking({
+                  action: "view-details",
+                  business: place.name,
+                  page: "/lake-hamilton",
+                  placement: "lake-hamilton-featured-restaurants",
+                  placementType: "editorial",
+                })}
                 className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 style={{ borderColor: "var(--border)" }}
               >
@@ -361,6 +369,13 @@ export default function LakeHamiltonPage() {
               <Link
                 key={stay.name}
                 href={stay.href}
+                {...businessClickTracking({
+                  action: "view-details",
+                  business: stay.name,
+                  page: "/lake-hamilton",
+                  placement: "lake-hamilton-featured-stays",
+                  placementType: "editorial",
+                })}
                 className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 style={{ borderColor: "var(--border)" }}
               >

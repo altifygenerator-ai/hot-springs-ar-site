@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import type { Business } from "@/data/businesses";
+import { businessClickTracking, getPlacementType } from "@/lib/tracking";
 
 type GuideLink = {
   label: string;
@@ -85,6 +86,14 @@ function DirectoryCard({
         href={href}
         target={external ? "_blank" : undefined}
         rel={external ? "noopener noreferrer" : undefined}
+        {...(badge !== "Basic Listing"
+          ? businessClickTracking({
+              action: business.website ? "website" : business.directions ? "directions" : "view-details",
+              business: business.name,
+              placement: "business-directory-featured-card",
+              placementType: getPlacementType(business.name),
+            })
+          : {})}
       >
         <div className="relative h-48 overflow-hidden bg-[color:var(--surface-strong)]">
           <img
@@ -324,6 +333,12 @@ export default function BusinessDirectoryPage({
                 href={getBusinessHref(mainBusiness)}
                 target={isExternalHref(getBusinessHref(mainBusiness)) ? "_blank" : undefined}
                 rel={isExternalHref(getBusinessHref(mainBusiness)) ? "noopener noreferrer" : undefined}
+                {...businessClickTracking({
+                  action: mainBusiness.website ? "website" : mainBusiness.directions ? "directions" : "view-details",
+                  business: mainBusiness.name,
+                  placement: "business-directory-featured-main",
+                  placementType: getPlacementType(mainBusiness.name),
+                })}
                 className="group overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl"
                 style={{ borderColor: "var(--border)" }}
               >

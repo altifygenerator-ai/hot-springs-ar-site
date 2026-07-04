@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { businessClickTracking } from "@/lib/tracking";
 
 const stays = [
   {
@@ -124,6 +125,13 @@ export default function FeaturedStays() {
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
           <Link
             href={main.href}
+            {...businessClickTracking({
+              action: "view-details",
+              business: main.name,
+              page: "/",
+              placement: "homepage-featured-stays-main",
+              placementType: "editorial",
+            })}
             className="group overflow-hidden rounded-[2rem] border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl"
             style={{ borderColor: "var(--border)" }}
           >
@@ -194,6 +202,13 @@ export default function FeaturedStays() {
               <Link
                 href={stay.href}
                 key={stay.name}
+                {...businessClickTracking({
+                  action: "view-details",
+                  business: stay.name,
+                  page: "/",
+                  placement: "homepage-featured-stays-side",
+                  placementType: "editorial",
+                })}
                 className="group grid overflow-hidden rounded-[1.75rem] border bg-[color:var(--surface)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:grid-cols-[0.42fr_0.58fr]"
                 style={{ borderColor: "var(--border)" }}
               >

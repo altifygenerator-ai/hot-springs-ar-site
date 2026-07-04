@@ -1,12 +1,31 @@
 import RelatedLocalLinks from "@/components/local-spots/RelatedLocalLinks";
 import type { LocalSpot } from "@/data/local-spots/hiddenGems";
+import { businessClickTracking } from "@/lib/tracking";
 
 type LocalSpotCardProps = {
   spot: LocalSpot;
+  trackingPage?: string;
+  trackingPlacement?: string;
+  trackingPlacementType?: "paid" | "editorial";
 };
 
-export default function LocalSpotCard({ spot }: LocalSpotCardProps) {
+export default function LocalSpotCard({
+  spot,
+  trackingPage,
+  trackingPlacement,
+  trackingPlacementType = "editorial",
+}: LocalSpotCardProps) {
   const hasImage = spot.imageAvailable && spot.image;
+  const trackingAttrs = (action: string) =>
+    trackingPlacement
+      ? businessClickTracking({
+          action,
+          business: spot.name,
+          page: trackingPage,
+          placement: trackingPlacement,
+          placementType: trackingPlacementType,
+        })
+      : {};
 
   return (
     <article className={`local-spot-card ${hasImage ? "has-image" : ""}`}>
@@ -57,19 +76,34 @@ export default function LocalSpotCard({ spot }: LocalSpotCardProps) {
 
         <div className="local-spot-actions">
           {spot.website && (
-            <a href={spot.website} target="_blank" rel="noopener noreferrer">
+            <a
+              href={spot.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              {...trackingAttrs("website")}
+            >
               Website
             </a>
           )}
 
           {spot.facebook && (
-            <a href={spot.facebook} target="_blank" rel="noopener noreferrer">
+            <a
+              href={spot.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              {...trackingAttrs("facebook")}
+            >
               Facebook
             </a>
           )}
 
           {spot.instagram && (
-            <a href={spot.instagram} target="_blank" rel="noopener noreferrer">
+            <a
+              href={spot.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              {...trackingAttrs("instagram")}
+            >
               Instagram
             </a>
           )}

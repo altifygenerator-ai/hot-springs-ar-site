@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import { businessClickTracking } from "@/lib/tracking";
 
 export const metadata = {
   title:
@@ -286,6 +287,13 @@ export default function HotelsNearOaklawnPage() {
               href={main.href}
               target="_blank"
               rel="noopener noreferrer"
+              {...businessClickTracking({
+                action: "view-details",
+                business: main.name,
+                page: "/hotels-near-oaklawn",
+                placement: "featured-oaklawn-hotels-main",
+                placementType: "editorial",
+              })}
               className="grid overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl lg:grid-cols-[1.1fr_0.9fr]"
               style={{ borderColor: "var(--border)" }}
             >
@@ -342,6 +350,13 @@ export default function HotelsNearOaklawnPage() {
                   key={hotel.name}
                   target="_blank"
                   rel="noopener noreferrer"
+                  {...businessClickTracking({
+                    action: "view-details",
+                    business: hotel.name,
+                    page: "/hotels-near-oaklawn",
+                    placement: "featured-oaklawn-hotels-side",
+                    placementType: "editorial",
+                  })}
                   className="overflow-hidden rounded-2xl border bg-[color:var(--surface)] transition hover:-translate-y-1 hover:shadow-xl"
                   style={{ borderColor: "var(--border)" }}
                 >

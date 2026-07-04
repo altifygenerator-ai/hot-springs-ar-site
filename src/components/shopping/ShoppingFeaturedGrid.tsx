@@ -1,4 +1,5 @@
 import type { ShoppingPlace } from "@/data/shoppingGuides";
+import { businessClickTracking } from "@/lib/tracking";
 
 type ShoppingFeaturedGridProps = {
   kicker: string;
@@ -33,6 +34,12 @@ export default function ShoppingFeaturedGrid({
                 href={hasRealLink ? place.website : undefined}
                 target={hasRealLink ? "_blank" : undefined}
                 rel={hasRealLink ? "noopener noreferrer" : undefined}
+                {...businessClickTracking({
+                  action: hasRealLink ? "website" : "view-details",
+                  business: place.name,
+                  placement: "shopping-featured-grid",
+                  placementType: "editorial",
+                })}
                 className="shopping-feature-card"
               >
                 {place.image && (

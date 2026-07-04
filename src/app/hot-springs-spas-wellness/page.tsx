@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { businessClickTracking } from "@/lib/tracking";
 
 export const metadata: Metadata = {
   title:
@@ -302,6 +303,13 @@ export default function HotSpringsSpasWellnessPage() {
             <div className="grid lg:grid-cols-[0.95fr_1.05fr]">
               <Link
                 href={featuredBusiness.href}
+                {...businessClickTracking({
+                  action: "view-details",
+                  business: featuredBusiness.name,
+                  page: "/hot-springs-spas-wellness",
+                  placement: "spas-wellness-featured-partner-image",
+                  placementType: "paid",
+                })}
                 className="group relative block min-h-[360px] overflow-hidden bg-[color:var(--surface-strong)] lg:min-h-[620px]"
               >
                 <Image
@@ -381,6 +389,13 @@ export default function HotSpringsSpasWellnessPage() {
 
                   <a
                     href={featuredBusiness.phoneHref}
+                    {...businessClickTracking({
+                      action: "call",
+                      business: featuredBusiness.name,
+                      page: "/hot-springs-spas-wellness",
+                      placement: "spas-wellness-featured-partner",
+                      placementType: "paid",
+                    })}
                     className="rounded-2xl border bg-white/55 p-4 transition hover:-translate-y-0.5 hover:shadow-md"
                     style={{
                       borderColor: "var(--border)",
@@ -444,6 +459,13 @@ export default function HotSpringsSpasWellnessPage() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     href={featuredBusiness.href}
+                    {...businessClickTracking({
+                      action: "view-details",
+                      business: featuredBusiness.name,
+                      page: "/hot-springs-spas-wellness",
+                      placement: "spas-wellness-featured-partner",
+                      placementType: "paid",
+                    })}
                     className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-black transition hover:-translate-y-0.5"
                     style={{
                       background: "var(--accent-dark)",
@@ -457,6 +479,13 @@ export default function HotSpringsSpasWellnessPage() {
                     href={featuredBusiness.website}
                     target="_blank"
                     rel="noopener noreferrer"
+                    {...businessClickTracking({
+                      action: "website",
+                      business: featuredBusiness.name,
+                      page: "/hot-springs-spas-wellness",
+                      placement: "spas-wellness-featured-partner",
+                      placementType: "paid",
+                    })}
                     className="inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-bold transition hover:-translate-y-0.5"
                     style={{
                       borderColor: "var(--border)",

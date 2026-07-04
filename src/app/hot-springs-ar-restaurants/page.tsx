@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { restaurantsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
 import EventsCTA from "@/components/events/EventsCTA";
+import { businessClickTracking, getPlacementType } from "@/lib/tracking";
 
 export const metadata = {
   title:
@@ -353,6 +354,13 @@ export default function RestaurantsPage() {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
+                {...businessClickTracking({
+                  action: mainRestaurant.website ? "website" : mainRestaurant.directions ? "directions" : "view-details",
+                  business: mainRestaurant.name,
+                  page: "/hot-springs-ar-restaurants",
+                  placement: "featured-restaurants-main",
+                  placementType: getPlacementType(mainRestaurant.name),
+                })}
                 className="grid overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl lg:grid-cols-[1.1fr_0.9fr]"
                 style={{ borderColor: "var(--border)" }}
               >
@@ -413,6 +421,13 @@ export default function RestaurantsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     key={place.name}
+                    {...businessClickTracking({
+                      action: place.website ? "website" : place.directions ? "directions" : "view-details",
+                      business: place.name,
+                      page: "/hot-springs-ar-restaurants",
+                      placement: "featured-restaurants-side",
+                      placementType: getPlacementType(place.name),
+                    })}
                     className="overflow-hidden rounded-2xl border bg-[color:var(--surface)] transition hover:-translate-y-1 hover:shadow-xl"
                     style={{ borderColor: "var(--border)" }}
                   >

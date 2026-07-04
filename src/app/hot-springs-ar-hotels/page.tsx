@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { hotelsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
 import LynLiliRentalCleaningBanner from "@/components/ads/LynLiliRentalCleaningBanner";
+import { businessClickTracking, getPlacementType } from "@/lib/tracking";
 
 export const metadata = {
   title:
@@ -339,6 +340,13 @@ export default function HotelsPage() {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
+                {...businessClickTracking({
+                  action: mainHotel.website ? "website" : mainHotel.directions ? "directions" : "view-details",
+                  business: mainHotel.name,
+                  page: "/hot-springs-ar-hotels",
+                  placement: "featured-hotels-main",
+                  placementType: getPlacementType(mainHotel.name),
+                })}
                 className="grid overflow-hidden rounded-3xl border bg-[color:var(--surface)] shadow-[var(--shadow)] transition hover:-translate-y-1 hover:shadow-2xl lg:grid-cols-[1.1fr_0.9fr]"
                 style={{ borderColor: "var(--border)" }}
               >
@@ -397,6 +405,13 @@ export default function HotelsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     key={place.name}
+                    {...businessClickTracking({
+                      action: place.website ? "website" : place.directions ? "directions" : "view-details",
+                      business: place.name,
+                      page: "/hot-springs-ar-hotels",
+                      placement: "featured-hotels-side",
+                      placementType: getPlacementType(place.name),
+                    })}
                     className="overflow-hidden rounded-2xl border bg-[color:var(--surface)] transition hover:-translate-y-1 hover:shadow-xl"
                     style={{ borderColor: "var(--border)" }}
                   >

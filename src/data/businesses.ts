@@ -1342,5 +1342,19 @@ export const businesses: Business[] = [
       "https://www.google.com/maps/search/?api=1&query=Flint+Rock+Cabins+Lonsdale+AR+72087",
     href: "/hot-springs-ar-cabins",
   },
+  {
+    name: "Brick House Grill",
+    category: "Restaurant",
+    type: "Steaks • Burgers • Sandwiches • Downtown Dining",
+    description:
+      "A locally owned downtown Hot Springs grill serving steaks, burgers, sandwiches, salads, seafood, and other American favorites in a laid-back brick dining room near the convention center.",
+    image: "/images/businesses/brick-house-grill.webp",
+    phone: "501-321-2926",
+    address: "801 Central Ave Suite 24, Hot Springs, AR 71901",
+    website: "https://www.thebrickhousegrill.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Brick+House+Grill+801+Central+Ave+Suite+24+Hot+Springs+AR+71901",
+    href: "/hot-springs-ar-restaurants",
+  },
 
 ];

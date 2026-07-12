@@ -2,6 +2,12 @@ import Link from "next/link";
 
 const updates = [
   {
+    label: "New article",
+    title: "Hot Springs Mountain Tower Scenic Drive",
+    text: "A new local guide covers the winding road above downtown, wooded picnic stops, the Zig-Zag Mountains, the Pagoda, trail access, and the view across Hot Springs.",
+    href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
+  },
+  {
     label: "Featured business",
     title: "Spa City Aesthetics Spotlight",
     text: "Spa City Aesthetics is featured in the Hot Springs guide with a dedicated spotlight for personalized facial analysis, regenerative skin treatments, body sculpting, lymphatic support, hair and scalp care, and skin longevity.",
@@ -18,12 +24,6 @@ const updates = [
     title: "Hot Springs Attractions",
     text: "The attractions guide has been expanded to help visitors find classic Hot Springs stops, family-friendly places, downtown attractions, and popular things to do around town.",
     href: "/hot-springs-attractions",
-  },
-  {
-    label: "New guide",
-    title: "Outdoor Businesses & Lake Area Stops",
-    text: "A new outdoor business guide helps visitors find lake-area stops, outdoor recreation, local activity providers, and businesses tied to enjoying Hot Springs outside.",
-    href: "/hot-springs-outdoor-businesses",
   },
 ];
 

@@ -57,6 +57,10 @@ const stayLinks = [
 const articleLinks = [
   { href: "/articles", label: "All Articles" },
   {
+    href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
+    label: "Hot Springs Mountain Tower Scenic Drive",
+  },
+  {
     href: "/articles/bathhouse-row",
     label: "Bathhouse Row: Why It Still Matters",
   },

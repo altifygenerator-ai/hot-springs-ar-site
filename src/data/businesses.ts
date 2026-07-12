@@ -547,7 +547,7 @@ export const businesses: Business[] = [
     website: "https://hotspringstower.com/",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Hot+Springs+Mountain+Tower+401+Hot+Springs+Mountain+Dr+Hot+Springs+AR",
-    href: "/things-to-do-in-hot-springs-ar",
+    href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
   },
 
   /* =======================
@@ -1273,6 +1273,74 @@ export const businesses: Business[] = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Hot+Springs+Camper+Rentals+Hot+Springs+AR",
     href: "/hot-springs-local-services",
+  },
+    {
+    name: "Hot Springs Off-Road Park",
+    category: "Outdoor Recreation",
+    type: "Off-Road Trails • Side-by-Side Rentals • Camping • Cabins",
+    description:
+      "A 1,242-acre off-road park with marked trails for different experience levels, rock-crawling terrain, scenic overlooks, side-by-side rentals, guided rides, RV sites, tent camping, and cabins.",
+    image: "/images/businesses/hot-springs-off-road-park.jpg",
+    phone: "501-625-3600",
+    address: "2100 Mill Creek Rd, Hot Springs, AR 71901",
+    website: "https://hotspringsoffroadpark.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Hot+Springs+Off-Road+Park+2100+Mill+Creek+Rd+Hot+Springs+AR+71901",
+    href: "/hot-springs-outdoor-businesses",
+  },
+  {
+    name: "Lucky Finds",
+    category: "Shopping",
+    type: "Thrift Store • Antiques • Collectibles • Local Finds",
+    description:
+      "A small local thrift store on Malvern Avenue with antiques, glassware, clothing, vintage toys, tools, collectibles, and plenty of miscellaneous finds to look through.",
+    image: "/images/businesses/lucky-finds.jpg",
+    address: "1534 Malvern Ave Suite I, Hot Springs, AR 71901",
+    website: "https://www.facebook.com/p/Lucky-Finds-61561564887908/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Lucky+Finds+1534+Malvern+Ave+Suite+I+Hot+Springs+AR+71901",
+    href: "/hot-springs-boutiques-shops",
+  },
+  {
+    name: "Burl's Country Smokehouse",
+    category: "Restaurant",
+    type: "Smokehouse • Barbecue • Deli • Country Store",
+    description:
+      "A longtime roadside smokehouse near Lake Ouachita serving smoked meats, stacked sandwiches, jerky, smoked cheeses, barbecue, and the oversized cinnamon rolls the place is known for.",
+    image: "/images/businesses/burls-country-smokehouse.jpg",
+    phone: "501-991-3875",
+    address: "10176 Albert Pike Rd, Royal, AR 71968",
+    website: "https://www.facebook.com/outlaw316/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Burls+Country+Smokehouse+10176+Albert+Pike+Rd+Royal+AR+71968",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "David's Burgers",
+    category: "Restaurant",
+    type: "Burgers • Hand-Cut Fries • Family-Friendly",
+    description:
+      "A casual Arkansas burger restaurant serving fresh, made-to-order burgers, hand-cut fries with free refills, and complimentary ice cream samples in a family-friendly setting.",
+    image: "/images/businesses/davids-burgers.jpg",
+    phone: "501-725-0096",
+    address: "3802 Central Ave Suite A, Hot Springs, AR 71913",
+    website: "https://www.davidsburgers.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Davids+Burgers+3802+Central+Ave+Suite+A+Hot+Springs+AR+71913",
+    href: "/hot-springs-ar-restaurants",
+  },
+  {
+    name: "Flint Rock Cabins",
+    category: "Cabins & Lodging",
+    type: "Log Cabins • Private Hot Tubs • Dog-Friendly • Family Stays",
+    description:
+      "Two quiet log cabins between Hot Springs and Little Rock with private hot tubs, indoor fireplaces, outdoor fire pits, grills, Wi-Fi, family amenities, and room to park trailers and off-road equipment.",
+    image: "/images/businesses/flint-rock-cabins.jpg",
+    address: "Lonsdale, AR 72087",
+    website: "https://flintrockcabins.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Flint+Rock+Cabins+Lonsdale+AR+72087",
+    href: "/hot-springs-ar-cabins",
   },
 
 ];

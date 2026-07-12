@@ -21,6 +21,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
     },
     {
+      path: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
+      priority: 0.92,
+      changeFrequency: "monthly" as const,
+    },
+    {
       path: "/articles/bathhouse-row",
       priority: 0.9,
       changeFrequency: "monthly" as const,

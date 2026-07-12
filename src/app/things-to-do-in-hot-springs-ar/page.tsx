@@ -62,6 +62,15 @@ const featuredAttractions = [
     image: "/images/businesses/oaklawn.webp",
     href: "/explore",
   },
+  {
+    name: "Hot Springs Mountain Tower Scenic Drive",
+    type: "Mountain Road • Picnic Stops • Scenic Views",
+    description:
+      "Take the winding road above downtown for wooded picnic areas, old stone walls, the Pagoda, trail access, the Zig-Zag Mountains, and broad views over Hot Springs.",
+    image:
+      "/images/articles/hot-springs-mountain/mountain-tower-from-drive.webp",
+    href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
+  },
 ];
 
 const thingsToDo = [
@@ -361,6 +370,13 @@ export default function ThingsToDoPage() {
           <Link href="/hot-springs-local-spots" className="btn">
             Local Hidden Gems
           </Link>
+
+          <Link
+            href="/articles/hot-springs-mountain-tower-zig-zag-mountains"
+            className="btn"
+          >
+            Mountain Tower Scenic Drive
+          </Link>
         </div>
       </section>
 
@@ -420,7 +436,7 @@ export default function ThingsToDoPage() {
               </div>
             </Link>
 
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid gap-6 lg:grid-cols-3">
               {sideAttractions.map((item) => (
                 <Link
                   href={item.href}

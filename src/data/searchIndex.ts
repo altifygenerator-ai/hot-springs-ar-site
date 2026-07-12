@@ -413,6 +413,16 @@ const pageSearchItems: SearchItem[] = [
     type: "Article",
   },
   {
+    title: "Hot Springs Mountain Tower Scenic Drive Article",
+    href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
+    category: "Article",
+    description:
+      "A local guide to Hot Springs Mountain Drive, wooded picnic stops, the Pagoda, trails, Zig-Zag Mountains, Hot Springs Mountain Tower, and views above town.",
+    keywords:
+      "hot springs mountain tower scenic drive zig zag mountains pagoda picnic area trails overlook national park mountain road",
+    type: "Article",
+  },
+  {
     title: "History of Hot Springs Gambling Museum Article",
     href: "/articles/history-of-hot-springs-gambling-museum",
     category: "Article",

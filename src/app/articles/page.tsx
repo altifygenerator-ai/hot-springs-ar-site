@@ -12,17 +12,30 @@ export const metadata: Metadata = {
 };
 
 const featuredArticle = {
-  title: "Bathhouse Row in Hot Springs: Why This Old Downtown Strip Still Matters",
-  label: "Featured history article",
+  title:
+    "Hot Springs Mountain Tower and the Zig-Zag Mountains: A Scenic Drive Above Town",
+  label: "New scenic drive article",
   description:
-    "A deeper look at the thermal water, historic bathhouses, preservation story, and why Bathhouse Row is still the heart of Hot Springs.",
-  href: "/articles/bathhouse-row",
-  image: "/images/businesses/bathhouse-row.webp",
+    "Take the winding road above downtown for wooded picnic stops, old stone walls, the Zig-Zag Mountains, the Pagoda, trail access, and a wide view over Hot Springs.",
+  href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
+  image:
+    "/images/articles/hot-springs-mountain/hot-springs-mountain-view-storm-clouds.webp",
 };
 
 const articles = [
   {
-    title: "Bathhouse Row in Hot Springs: Why This Old Downtown Strip Still Matters",
+    title:
+      "Hot Springs Mountain Tower and the Zig-Zag Mountains: A Scenic Drive Above Town",
+    label: "Scenic drive & outdoors",
+    description:
+      "A local guide to the road, picnic area, Pagoda, mountain trails, Zig-Zag Mountains, and views above town.",
+    href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
+    image:
+      "/images/articles/hot-springs-mountain/mountain-tower-from-drive.webp",
+  },
+  {
+    title:
+      "Bathhouse Row in Hot Springs: Why This Old Downtown Strip Still Matters",
     label: "History & culture",
     description:
       "The story of the water, the bathhouses, downtown Hot Springs, and why this historic strip still carries the city’s identity.",
@@ -31,19 +44,11 @@ const articles = [
   },
   {
     title: "History of Hot Springs Gambling Museum",
-    label: "Coming soon",
+    label: "Local history",
     description:
-      "A future article on Hot Springs’ gambling, mob-era stories, downtown history, and the museum that helps preserve that wilder side of town.",
-    href: "/articles",
-    image: "/images/hero/hot-springs-history.jpg",
-  },
-  {
-    title: "DeGray Lake Resort State Park Day Trip",
-    label: "Coming soon",
-    description:
-      "A future nearby trip guide for visitors wanting lake views, state park scenery, resort-style stops, and an easy drive from Hot Springs.",
-    href: "/articles",
-    image: "/images/businesses/lake-hamilton2.jpg",
+      "A closer look at restored slot machines, casino tables, the 1967 raids, and the gambling era that shaped another side of Hot Springs history.",
+    href: "/articles/history-of-hot-springs-gambling-museum",
+    image: "/images/articles/gambling-museum-slot-machines.jpg",
   },
 ];
 
@@ -117,17 +122,17 @@ export default function ArticlesPage() {
         <div className="container">
           <div className="mb-10 max-w-3xl">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
-              Recent and upcoming articles
+              More Hot Springs articles
             </p>
 
             <h2 className="mb-4 text-4xl font-semibold leading-tight md:text-5xl">
-              More Hot Springs stories are being added.
+              Local stories and useful guides for seeing more of town.
             </h2>
 
             <p className="text-lg leading-8 text-[color:var(--color-muted)]">
-              This section will grow into a home for Hot Springs history pieces,
-              lake guides, downtown features, family-friendly ideas, and local
-              stories worth keeping in front of visitors.
+              These articles go deeper than a quick list, with local context,
+              practical planning details, original photos, and links to the rest
+              of the Hot Springs guide.
             </p>
           </div>
 

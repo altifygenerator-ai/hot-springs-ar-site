@@ -12,7 +12,10 @@ import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 import LocalSpotsPreview from "@/components/home/LocalSpotsPreview";
 import RecentUpdates from "@/components/home/RecentUpdates";
 import ArticlesPreview from "@/components/home/ArticlesPreview";
-import FourthOfJulyFeature from "@/components/home/FourthOfJulyFeature";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default function HomePage() {
   return (
     <main>
@@ -26,29 +29,16 @@ export default function HomePage() {
       />
 
       <QuickLinks />
-
       <RecentUpdates />
-
-<HomeEventsPreview />
-
-
-
-<CategoryGrid />
-
+      <HomeEventsPreview />
+      <CategoryGrid />
       <LocalSpotsPreview />
-
       <FeaturedRestaurants />
-
       <FeaturedStays />
-
       <FeaturedAttractions />
-
       <ArticlesPreview />
-
       <PromoteBusinessCTA />
-
       <NearbyDestinations />
-
       <FAQSection />
     </main>
   );

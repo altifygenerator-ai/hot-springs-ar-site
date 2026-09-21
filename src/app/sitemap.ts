@@ -2,24 +2,13 @@ import type { MetadataRoute } from "next";
 import { site } from "@/data/site";
 import { supabaseAdmin } from "@/lib/supabase/server";
 
+const contentUpdated = new Date("2026-09-20T00:00:00-05:00");
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
-    {
-      path: "",
-      priority: 1,
-      changeFrequency: "weekly" as const,
-    },
-    {
-      path: "/explore",
-      priority: 0.9,
-      changeFrequency: "monthly" as const,
-    },
-
-    {
-      path: "/articles",
-      priority: 0.9,
-      changeFrequency: "weekly" as const,
-    },
+    { path: "", priority: 1, changeFrequency: "weekly" as const },
+    { path: "/explore", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/articles", priority: 0.9, changeFrequency: "weekly" as const },
     {
       path: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
       priority: 0.92,
@@ -35,39 +24,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.84,
       changeFrequency: "monthly" as const,
     },
-
-    {
-      path: "/events",
-      priority: 0.95,
-      changeFrequency: "daily" as const,
-    },
-    {
-      path: "/this-weekend",
-      priority: 0.95,
-      changeFrequency: "daily" as const,
-    },
+    { path: "/events", priority: 0.95, changeFrequency: "daily" as const },
+    { path: "/this-weekend", priority: 0.95, changeFrequency: "daily" as const },
     {
       path: "/hot-springs-fourth-of-july",
-      priority: 0.86,
-      changeFrequency: "weekly" as const,
+      priority: 0.58,
+      changeFrequency: "yearly" as const,
     },
-    {
-      path: "/submit-event",
-      priority: 0.6,
-      changeFrequency: "monthly" as const,
-    },
-
+    { path: "/submit-event", priority: 0.6, changeFrequency: "monthly" as const },
     {
       path: "/community-photos",
       priority: 0.82,
       changeFrequency: "weekly" as const,
     },
-    {
-      path: "/submit-photo",
-      priority: 0.6,
-      changeFrequency: "monthly" as const,
-    },
-
+    { path: "/submit-photo", priority: 0.6, changeFrequency: "monthly" as const },
     {
       path: "/hot-springs-local-spots",
       priority: 0.9,
@@ -88,7 +58,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.86,
       changeFrequency: "weekly" as const,
     },
-
     {
       path: "/hot-springs-antique-thrift-flea-markets",
       priority: 0.9,
@@ -109,7 +78,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.86,
       changeFrequency: "weekly" as const,
     },
-
     {
       path: "/things-to-do-in-hot-springs-ar",
       priority: 0.95,
@@ -120,7 +88,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
       changeFrequency: "monthly" as const,
     },
-
     {
       path: "/hot-springs-ar-restaurants",
       priority: 0.9,
@@ -136,7 +103,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
       changeFrequency: "monthly" as const,
     },
-
     {
       path: "/hot-springs-ar-hotels",
       priority: 0.9,
@@ -152,7 +118,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
       changeFrequency: "monthly" as const,
     },
-
     {
       path: "/hot-springs-ar-cabins",
       priority: 0.9,
@@ -163,12 +128,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
       changeFrequency: "monthly" as const,
     },
-
-    {
-      path: "/bathhouse-row",
-      priority: 0.9,
-      changeFrequency: "monthly" as const,
-    },
+    { path: "/bathhouse-row", priority: 0.9, changeFrequency: "monthly" as const },
     {
       path: "/hot-springs-spas-wellness",
       priority: 0.86,
@@ -194,17 +154,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.86,
       changeFrequency: "weekly" as const,
     },
-    {
-      path: "/lake-hamilton",
-      priority: 0.9,
-      changeFrequency: "monthly" as const,
-    },
-    {
-      path: "/history",
-      priority: 0.75,
-      changeFrequency: "monthly" as const,
-    },
-
+    { path: "/lake-hamilton", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/history", priority: 0.75, changeFrequency: "monthly" as const },
     {
       path: "/local-businesses",
       priority: 0.88,
@@ -230,17 +181,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.84,
       changeFrequency: "weekly" as const,
     },
-
-    {
-      path: "/contact",
-      priority: 0.8,
-      changeFrequency: "monthly" as const,
-    },
-    {
-      path: "/search",
-      priority: 0.72,
-      changeFrequency: "monthly" as const,
-    },
+    { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
     {
       path: "/pet-friendly-hot-springs",
       priority: 0.88,
@@ -250,25 +191,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticRoutes: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${site.url}${route.path}`,
-    lastModified: new Date(),
+    lastModified: contentUpdated,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
 
-  const { data: events } = await supabaseAdmin
+  const { data: events, error } = await supabaseAdmin
     .from("events")
-    .select("slug, updated_at")
+    .select("slug, updated_at, start_date, end_date")
     .eq("status", "approved");
 
-  const eventRoutes: MetadataRoute.Sitemap =
-    events?.map((event) => ({
-      url: `${site.url}/events/${event.slug}`,
-      lastModified: event.updated_at
-        ? new Date(event.updated_at)
-        : new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    })) || [];
+  if (error) {
+    console.error("Sitemap event query failed:", error.message);
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  const currentEvents =
+    events?.filter((event) => {
+      const effectiveEnd = event.end_date || event.start_date;
+      return effectiveEnd >= today;
+    }) || [];
+
+  const eventRoutes: MetadataRoute.Sitemap = currentEvents.map((event) => ({
+    url: `${site.url}/events/${event.slug}`,
+    lastModified: event.updated_at ? new Date(event.updated_at) : contentUpdated,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
 
   return [...staticRoutes, ...eventRoutes];
 }

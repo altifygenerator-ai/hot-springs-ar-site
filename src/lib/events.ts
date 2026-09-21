@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { supabaseAdmin } from "./supabase/server";
 
 export type EventStatus = "draft" | "pending" | "approved" | "rejected";
@@ -53,6 +54,8 @@ export function createEventSlug(title: string, date?: string) {
 }
 
 export async function getApprovedEvents() {
+  noStore();
+
   const { data, error } = await supabaseAdmin
     .from("events")
     .select("*")
@@ -69,6 +72,8 @@ export async function getApprovedEvents() {
 }
 
 export async function getUpcomingApprovedEvents(limit = 12) {
+  noStore();
+
   const today = new Date().toISOString().slice(0, 10);
 
   const { data, error } = await supabaseAdmin
@@ -89,8 +94,9 @@ export async function getUpcomingApprovedEvents(limit = 12) {
 }
 
 export async function getWeekendEvents() {
-  const now = new Date();
+  noStore();
 
+  const now = new Date();
   const day = now.getDay();
   const daysUntilFriday = (5 - day + 7) % 7;
 
@@ -121,6 +127,8 @@ export async function getWeekendEvents() {
 }
 
 export async function getEventBySlug(slug: string) {
+  noStore();
+
   const { data, error } = await supabaseAdmin
     .from("events")
     .select("*")
@@ -135,7 +143,10 @@ export async function getEventBySlug(slug: string) {
 
   return data as TourismEvent;
 }
+
 export async function getAllEventsForAdmin() {
+  noStore();
+
   const { data, error } = await supabaseAdmin
     .from("events")
     .select("*")
@@ -150,6 +161,8 @@ export async function getAllEventsForAdmin() {
 }
 
 export async function getEventForAdmin(id: string) {
+  noStore();
+
   const { data, error } = await supabaseAdmin
     .from("events")
     .select("*")
@@ -165,6 +178,8 @@ export async function getEventForAdmin(id: string) {
 }
 
 export async function getEventSourcesForAdmin() {
+  noStore();
+
   const { data, error } = await supabaseAdmin
     .from("event_sources")
     .select("*")
@@ -179,6 +194,8 @@ export async function getEventSourcesForAdmin() {
 }
 
 export async function getRecentEventImportRuns(limit = 20) {
+  noStore();
+
   const { data, error } = await supabaseAdmin
     .from("event_import_runs")
     .select("*, event_sources(name)")

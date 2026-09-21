@@ -11,21 +11,14 @@ const footerGroups = [
       { href: "/events", label: "Events" },
       { href: "/this-weekend", label: "This Weekend" },
       { href: "/history", label: "History" },
-      
     ],
   },
   {
     title: "Food & Local",
     links: [
       { href: "/hot-springs-ar-restaurants", label: "Restaurants" },
-      {
-        href: "/restaurants-near-bathhouse-row",
-        label: "Near Bathhouse Row",
-      },
-      {
-        href: "/lake-hamilton-restaurants",
-        label: "Lake Hamilton Restaurants",
-      },
+      { href: "/restaurants-near-bathhouse-row", label: "Near Bathhouse Row" },
+      { href: "/lake-hamilton-restaurants", label: "Lake Hamilton Restaurants" },
       {
         href: "/hot-springs-antique-thrift-flea-markets",
         label: "Antique, Thrift & Flea Markets",
@@ -60,40 +53,37 @@ const footerGroups = [
   {
     title: "Business",
     links: [
-      {
-  label: "Submit a Photo",
-  href: "/submit-photo",
-},
+      { label: "Submit a Photo", href: "/submit-photo" },
       { href: "/local-businesses", label: "Local Businesses" },
       { href: "/contact", label: "Get Listed" },
       { href: "/submit-event", label: "Submit an Event" },
     ],
   },
- {
-  title: "Articles",
-  links: [
-    { href: "/articles", label: "All Articles" },
-    {
-      href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
-      label: "Hot Springs Mountain Tower Scenic Drive",
-    },
-    {
-      href: "/articles/bathhouse-row",
-      label: "Bathhouse Row: Why It Still Matters",
-    },
-    {
-      href: "/articles/history-of-hot-springs-gambling-museum",
-      label: "History of Hot Springs Gambling Museum",
-    },
-  ],
-},
+  {
+    title: "Articles",
+    links: [
+      { href: "/articles", label: "All Articles" },
+      {
+        href: "/articles/hot-springs-mountain-tower-zig-zag-mountains",
+        label: "Hot Springs Mountain Tower Scenic Drive",
+      },
+      {
+        href: "/articles/bathhouse-row",
+        label: "Bathhouse Row: Why It Still Matters",
+      },
+      {
+        href: "/articles/history-of-hot-springs-gambling-museum",
+        label: "History of Hot Springs Gambling Museum",
+      },
+    ],
+  },
 ];
 
 const sisterSites = [
-  { href: "https://glenwoodarkansas.org", label: "Glenwood Arkansas" },
-  { href: "https://amityarkansas.org", label: "Amity Arkansas" },
-  { href: "https://mountidaarkansas.org", label: "Mount Ida Arkansas" },
-  { href: "https://murfreesboroarkansas.org", label: "Murfreesboro Arkansas" },
+  { href: "https://www.glenwoodarkansas.org", label: "Glenwood Arkansas" },
+  { href: "https://www.amityarkansas.org", label: "Amity Arkansas" },
+  { href: "https://www.mountidaarkansas.org", label: "Mount Ida Arkansas" },
+  { href: "https://www.murfreesboroarkansas.org", label: "Murfreesboro Arkansas" },
 ];
 
 function FooterGroup({
@@ -143,17 +133,12 @@ export default function Footer() {
             <Link href="/events" className="footer-button footer-button-outline">
               View Events
             </Link>
-            
           </div>
         </div>
 
         <div className="footer-link-grid">
           {footerGroups.map((group) => (
-            <FooterGroup
-              key={group.title}
-              title={group.title}
-              links={group.links}
-            />
+            <FooterGroup key={group.title} title={group.title} links={group.links} />
           ))}
         </div>
 
@@ -195,7 +180,7 @@ export default function Footer() {
         <p>
           Website by{" "}
           <a
-            href="https://hometownwebservicesar.cc"
+            href="https://www.hometownwebservicesar.com"
             target="_blank"
             rel="noopener noreferrer"
           >

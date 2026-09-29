@@ -100,6 +100,28 @@ export default function RecentUpdates() {
           </div>
         </div>
 
+        <div className="mb-6 overflow-hidden rounded-[1.6rem] border border-amber-900/15 bg-gradient-to-r from-stone-950 via-stone-900 to-amber-950 p-6 text-white shadow-lg md:p-7">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="hero-eyebrow !text-amber-300">Featured Cabin Partner</p>
+              <h3 className="mt-2 text-2xl font-semibold leading-tight !text-white md:text-3xl">
+                River View Cabins on the Ouachita River
+              </h3>
+              <p className="mt-3 leading-7 !text-white/85">
+                14 riverfront cabins with hot tubs, a pool, horseback riding, kayak and canoe trips, quartz-crystal hiking trails, direct river access, and fireplaces available November through March.
+              </p>
+            </div>
+            <a
+              href="https://riverviewcabins.com/"
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+              className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-bold text-stone-950 transition hover:-translate-y-0.5"
+            >
+              Visit River View Cabins ↗
+            </a>
+          </div>
+        </div>
+
         <div className="categories-grid">
           {updates.map((update) => (
             <Link

@@ -108,11 +108,11 @@ export default function RecentUpdates() {
                 River View Cabins on the Ouachita River
               </h3>
               <p className="mt-3 leading-7 !text-white/85">
-                14 riverfront cabins with hot tubs, a pool, horseback riding, kayak and canoe trips, quartz-crystal hiking trails, direct river access, and fireplaces available November through March.
+                14 riverfront cabins with hot tubs, a pool, horseback riding, kayak and canoe trips, quartz-crystal hiking trails, direct river access, and fireplaces available November 1 through March 1.
               </p>
             </div>
             <a
-              href="https://riverviewcabins.com/"
+              href="https://www.riverviewcabins-canoes.com/"
               target="_blank"
               rel="sponsored noopener noreferrer"
               className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-bold text-stone-950 transition hover:-translate-y-0.5"

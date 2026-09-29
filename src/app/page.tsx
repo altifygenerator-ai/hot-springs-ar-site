@@ -11,6 +11,7 @@ import { homeHero } from "@/data/hero";
 import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 import LocalSpotsPreview from "@/components/home/LocalSpotsPreview";
 import RecentUpdates from "@/components/home/RecentUpdates";
+import RiverViewCabinsHomeAd from "@/components/home/RiverViewCabinsHomeAd";
 import ArticlesPreview from "@/components/home/ArticlesPreview";
 
 export const dynamic = "force-dynamic";
@@ -30,6 +31,7 @@ export default function HomePage() {
 
       <QuickLinks />
       <RecentUpdates />
+      <RiverViewCabinsHomeAd />
       <HomeEventsPreview />
       <CategoryGrid />
       <LocalSpotsPreview />

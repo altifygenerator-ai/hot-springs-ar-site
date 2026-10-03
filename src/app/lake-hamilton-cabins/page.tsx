@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FindAPlaceBookingCTA from "@/components/FindAPlaceBookingCTA";
 import Hero from "@/components/Hero";
 import { businessClickTracking } from "@/lib/tracking";
 
@@ -401,6 +402,13 @@ export default function LakeHamiltonCabinsPage() {
           </div>
         </div>
       </section>
+
+      <FindAPlaceBookingCTA
+        heading="Looking for a stay in Hot Springs?"
+        text="Browse cabins, vacation rentals, and other stays on Find a Place Booking, with results already focused on Hot Springs."
+        href="https://www.findaplacebooking.com/stays?where=Hot%20Springs"
+        buttonLabel="Find a Stay in Hot Springs →"
+      />
 
       <section className="cta">
         <div className="container">

@@ -4,9 +4,9 @@ import { businessClickTracking } from "@/lib/tracking";
 
 export const metadata = {
   title:
-    "Lake Hamilton Restaurants | Lakefront Dining in Hot Springs Arkansas",
+    "Lake Hamilton Restaurants on the Water | Lakefront Dining in Hot Springs",
   description:
-    "Find restaurants around Lake Hamilton in Hot Springs, Arkansas including lakefront dining, seafood, pizza, patios, casual food, drinks, and places to eat near the water.",
+    "Find Lake Hamilton restaurants on and near the water, including lakefront dining, seafood, pizza, patios, drinks, casual food, and boater-friendly places to eat in Hot Springs.",
   keywords: [
     "Lake Hamilton restaurants",
     "restaurants on Lake Hamilton",

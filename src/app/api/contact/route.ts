@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { checkFormSubmission } from "@/lib/formSecurity";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -14,6 +15,19 @@ function nl2br(value: string) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
+
+    const security = checkFormSubmission(req, body as Record<string, unknown>);
+
+    if (!security.ok) {
+      if (security.silent) {
+      return NextResponse.json({ success: true });
+      }
+
+      return NextResponse.json(
+        { error: security.error },
+        { status: security.status },
+      );
+    }
 
     const formType = clean(body.formType) || "business";
 

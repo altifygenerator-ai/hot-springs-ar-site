@@ -5,9 +5,9 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata = {
-  title: "Events in Hot Springs, Arkansas",
+  title: "Hot Springs Arkansas Events | Festivals, Live Music & Things Happening",
   description:
-    "Find upcoming events, live music, festivals, family activities, and things happening around Hot Springs, Arkansas.",
+    "Find upcoming Hot Springs events, festivals, live music, markets, family activities, and things happening this week and this weekend around Hot Springs, Arkansas.",
 
   alternates: {
     canonical: "/events",
@@ -26,7 +26,10 @@ export default async function EventsPage() {
           <p className="hero-description">
             A local guide to upcoming events, weekend plans, festivals, live
             music, family-friendly activities, and things worth checking out
-            while you’re in town.
+            while you’re in town. Looking specifically for this weekend?{" "}
+            <a href="/this-weekend" style={{ fontWeight: 800 }}>
+              See what’s happening this weekend in Hot Springs.
+            </a>
           </p>
 
           <div className="hero-buttons">

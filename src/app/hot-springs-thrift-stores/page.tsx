@@ -4,9 +4,9 @@ import ShoppingPlaceCard from "@/components/shopping/ShoppingPlaceCard";
 import { antiquePlaces, fleaPlaces, thriftPlaces } from "@/data/shoppingGuides";
 
 export const metadata = {
-  title: "Thrift Stores in Hot Springs, Arkansas",
+  title: "Thrift Stores in Hot Springs, Arkansas | Resale & Secondhand Shops",
   description:
-    "A local guide to thrift stores, resale shops, nonprofit thrift shops, consignment stops, secondhand shopping, and cause-based resale around Hot Springs, Arkansas.",
+    "Find thrift stores in Hot Springs, Arkansas including resale shops, nonprofit thrift stores, secondhand shopping, furniture, home goods, and cause-based resale stops.",
   keywords: [
     "thrift stores Hot Springs Arkansas",
     "Hot Springs AR thrift shops",

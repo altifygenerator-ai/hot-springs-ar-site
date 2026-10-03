@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 const FORM_ENDPOINT = "/api/contact";
 
 export default function SuggestionForm() {
+  const formStartedAt = useRef(Date.now());
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
 
@@ -27,6 +28,8 @@ export default function SuggestionForm() {
       relatedBusiness: String(formData.get("relatedBusiness") || ""),
       pageOrArea: String(formData.get("pageOrArea") || ""),
       message: String(formData.get("message") || ""),
+      websiteUrl: String(formData.get("websiteUrl") || ""),
+      formStartedAt: formStartedAt.current,
     };
 
     try {
@@ -43,6 +46,7 @@ export default function SuggestionForm() {
       }
 
       form.reset();
+      formStartedAt.current = Date.now();
       setStatus("success");
       setMessage("Thanks — your suggestion was sent.");
     } catch {
@@ -78,6 +82,14 @@ export default function SuggestionForm() {
       </div>
 
       <form onSubmit={handleSubmit} className="grid gap-4">
+        <input
+          type="text"
+          name="websiteUrl"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+        />
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
             <label className="mb-2 block text-sm font-semibold">Your Name</label>

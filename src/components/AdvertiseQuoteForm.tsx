@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const businessTypes = [
   "Restaurant",
@@ -15,6 +15,7 @@ const businessTypes = [
 ];
 
 export default function AdvertiseQuoteForm() {
+  const formStartedAt = useRef(Date.now());
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle"
   );
@@ -39,6 +40,8 @@ export default function AdvertiseQuoteForm() {
       location: String(formData.get("location") || ""),
       listingType: String(formData.get("listingType") || ""),
       message: String(formData.get("message") || ""),
+      websiteUrl: String(formData.get("websiteUrl") || ""),
+      formStartedAt: formStartedAt.current,
     };
 
     try {
@@ -61,6 +64,7 @@ export default function AdvertiseQuoteForm() {
         "Thanks! Your request was sent. We’ll get back with you as soon as we can."
       );
       form.reset();
+      formStartedAt.current = Date.now();
     } catch (error) {
       setStatus("error");
       setMessage(
@@ -77,6 +81,15 @@ export default function AdvertiseQuoteForm() {
       className="rounded-[2rem] border bg-[color:var(--surface)] p-6 shadow-[var(--shadow)] md:p-8"
       style={{ borderColor: "var(--border)" }}
     >
+      <input
+        type="text"
+        name="websiteUrl"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+
       <div className="mb-6">
         <p
           className="mb-2 text-sm font-bold uppercase tracking-[0.22em]"

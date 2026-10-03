@@ -27,7 +27,15 @@ export default async function EventsPage() {
             A local guide to upcoming events, weekend plans, festivals, live
             music, family-friendly activities, and things worth checking out
             while you’re in town. Looking specifically for this weekend?{" "}
-            <a href="/this-weekend" style={{ fontWeight: 800 }}>
+            <a
+              href="/this-weekend"
+              style={{
+                fontWeight: 800,
+                color: "var(--accent-dark)",
+                textDecoration: "underline",
+                textUnderlineOffset: "3px",
+              }}
+            >
               See what’s happening this weekend in Hot Springs.
             </a>
           </p>

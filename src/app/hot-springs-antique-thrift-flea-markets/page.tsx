@@ -13,9 +13,9 @@ import ShoppingGuideCTA from "@/components/shopping/ShoppingGuideCTA";
 
 export const metadata = {
   title:
-    "Antique Stores, Thrift Stores & Flea Markets in Hot Springs, Arkansas",
+    "Hot Springs Antique Stores, Thrift Shops & Flea Markets | Local Shopping Guide",
   description:
-    "A local guide to antique stores, thrift shops, resale stores, flea markets, vendor malls, vintage shops, and secondhand shopping around Hot Springs, Arkansas.",
+    "Find antique stores, thrift shops, flea markets, vendor malls, resale stores, vintage finds, and secondhand shopping around Hot Springs, Arkansas in one local guide.",
 
   alternates: {
     canonical: "/hot-springs-antique-thrift-flea-markets",

@@ -16,7 +16,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    const security = checkFormSubmission(req, body as Record<string, unknown>);
+    const security = checkFormSubmission(request, body as Record<string, unknown>);
 
     if (!security.ok) {
       if (security.silent) {

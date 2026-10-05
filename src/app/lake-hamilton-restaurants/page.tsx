@@ -1,12 +1,11 @@
+import TripConnections from "@/components/TripConnections";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { businessClickTracking } from "@/lib/tracking";
 
 export const metadata = {
-  title:
-    "Lake Hamilton Restaurants on the Water | Lakefront Dining in Hot Springs",
-  description:
-    "Find Lake Hamilton restaurants on and near the water, including lakefront dining, seafood, pizza, patios, drinks, casual food, and boater-friendly places to eat in Hot Springs.",
+  title: { absolute: "Lake Hamilton Restaurants on the Water | Hot Springs, AR" },
+  description: "Find lakefront and nearby Lake Hamilton restaurants for seafood, pizza, patios and dinner. Compare local listings and plan the rest of your Hot Springs trip.",
   keywords: [
     "Lake Hamilton restaurants",
     "restaurants on Lake Hamilton",
@@ -149,6 +148,7 @@ export default function LakeHamiltonRestaurantsPage() {
           href: "/hot-springs-ar-restaurants",
         }}
       />
+      <TripConnections compact heading="Plan your Hot Springs day" />
 
       <section className="section">
         <div className="container">
@@ -423,6 +423,7 @@ export default function LakeHamiltonRestaurantsPage() {
           </div>
         </div>
       </section>
+      <TripConnections heading="Where next after lakeside dining?" links={[{"href": "/lake-hamilton", "label": "Explore Lake Hamilton"}, {"href": "/lake-hamilton-cabins", "label": "Stay near the lake"}, {"href": "/hot-springs-boutiques-shops", "label": "Local shopping"}, {"href": "/this-weekend", "label": "This weekend"}]} />
     </main>
   );
 }

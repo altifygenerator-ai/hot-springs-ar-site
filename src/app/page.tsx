@@ -1,3 +1,5 @@
+export const metadata = { title: { absolute: "Hot Springs, Arkansas | Things to Do, Food & Local Guides" }, description: "Plan your Hot Springs trip with Bathhouse Row, restaurants, shopping, Lake Hamilton, cabins and current events. Find the next stop that fits your day." };
+
 import Hero from "@/components/Hero";
 import QuickLinks from "@/components/home/QuickLinks";
 import CategoryGrid from "@/components/home/CategoryGrid";

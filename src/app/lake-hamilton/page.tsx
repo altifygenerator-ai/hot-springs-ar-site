@@ -1,3 +1,4 @@
+import TripConnections from "@/components/TripConnections";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { businessClickTracking } from "@/lib/tracking";
@@ -171,6 +172,7 @@ export default function LakeHamiltonPage() {
           href: "/lake-hamilton-cabins",
         }}
       />
+      <TripConnections compact heading="Plan your Hot Springs day" />
 
       {/* INTRO */}
       <section className="section">
@@ -508,6 +510,7 @@ export default function LakeHamiltonPage() {
           </div>
         </div>
       </section>
+      <TripConnections heading="Round out your lake day" links={[{"href": "/lake-hamilton-restaurants", "label": "Lake restaurants"}, {"href": "/lake-hamilton-cabins", "label": "Lake cabins"}, {"href": "/bathhouse-row", "label": "Bathhouse Row"}, {"href": "/this-weekend", "label": "This weekend"}]} />
     </main>
   );
 }

@@ -1,12 +1,12 @@
+import TripConnections from "@/components/TripConnections";
 import ShoppingGuideCTA from "@/components/shopping/ShoppingGuideCTA";
 import ShoppingHero from "@/components/shopping/ShoppingHero";
 import ShoppingPlaceCard from "@/components/shopping/ShoppingPlaceCard";
 import { antiquePlaces, fleaPlaces, thriftPlaces } from "@/data/shoppingGuides";
 
 export const metadata = {
-  title: "Thrift Stores in Hot Springs, Arkansas | Resale & Secondhand Shops",
-  description:
-    "Find thrift stores in Hot Springs, Arkansas including resale shops, nonprofit thrift stores, secondhand shopping, furniture, home goods, and cause-based resale stops.",
+  title: { absolute: "Thrift Stores in Hot Springs, AR | Resale & Home Goods" },
+  description: "Browse Hot Springs thrift and resale shops for furniture, clothes, books and home goods, with local listings and links for planning more than one stop.",
   keywords: [
     "thrift stores Hot Springs Arkansas",
     "Hot Springs AR thrift shops",
@@ -41,7 +41,7 @@ export default function HotSpringsThriftStoresPage() {
     <main>
       <ShoppingHero
         kicker="Hot Springs Thrift Stores"
-        title="Secondhand shops, resale stops, and thrift stores around Hot Springs."
+        title="Thrift stores in Hot Springs, Arkansas"
         text="Thrift shopping in Hot Springs is less about one perfect store and more about knowing the mix. There are practical resale shops, nonprofit thrift stores, donation-based stops, furniture and home goods places, and smaller shops tied to local causes."
         primaryHref="/hot-springs-antique-thrift-flea-markets"
         primaryLabel="Back to Shopping Hub"
@@ -179,6 +179,7 @@ export default function HotSpringsThriftStoresPage() {
         href="/contact"
         label="Send a suggestion"
       />
+      <TripConnections heading="Make a day of shopping" links={[{"href": "/hot-springs-ar-restaurants", "label": "Find somewhere to eat"}, {"href": "/hot-springs-boutiques-shops", "label": "Boutiques & local shops"}, {"href": "/shopping-near-bathhouse-row", "label": "Shopping near Bathhouse Row"}, {"href": "/this-weekend", "label": "This weekend"}]} />
     </main>
   );
 }

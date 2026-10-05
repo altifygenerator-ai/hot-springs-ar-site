@@ -1,3 +1,4 @@
+import TripConnections from "@/components/TripConnections";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { restaurantsHero } from "@/data/hero";
@@ -6,10 +7,8 @@ import EventsCTA from "@/components/events/EventsCTA";
 import { businessClickTracking, getPlacementType } from "@/lib/tracking";
 
 export const metadata = {
-  title:
-    "Restaurants in Hot Springs, Arkansas | Downtown, Lake Hamilton & Local Food",
-  description:
-    "Find restaurants in Hot Springs, Arkansas, including downtown dining, breakfast spots, lakefront food, barbecue, pizza, breweries, cafes, Mexican food, and places to eat near Bathhouse Row, Lake Hamilton, Oaklawn, hotels, and cabins.",
+  title: { absolute: "Restaurants in Hot Springs, AR | Downtown & Lake Dining" },
+  description: "Find Hot Springs restaurants for downtown meals, Bathhouse Row stops and Lake Hamilton dining. Browse local listings, phone numbers and directions.",
 keywords: [
   "restaurants in Hot Springs Arkansas",
   "Hot Springs AR restaurants",
@@ -188,6 +187,11 @@ export default function RestaurantsPage() {
         primaryCta={restaurantsHero.primaryCta}
         secondaryCta={restaurantsHero.secondaryCta}
       />
+      <TripConnections compact heading="Choose your dining area" links={[
+        { href: "/restaurants-near-bathhouse-row", label: "Near Bathhouse Row" },
+        { href: "/lake-hamilton-restaurants", label: "Lake Hamilton dining" },
+        { href: "#all-restaurants", label: "Browse local restaurants" },
+      ]} />
 
       <section className="section">
         <div className="container">
@@ -335,7 +339,7 @@ export default function RestaurantsPage() {
         <section className="section">
           <div className="container">
             <div className="section-heading">
-              <h2>Featured Places to Eat in Hot Springs</h2>
+              <h2 id="all-restaurants" style={{ scrollMarginTop: 210 }}>Featured Places to Eat in Hot Springs</h2>
 
               <p>
                 These are strong starting points for visitors planning meals
@@ -904,6 +908,7 @@ export default function RestaurantsPage() {
           </div>
         </div>
       </section>
+      <TripConnections heading="Make a day of Hot Springs" links={[{"href": "/bathhouse-row", "label": "Bathhouse Row"}, {"href": "/hot-springs-boutiques-shops", "label": "Local shopping"}, {"href": "/lake-hamilton", "label": "Lake Hamilton"}, {"href": "/this-weekend", "label": "This weekend"}]} />
     </main>
   );
 }

@@ -261,7 +261,7 @@ export default async function ThisWeekendPage() {
         </div>
       </section>
 
-      <section className="section pt-0">
+      <section id="weekend-events" className="section pt-0" style={{ scrollMarginTop: 210 }}>
         <div className="container">
           <div className="section-heading">
             <h2>This Weekend’s Events</h2>

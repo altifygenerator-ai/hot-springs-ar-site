@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import type { Business } from "@/data/businesses";
@@ -19,6 +20,7 @@ type FAQ = {
 };
 
 type BusinessDirectoryPageProps = {
+  afterContent?: ReactNode;
   eyebrow: string;
   title: string;
   description: string;
@@ -168,6 +170,7 @@ export default function BusinessDirectoryPage({
   title,
   description,
   heroImage,
+  afterContent,
   primaryCta,
   secondaryCta,
   introEyebrow,
@@ -545,6 +548,7 @@ export default function BusinessDirectoryPage({
           </div>
         </div>
       </section>
+      {afterContent}
     </main>
   );
 }

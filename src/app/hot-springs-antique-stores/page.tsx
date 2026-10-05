@@ -1,12 +1,12 @@
+import TripConnections from "@/components/TripConnections";
 import ShoppingGuideCTA from "@/components/shopping/ShoppingGuideCTA";
 import ShoppingHero from "@/components/shopping/ShoppingHero";
 import ShoppingPlaceCard from "@/components/shopping/ShoppingPlaceCard";
 import { antiquePlaces, fleaPlaces } from "@/data/shoppingGuides";
 
 export const metadata = {
-  title: "Antique Stores in Hot Springs, Arkansas",
-  description:
-    "A local guide to antique stores, vintage shops, curated decor, estate jewelry, collectibles, retro finds, and antique shopping around Hot Springs, Arkansas.",
+  title: { absolute: "Antique Stores in Hot Springs, AR | Vintage & Collectibles" },
+  description: "Explore Hot Springs antique stores and vintage shops for collectibles, decor and estate finds. Use local listings and nearby shopping guides to plan your stops.",
   keywords: [
     "antique stores Hot Springs Arkansas",
     "Hot Springs AR antiques",
@@ -29,7 +29,7 @@ export default function HotSpringsAntiqueStoresPage() {
     <main>
       <ShoppingHero
         kicker="Hot Springs Antique Stores"
-        title="Old pieces, vintage finds, and antique stops worth slowing down for."
+        title="Antique stores in Hot Springs, Arkansas"
         text="Antique shopping in Hot Springs has a different pace to it. You might start near Bathhouse Row, drift toward Hobson Avenue, or find yourself in a vendor mall where the shelves are packed with old signs, glassware, furniture, jewelry, records, lamps, and things that feel like they came out of somebody’s family story."
         primaryHref="/hot-springs-antique-thrift-flea-markets"
         primaryLabel="Back to Shopping Hub"
@@ -147,6 +147,7 @@ export default function HotSpringsAntiqueStoresPage() {
         href="/contact"
         label="Send a suggestion"
       />
+      <TripConnections heading="Make a day of shopping" links={[{"href": "/hot-springs-ar-restaurants", "label": "Find somewhere to eat"}, {"href": "/hot-springs-boutiques-shops", "label": "Boutiques & local shops"}, {"href": "/shopping-near-bathhouse-row", "label": "Shopping near Bathhouse Row"}, {"href": "/this-weekend", "label": "This weekend"}]} />
     </main>
   );
 }

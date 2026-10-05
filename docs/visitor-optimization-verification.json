@@ -1,0 +1,33 @@
+{
+  "source": "dac3fd01930c33f0e00376d7f8893f4231c60598",
+  "viewportWidths": [
+    360,
+    390,
+    768,
+    1280,
+    1440
+  ],
+  "checkedRoutes": [
+    "/",
+    "/bathhouse-row",
+    "/events",
+    "/hot-springs-antique-stores",
+    "/hot-springs-antique-thrift-flea-markets",
+    "/hot-springs-ar-cabins",
+    "/hot-springs-ar-restaurants",
+    "/hot-springs-boutiques-shops",
+    "/hot-springs-flea-markets",
+    "/hot-springs-thrift-stores",
+    "/lake-hamilton",
+    "/lake-hamilton-restaurants",
+    "/shopping-near-bathhouse-row",
+    "/this-weekend"
+  ],
+  "responsiveChecks": 70,
+  "internalDestinations": 45,
+  "runtimeErrors": 0,
+  "missingJumpTargets": 0,
+  "overflowChecksFailed": 0,
+  "localQAUsesEmptyEventFixtures": true,
+  "liveSubmissionsTested": false
+}

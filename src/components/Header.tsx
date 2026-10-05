@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import styles from "./Header.module.css";
 import { useState } from "react";
 import HeaderSearch from "@/components/HeaderSearch";
 
@@ -81,7 +82,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${styles.header}`}>
       <div className="container header-inner">
         <Link href="/" className="logo" onClick={() => setOpen(false)}>
           Hot Springs Arkansas

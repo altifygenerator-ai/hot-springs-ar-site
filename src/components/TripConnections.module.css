@@ -1,0 +1,34 @@
+.compact {
+  padding: 28px 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.next {
+  padding: 40px 0;
+}
+.label {
+  margin: 0 0 16px;
+  color: var(--green);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.heading {
+  margin: 0 0 24px;
+  color: var(--green);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.links a {
+  min-height: 44px;
+  max-width: 100%;
+}
+.links a:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 4px;
+}

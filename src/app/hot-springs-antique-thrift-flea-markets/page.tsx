@@ -1,3 +1,4 @@
+import TripConnections from "@/components/TripConnections";
 import Link from "next/link";
 import {
   antiquePlaces,
@@ -12,10 +13,8 @@ import ShoppingFeaturedGrid from "@/components/shopping/ShoppingFeaturedGrid";
 import ShoppingGuideCTA from "@/components/shopping/ShoppingGuideCTA";
 
 export const metadata = {
-  title:
-    "Hot Springs Antique Stores, Thrift Shops & Flea Markets | Local Shopping Guide",
-  description:
-    "Find antique stores, thrift shops, flea markets, vendor malls, resale stores, vintage finds, and secondhand shopping around Hot Springs, Arkansas in one local guide.",
+  title: { absolute: "Hot Springs, AR Antiques, Thrift Stores & Flea Markets" },
+  description: "Plan a Hot Springs shopping day with antique stores, thrift shops and flea markets. Choose a shopping guide, browse local listings and find nearby food.",
 
   alternates: {
     canonical: "/hot-springs-antique-thrift-flea-markets",
@@ -81,7 +80,7 @@ export default function AntiqueThriftFleaMarketsPage() {
     <main>
       <ShoppingHero
         kicker="Hot Springs Shopping Guide"
-        title="Antique stores, thrift shops, and flea markets around Hot Springs."
+        title="Hot Springs antiques, thrift stores & flea markets"
         text="Some Hot Springs trips are built around bathhouses, lake views, or a weekend at Oaklawn. But there is another kind of day here too: the slower one, where you wander through vendor booths, old furniture, estate jewelry, resale racks, dusty shelves, and odd little finds you did not know you were looking for."
         primaryHref="/hot-springs-antique-stores"
         primaryLabel="Antique Stores"
@@ -98,6 +97,11 @@ export default function AntiqueThriftFleaMarketsPage() {
         cardTitle="Call or check Facebook first."
         cardText="Flea markets, vendor malls, and smaller resale shops can change hours, booth inventory, locations, and weekend schedules. This guide is built to help you narrow the trip, but a quick check can save you from driving across town for a closed door."
       />
+      <TripConnections compact heading="Choose your shopping guide" links={[
+        { href: "/hot-springs-antique-stores", label: "Antique stores" },
+        { href: "/hot-springs-thrift-stores", label: "Thrift & resale" },
+        { href: "/hot-springs-flea-markets", label: "Flea markets" },
+      ]} />
 
       <section className="shopping-section shopping-section-tight">
         <div className="container">
@@ -197,6 +201,7 @@ export default function AntiqueThriftFleaMarketsPage() {
         href="/contact"
         label="Send a suggestion"
       />
+      <TripConnections heading="Make a day of shopping" links={[{"href": "/hot-springs-ar-restaurants", "label": "Find somewhere to eat"}, {"href": "/hot-springs-boutiques-shops", "label": "Boutiques & local shops"}, {"href": "/shopping-near-bathhouse-row", "label": "Shopping near Bathhouse Row"}, {"href": "/this-weekend", "label": "This weekend"}]} />
     </main>
   );
 }

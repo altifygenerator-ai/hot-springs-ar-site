@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Chooser keyboard focus and 44px tap target",
+    "height": 55.59375,
+    "outline": "solid",
+    "outlineWidth": "2px"
+  },
+  {
+    "name": "Mobile menu keyboard open, routing and close",
+    "passed": true
+  },
+  {
+    "name": "Articles keyboard dropdown stays within laptop viewport",
+    "passed": true
+  }
+]

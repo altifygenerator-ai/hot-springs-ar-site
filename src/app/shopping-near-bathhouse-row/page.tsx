@@ -2,9 +2,8 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 
 export const metadata = {
-  title: "Shopping Near Bathhouse Row | Downtown Hot Springs Arkansas Shops",
-  description:
-    "Find shopping near Bathhouse Row in Hot Springs, Arkansas, including antique stores, local finds, books, sweets, downtown browsing, gifts, vintage stops, and nearby shopping guides.",
+  title: { absolute: "Shopping Near Bathhouse Row | Hot Springs, AR" },
+  description: "Explore shopping near Bathhouse Row and Central Avenue with local stores, gifts and nearby food stops. Keep exploring downtown Hot Springs between visits.",
   keywords: [
     "shopping near Bathhouse Row",
     "Bathhouse Row shopping",

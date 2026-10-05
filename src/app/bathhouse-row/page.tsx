@@ -1,11 +1,10 @@
+import TripConnections from "@/components/TripConnections";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 
 export const metadata = {
-  title:
-    "Bathhouse Row in Hot Springs, Arkansas | Historic Bathhouses, Spas & Downtown Guide",
-  description:
-    "Explore Bathhouse Row in Hot Springs, Arkansas with historic bathhouses, thermal water, downtown restaurants, shops, hotels, Hot Springs National Park, spas, and things to do nearby.",
+  title: { absolute: "Bathhouse Row, Hot Springs | Historic Baths & Visitor Guide" },
+  description: "Explore historic Bathhouse Row and Hot Springs National Park. Find bathhouse guides, nearby restaurants, downtown shops and ideas for the rest of your day.",
   keywords: [
     "Bathhouse Row Hot Springs Arkansas",
     "Bathhouse Row Hot Springs AR",
@@ -176,6 +175,7 @@ export default function BathhouseRowPage() {
         primaryCta={hero.primaryCta}
         secondaryCta={hero.secondaryCta}
       />
+      <TripConnections compact heading="Plan your Hot Springs day" />
 
       <section className="section">
         <div className="container">
@@ -621,6 +621,7 @@ export default function BathhouseRowPage() {
           </div>
         </div>
       </section>
+      <TripConnections heading="Where next after Bathhouse Row?" links={[{"href": "/restaurants-near-bathhouse-row", "label": "Restaurants nearby"}, {"href": "/shopping-near-bathhouse-row", "label": "Shop downtown"}, {"href": "/lake-hamilton", "label": "Lake Hamilton"}, {"href": "/this-weekend", "label": "This weekend"}]} />
     </main>
   );
 }

@@ -800,6 +800,18 @@ export const businesses: Business[] = [
       "https://www.google.com/maps/search/?api=1&query=MT+Savvy+Styles+Boutique+3814+Central+Ave+Suite+E+Hot+Springs+AR",
     href: "/local-businesses",
   },
+  {
+    name: "Park Ave Vape & Tobacco",
+    category: "Shopping",
+    type: "Thrift & Resale • Specialty Retail • Family-Owned",
+    description:
+      "A locally owned family shop on Park Avenue combining a rotating thrift and secondhand selection with smoke-shop merchandise and other specialty retail goods. Some merchandise is age-restricted; 21+ where applicable.",
+    image: "/images/shopping/thrift-stores-hero.png",
+    address: "761 Park Ave, Hot Springs National Park, AR 71901",
+    website: "https://www.facebook.com/profile.php?id=61580041853607",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Park+Ave+Vape+and+Tobacco+761+Park+Ave+Hot+Springs+National+Park+AR+71901",
+  },
 
   /* =======================
      COMMUNITY-SUGGESTED LOCAL ADDITIONS

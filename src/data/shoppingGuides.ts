@@ -127,6 +127,20 @@ export const shoppingPlaces: ShoppingPlace[] = [
     bestFor: ["Furniture", "Home goods", "DIY finds", "Shopping for a cause"],
   },
   {
+    name: "Park Ave Vape & Tobacco",
+    category: "thrift",
+    label: "Thrift finds • Specialty retail • Family-owned",
+    address: "761 Park Ave, Hot Springs National Park, AR 71901",
+    website: "https://www.facebook.com/profile.php?id=61580041853607",
+    image: "/images/shopping/thrift-stores-hero.png",
+    description:
+      "A locally owned family shop on Park Avenue with a rotating thrift and secondhand side alongside smoke-shop merchandise and other specialty retail goods. It gives thrift shoppers another local stop while clearly separating general resale shopping from age-restricted products.",
+    bestFor: ["Thrift finds", "Secondhand browsing", "Local family-owned retail", "Park Avenue"],
+    note:
+      "Hours provided by the owner: Monday–Thursday 10 AM–9 PM and Friday–Saturday noon–10 PM. Sunday hours were not provided. Some merchandise is age-restricted; 21+ where applicable.",
+  },
+
+  {
     name: "Jackson House Thrift Store",
     category: "thrift",
     label: "Community thrift store",

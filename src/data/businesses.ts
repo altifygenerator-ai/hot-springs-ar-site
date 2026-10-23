@@ -455,7 +455,7 @@ export const businesses: Business[] = [
     image: "/images/businesses/lone-cedar-cabins.jpeg",
     phone: "501-865-6782",
     address: "1873 Lone Cedar Cabins Rd, Bismarck, AR 71929",
-    website: "https://www.findaplacebooking.com/stays/lone-cedar-cabin-at-lone-cedar-cabins",
+    website: "https://www.findaplacebooking.com/hosts/dawn-gabe-rubio",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Lone+Cedar+Cabins+1873+Lone+Cedar+Cabins+Rd+Bismarck+AR+71929",
     href: "/hot-springs-ar-cabins",

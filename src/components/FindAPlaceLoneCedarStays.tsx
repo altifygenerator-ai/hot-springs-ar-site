@@ -1,9 +1,11 @@
+import { businessClickTracking } from "@/lib/tracking";
+
 const loneCedarStays = [
   {
     name: "Lone Cedar Cabin",
     slug: "lone-cedar-cabin-at-lone-cedar-cabins",
-    type: "Cabin · Sleeps 4",
-    description: "A hand-built rustic cabin with a loft bedroom, jetted tub, full kitchen, covered porch and outdoor shower.",
+    type: "Cabin · Bismarck",
+    description: "A rustic retreat on secluded wooded acreage in the Ouachita foothills, near DeGray Lake and Hot Springs.",
   },
   {
     name: "Oak Ridge Cabin",
@@ -39,7 +41,7 @@ export default function FindAPlaceLoneCedarStays() {
             const image = "https://www.findaplacebooking.com/api/public/stay-cover/" + encodeURIComponent(stay.slug);
             return (
               <article key={stay.slug} className="group flex h-full flex-col overflow-hidden rounded-3xl border bg-[color:var(--surface-strong)]" style={{ borderColor: "var(--border)" }}>
-                <a href={url} target="_blank" rel="noopener noreferrer" className="block h-52 overflow-hidden bg-stone-200" aria-label={"View " + stay.name + " on Find A Place"}>
+                <a href={url} target="_blank" rel="noopener noreferrer" className="block h-52 overflow-hidden bg-stone-200" aria-label={"View " + stay.name + " on Find A Place"} {...businessClickTracking({ action: "find_a_place_booking", business: stay.name, city: "Bismarck / Hot Springs area", page: "/hot-springs-ar-cabins", placement: "fap_property_photo", placementType: "editorial" })}>
                   <img src={image} alt={stay.name + " at Lone Cedar Cabins"} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
                 </a>
                 <div className="flex flex-1 flex-col p-6">
@@ -52,6 +54,7 @@ export default function FindAPlaceLoneCedarStays() {
                     rel="noopener noreferrer"
                     className="mt-6 inline-flex w-fit items-center rounded-full px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                     style={{ background: "var(--green)" }}
+                    {...businessClickTracking({ action: "find_a_place_booking", business: stay.name, city: "Bismarck / Hot Springs area", page: "/hot-springs-ar-cabins", placement: "fap_property_button", placementType: "editorial" })}
                   >
                     View stay &amp; check dates ↗
                   </a>

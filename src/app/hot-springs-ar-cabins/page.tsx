@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FindAPlaceBookingCTA from "@/components/FindAPlaceBookingCTA";
 import FindAPlaceLoneCedarStays from "@/components/FindAPlaceLoneCedarStays";
+import WeeklyFindAPlaceStays from "@/components/WeeklyFindAPlaceStays";
 import Hero from "@/components/Hero";
 import { cabinsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
@@ -292,6 +293,7 @@ export default function CabinsPage() {
 
       <div id="lone-cedar-stays" />
       <FindAPlaceLoneCedarStays />
+      <WeeklyFindAPlaceStays />
 
       <div id="hot-springs-more" />
       <section className="section">

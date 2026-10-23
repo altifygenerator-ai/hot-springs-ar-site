@@ -554,7 +554,7 @@ export default function CabinsPage() {
                           background: "var(--surface-strong)",
                         }}
                       >
-                        Website
+                        {place.website?.includes("findaplacebooking.com") ? "Book on Find A Place" : "Website"}
                       </a>
                     )}
 
@@ -645,7 +645,7 @@ export default function CabinsPage() {
                           background: "var(--surface-strong)",
                         }}
                       >
-                        Website
+                        {place.website?.includes("findaplacebooking.com") ? "Book on Find A Place" : "Website"}
                       </a>
                     )}
 

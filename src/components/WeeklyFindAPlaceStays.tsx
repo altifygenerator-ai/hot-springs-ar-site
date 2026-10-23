@@ -97,7 +97,7 @@ export default async function WeeklyFindAPlaceStays() {
                   <img src={cover} alt={stay.name} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                 </a>
                 <div className="flex flex-1 flex-col p-5">
-                  <p className="text-xs font-medium uppercase tracking-wide" style={{color:"var(--accent-dark)"}}>{stay.type} · {stay.city}</p>
+                  <p className="text-xs font-medium uppercase tracking-wide" style={{color:"var(--accent-dark)"}}>{stay.property_type || "Stay"} · {stay.city}</p>
                   <h3 className="mt-2 text-xl font-semibold leading-snug" style={{color:"var(--text)"}}>{stay.name}</h3>
                   <p className="mt-2 text-sm" style={{color:"var(--muted)"}}>{stay.host_name || "Independent host"}</p>
                   <p className="mt-3 flex-1 text-sm leading-6" style={{color:"var(--muted)"}}>{excerpt(stay.description)}</p>

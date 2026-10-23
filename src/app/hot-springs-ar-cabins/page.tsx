@@ -38,57 +38,7 @@ const allCabins = businesses.filter(
 
 const featuredCabins = allCabins.filter((business) => business.featured);
 
-const standardCabins = allCabins.filter((business) => !business.featured);
-
-const stayStyles = [
-  {
-    title: "Wooded Cabins and Treehouse Stays",
-    text: "Best for visitors wanting a quieter getaway, more privacy, forest views, fire pits, romantic weekends, or a stay that feels different from a normal hotel.",
-  },
-  {
-    title: "Lake Hamilton and Lake Catherine Area",
-    text: "Best for visitors who want to be closer to water views, boating, fishing, lakefront restaurants, outdoor recreation, and slower evenings near the lake.",
-  },
-  {
-    title: "Downtown and Bathhouse Row Access",
-    text: "Best for travelers who want to explore restaurants, bathhouses, shops, museums, spas, and Hot Springs National Park without spending too much time driving.",
-  },
-  {
-    title: "Family and Group Trips",
-    text: "Best for visitors needing more space than a hotel room, easier parking, kitchens, outdoor areas, and a comfortable base for exploring Hot Springs.",
-  },
-];
-
-const guideLinks = [
-  {
-    label: "Things To Do",
-    href: "/things-to-do-in-hot-springs-ar",
-  },
-  {
-    label: "Lake Hamilton Cabins",
-    href: "/lake-hamilton-cabins",
-  },
-  {
-    label: "Pet-Friendly Hot Springs",
-    href: "/pet-friendly-hot-springs",
-  },
-  {
-    label: "Restaurants",
-    href: "/hot-springs-ar-restaurants",
-  },
-  {
-    label: "Hotels",
-    href: "/hot-springs-ar-hotels",
-  },
-  {
-    label: "Explore Hot Springs",
-    href: "/explore",
-  },
-  {
-    label: "Lake Hamilton",
-    href: "/lake-hamilton",
-  },
-];
+const standardCabins = allCabins.filter((business) => !business.featured && business.name !== "Lone Cedar Cabins");
 
 const faqs = [
   {
@@ -174,144 +124,20 @@ export default function CabinsPage() {
         secondaryCta={cabinsHero.secondaryCta}
       />
 
-      <section className="section">
-        <div className="container">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div>
-              <p
-                className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
-                style={{ color: "var(--accent-dark)" }}
-              >
-                Hot Springs Cabin Guide
-              </p>
-
-              <h2 className="max-w-2xl text-4xl font-semibold leading-tight md:text-5xl">
-                Find a cabin that fits the kind of Hot Springs trip you want.
-              </h2>
-            </div>
-
-            <div className="space-y-5">
-              <p
-                className="text-lg leading-relaxed"
-                style={{ color: "var(--text)" }}
-              >
-                Hot Springs has more than standard hotels. Visitors can find
-                wooded cabins, treehouse-style stays, lake cottages, RV resorts,
-                romantic getaways, and quiet vacation rentals close to Lake
-                Hamilton, Lake Catherine, downtown, and the Ouachita Mountains.
-              </p>
-
-              <p className="leading-relaxed" style={{ color: "var(--muted)" }}>
-                Use this guide to compare cabin-style stays near{" "}
-                <Link
-                  href="/things-to-do-in-hot-springs-ar"
-                  className="font-semibold underline underline-offset-4"
-                  style={{ color: "var(--accent-dark)" }}
-                >
-                  things to do
-                </Link>
-                ,{" "}
-                <Link
-                  href="/hot-springs-ar-restaurants"
-                  className="font-semibold underline underline-offset-4"
-                  style={{ color: "var(--accent-dark)" }}
-                >
-                  restaurants
-                </Link>
-                ,{" "}
-                <Link
-                  href="/hot-springs-ar-hotels"
-                  className="font-semibold underline underline-offset-4"
-                  style={{ color: "var(--accent-dark)" }}
-                >
-                  hotels
-                </Link>
-                , Bathhouse Row, Lake Hamilton, Lake Catherine, and Hot Springs
-                National Park.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section pt-0">
-        <div className="container">
-          <div
-            className="rounded-[2rem] border bg-[color:var(--surface)] p-6 shadow-sm md:p-8"
-            style={{ borderColor: "var(--border)" }}
-          >
-            <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
-              <div>
-                <p
-                  className="mb-3 text-sm font-bold uppercase tracking-[0.22em]"
-                  style={{ color: "var(--accent-dark)" }}
-                >
-                  Plan Around Your Stay
-                </p>
-
-                <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-                  Pick the kind of stay before you pick the cabin.
-                </h2>
-
-                <p
-                  className="mt-4 leading-relaxed"
-                  style={{ color: "var(--muted)" }}
-                >
-                  Some trips are better near the lake, some are better tucked in
-                  the trees, and some need quick access to downtown, restaurants,
-                  bathhouses, and family attractions.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                {guideLinks.map((item) => (
-                  <Link key={item.href} href={item.href} className="btn">
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section pt-0">
-        <div className="container">
-          <div className="section-heading">
-            <h2>Best Types of Cabin Stays Around Hot Springs</h2>
-
-            <p>
-              A cabin trip can mean a lot of different things here. Some people
-              want lake access, some want romance, some want space for family,
-              and some just want somewhere quiet after a full day in town.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {stayStyles.map((area) => (
-              <div
-                key={area.title}
-                className="rounded-3xl border bg-[color:var(--surface)] p-6 shadow-sm"
-                style={{ borderColor: "var(--border)" }}
-              >
-                <h3 className="text-2xl font-semibold">{area.title}</h3>
-
-                <p
-                  className="mt-3 leading-relaxed"
-                  style={{ color: "var(--muted)" }}
-                >
-                  {area.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <nav aria-label="Browse the cabins guide" className="container flex flex-wrap items-center gap-3 py-7 text-sm">
+        <span className="font-semibold" style={{ color: "var(--text)" }}>Browse:</span>
+        <a className="rounded-full border px-4 py-2 font-medium" style={{ borderColor: "var(--border)" }} href="#hot-springs-featured">Featured stays</a>
+        <a className="rounded-full border px-4 py-2 font-medium" style={{ borderColor: "var(--border)" }} href="#lone-cedar-stays">Bookable Lone Cedar stays</a>
+        <a className="rounded-full border px-4 py-2 font-medium" style={{ borderColor: "var(--border)" }} href="#hot-springs-more">More cabins & resorts</a>
+        <Link className="rounded-full border px-4 py-2 font-medium" style={{ borderColor: "var(--border)" }} href="/lake-hamilton-cabins">Lake Hamilton</Link>
+        <Link className="rounded-full border px-4 py-2 font-medium" style={{ borderColor: "var(--border)" }} href="/hot-springs-ar-hotels">Hotels</Link>
+      </nav>
 
       <div className="pb-4">
         <LynLiliRentalCleaningBanner context="cabins" />
       </div>
 
+      <div id="hot-springs-featured" />
       {mainCabin && (
         <section className="section">
           <div className="container">
@@ -464,6 +290,10 @@ export default function CabinsPage() {
         </section>
       )}
 
+      <div id="lone-cedar-stays" />
+      <FindAPlaceLoneCedarStays />
+
+      <div id="hot-springs-more" />
       <section className="section">
         <div className="container">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
@@ -756,8 +586,6 @@ export default function CabinsPage() {
           </div>
         </div>
       </section>
-
-      <FindAPlaceLoneCedarStays />
 
       <FindAPlaceBookingCTA
         heading="Looking for a stay in Hot Springs?"

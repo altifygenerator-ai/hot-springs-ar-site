@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FindAPlaceBookingCTA from "@/components/FindAPlaceBookingCTA";
+import FindAPlaceLoneCedarStays from "@/components/FindAPlaceLoneCedarStays";
 import Hero from "@/components/Hero";
 import { cabinsHero } from "@/data/hero";
 import { businesses } from "@/data/businesses";
@@ -755,6 +756,8 @@ export default function CabinsPage() {
           </div>
         </div>
       </section>
+
+      <FindAPlaceLoneCedarStays />
 
       <FindAPlaceBookingCTA
         heading="Looking for a stay in Hot Springs?"

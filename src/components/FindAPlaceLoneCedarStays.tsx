@@ -22,7 +22,7 @@ const loneCedarStays = [
 export default function FindAPlaceLoneCedarStays() {
   return (
     <section className="section bg-[color:var(--surface)]" aria-labelledby="fap-lone-cedar-heading">
-      <div className="shell">
+      <div className="container">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-wider" style={{ color: "var(--accent-dark)" }}>Available to book on Find A Place</p>
           <h2 id="fap-lone-cedar-heading" className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">

@@ -61,6 +61,18 @@ const featuredStays = [
 
 const otherStays = [
   {
+    name: "Scott Forge Lake House",
+    type: "Lakefront Vacation Rental • 4 Bedrooms • 4 Baths",
+    description:
+      "Scott Forge Lake House is a four-bedroom, four-bath lakefront home on a quiet, no-tow stretch of Lake Hamilton. It sleeps 10 in real beds, up to 12 with kids, and has a big covered deck, a hot tub, a stone fire pit at the water's edge and a private dock with a boat slip. About 15 minutes from Oaklawn and 20 from downtown. Book directly with the owner at scottforgelakehouse.com or text 501-420-3310.",
+    address: "Hot Springs, AR 71913",
+    locationLabel: "Location",
+    locationNote: "Guests receive the street address after booking.",
+    phone: "501-420-3310",
+    phoneHref: "sms:+15014203310",
+    href: "https://scottforgelakehouse.com",
+  },
+  {
     name: "Knollwood Lodge",
     type: "Lakefront Cabin Rentals",
     description:
@@ -360,12 +372,41 @@ export default function LakeHamiltonCabinsPage() {
 
                 <div className="mt-4 space-y-1 text-sm">
                   <p style={{ color: "var(--text)" }}>
-                    <strong>Address:</strong> {stay.address}
+                    <strong>{stay.locationLabel ?? "Address"}:</strong> {stay.address}
                   </p>
+                  {stay.locationNote && (
+                    <p style={{ color: "var(--muted)" }}>{stay.locationNote}</p>
+                  )}
                   <p style={{ color: "var(--text)" }}>
-                    <strong>Phone:</strong> {stay.phone}
+                    <strong>{stay.phoneHref ? "Text" : "Phone"}:</strong>{" "}
+                    {stay.phoneHref ? (
+                      <a href={stay.phoneHref} className="underline underline-offset-4">
+                        {stay.phone}
+                      </a>
+                    ) : (
+                      stay.phone
+                    )}
                   </p>
                 </div>
+                {stay.href && (
+                  <a
+                    href={stay.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${stay.name} website`}
+                    {...businessClickTracking({
+                      action: "website",
+                      business: stay.name,
+                      page: "/lake-hamilton-cabins",
+                      placement: "basic-lake-hamilton-stays",
+                      placementType: "editorial",
+                    })}
+                    className="mt-4 inline-block font-bold underline underline-offset-4"
+                    style={{ color: "var(--accent-dark)" }}
+                  >
+                    Visit website →
+                  </a>
+                )}
               </article>
             ))}
           </div>

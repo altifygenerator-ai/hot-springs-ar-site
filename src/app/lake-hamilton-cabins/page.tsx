@@ -64,12 +64,10 @@ const otherStays = [
     name: "Scott Forge Lake House",
     type: "Lakefront Vacation Rental • 4 Bedrooms • 4 Baths",
     description:
-      "Scott Forge Lake House is a four-bedroom, four-bath lakefront home on a quiet, no-tow stretch of Lake Hamilton. It sleeps 10 in real beds, up to 12 with kids, and has a big covered deck, a hot tub, a stone fire pit at the water's edge and a private dock with a boat slip. About 15 minutes from Oaklawn and 20 from downtown. Book directly with the owner at scottforgelakehouse.com or text 501-420-3310.",
+      "Scott Forge Lake House is a four-bedroom, four-bath lakefront home on a quiet, no-tow stretch of Lake Hamilton. It sleeps 10 in real beds, up to 12 with kids, and has a big covered deck, a hot tub, a stone fire pit at the water's edge and a private dock with a boat slip. About 15 minutes from Oaklawn and 20 from downtown. Book directly with the owner at scottforgelakehouse.com.",
     address: "Hot Springs, AR 71913",
     locationLabel: "Location",
     locationNote: "Guests receive the street address after booking.",
-    phone: "501-420-3310",
-    phoneHref: "sms:+15014203310",
     href: "https://scottforgelakehouse.com",
   },
   {
@@ -377,16 +375,11 @@ export default function LakeHamiltonCabinsPage() {
                   {stay.locationNote && (
                     <p style={{ color: "var(--muted)" }}>{stay.locationNote}</p>
                   )}
-                  <p style={{ color: "var(--text)" }}>
-                    <strong>{stay.phoneHref ? "Text" : "Phone"}:</strong>{" "}
-                    {stay.phoneHref ? (
-                      <a href={stay.phoneHref} className="underline underline-offset-4">
-                        {stay.phone}
-                      </a>
-                    ) : (
-                      stay.phone
-                    )}
-                  </p>
+                  {stay.phone && (
+                    <p style={{ color: "var(--text)" }}>
+                      <strong>Phone:</strong> {stay.phone}
+                    </p>
+                  )}
                 </div>
                 {stay.href && (
                   <a

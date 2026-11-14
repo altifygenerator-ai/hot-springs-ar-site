@@ -40,7 +40,7 @@ function normalizeAiDraft(
     raw_description: cleanMultiline(record.raw_description) || cleanMultiline(record.description),
     description: cleanMultiline(record.description),
     ai_summary: cleanMultiline(record.ai_summary),
-    city: cleanString(record.city) || defaults.city || "Hot Springs",
+    city: cleanString(record.city) || defaults.city || null,
     location_name:
       cleanString(record.location_name) || cleanString(record.venue_name) || defaults.venue || null,
     address: cleanString(record.address),
@@ -91,7 +91,7 @@ Default city: ${source.city || "Hot Springs"}
 Default category: ${source.category_hint || ""}
 Default venue: ${source.venue_hint || ""}
 
-Extract up to 12 upcoming events from this page text. Return this JSON shape:
+Extract up to 12 upcoming events from this page text. Never copy a default city into the event location. If the event is outside Hot Springs Arkansas or no venue/location is supported, skip it. Do not roll past dates forward into a new year. Return this JSON shape:
 {
   "events": [
     {
@@ -135,7 +135,7 @@ ${clippedText}`,
     .map((event) =>
       normalizeAiDraft(event, {
         sourceUrl: source.url,
-        city: source.city || "Hot Springs",
+        city: null,
         category: source.category_hint || null,
         venue: source.venue_hint || null,
       })

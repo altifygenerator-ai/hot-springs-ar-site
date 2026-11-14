@@ -189,6 +189,28 @@ export default function RestaurantsPage() {
         secondaryCta={restaurantsHero.secondaryCta}
       />
 
+      <section className="section" aria-label="Newer downtown restaurants and dessert shops">
+        <div className="container">
+          <div className="section-heading">
+            <p className="hero-eyebrow">More local dining stops</p>
+            <h2>Worth knowing about downtown</h2>
+            <p>Downtown changes fast. Here are two established spots worth including in a current food plan. Check each business for its latest hours before visiting.</p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2">
+            <article className="rounded-2xl border p-6" style={{ borderColor: "var(--border)" }}>
+              <h3 className="text-xl font-bold">Corazón Mexican Cocina</h3>
+              <p className="mt-2">Mexican dining at 901 Central Avenue, with handmade tortillas and a sit-down dining experience downtown.</p>
+              <a className="mt-4 inline-block font-semibold underline" href="https://corazonmexicancocina.com/" target="_blank" rel="noopener noreferrer">Visit the restaurant website</a>
+            </article>
+            <article className="rounded-2xl border p-6" style={{ borderColor: "var(--border)" }}>
+              <h3 className="text-xl font-bold">Scoops Homemade Ice Cream — Downtown</h3>
+              <p className="mt-2">The downtown Scoops storefront opened in 2026 at 829 Central Avenue, convenient for a dessert stop while walking downtown.</p>
+              <a className="mt-4 inline-block font-semibold underline" href="https://www.scoopshomemadeicecream.com/find-us" target="_blank" rel="noopener noreferrer">Find the downtown location</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">

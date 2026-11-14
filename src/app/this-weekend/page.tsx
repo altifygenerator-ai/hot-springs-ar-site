@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata = {
-  title: "This Weekend in Hot Springs, Arkansas",
+  title: "Hot Springs Events This Weekend & Things to Do",
   description:
     "See what’s happening this weekend in Hot Springs, Arkansas, including local events, live music, festivals, markets, restaurants, attractions, and family-friendly things to do.",
 
@@ -121,7 +121,7 @@ export default async function ThisWeekendPage() {
         </p>
 
         <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] md:text-7xl">
-          What’s going on in Hot Springs this weekend.
+          Events and things to do in Hot Springs this weekend
         </h1>
 
         <p

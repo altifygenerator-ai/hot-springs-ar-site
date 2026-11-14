@@ -2842,3 +2842,34 @@ p {
 .header-search-results {
   z-index: 120;
 }
+
+
+/* Compact, keyboard-accessible mobile navigation */
+@media (max-width: 860px) {
+  .hot-mobile-menu {
+    max-height: min(74vh, 700px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .hot-mobile-menu-group summary {
+    cursor: pointer;
+    padding: 0.65rem 0.3rem;
+    min-height: 44px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--green);
+  }
+
+  .hot-mobile-menu-group[open] > summary {
+    margin-bottom: 0.35rem;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.hot-mobile-menu-group summary:focus-visible,
+.hot-desktop-nav button:focus-visible,
+.hot-desktop-nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

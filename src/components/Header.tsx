@@ -168,8 +168,9 @@ export default function Header() {
               Home
             </Link>
 
-            <div className="hot-mobile-menu-group">
-              <p>Things To Do</p>
+            <details className="hot-mobile-menu-group">
+
+              <summary>Things To Do</summary>
               {thingsToDoLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -179,10 +180,11 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-            </div>
+            </details>
 
-            <div className="hot-mobile-menu-group">
-              <p>Food & Local</p>
+            <details className="hot-mobile-menu-group">
+
+              <summary>Food & Local</summary>
               {foodLocalLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -192,10 +194,11 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-            </div>
+            </details>
 
-            <div className="hot-mobile-menu-group">
-              <p>Places To Stay</p>
+            <details className="hot-mobile-menu-group">
+
+              <summary>Places To Stay</summary>
               {stayLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -205,20 +208,22 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-            </div>
+            </details>
 
-            <div className="hot-mobile-menu-group">
-              <p>Events</p>
+            <details className="hot-mobile-menu-group">
+
+              <summary>Events</summary>
               <Link href="/events" onClick={() => setOpen(false)}>
                 Events
               </Link>
               <Link href="/this-weekend" onClick={() => setOpen(false)}>
                 This Weekend
               </Link>
-            </div>
+            </details>
 
-            <div className="hot-mobile-menu-group">
-              <p>Articles</p>
+            <details className="hot-mobile-menu-group">
+
+              <summary>Articles</summary>
               {articleLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -228,10 +233,11 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-            </div>
+            </details>
 
-            <div className="hot-mobile-menu-group">
-              <p>Sister Sites</p>
+            <details className="hot-mobile-menu-group">
+
+              <summary>Sister Sites</summary>
               {sisterSites.map((site) => (
                 <a
                   key={site.href}
@@ -242,11 +248,11 @@ export default function Header() {
                   {site.label}
                 </a>
               ))}
-            </div>
+            </details>
 
             <Link
               className="nav-cta hot-mobile-cta"
-              href="/local-businesses"
+              href="/contact"
               onClick={() => setOpen(false)}
             >
               Get Listed

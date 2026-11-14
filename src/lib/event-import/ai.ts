@@ -40,7 +40,7 @@ function normalizeAiDraft(
     raw_description: cleanMultiline(record.raw_description) || cleanMultiline(record.description),
     description: cleanMultiline(record.description),
     ai_summary: cleanMultiline(record.ai_summary),
-    city: cleanString(record.city) || defaults.city || "Hot Springs",
+    city: cleanString(record.city) || null,
     location_name:
       cleanString(record.location_name) || cleanString(record.venue_name) || defaults.venue || null,
     address: cleanString(record.address),
@@ -80,7 +80,7 @@ export async function extractEventsFromTextWithAI(
       {
         role: "system",
         content:
-          "You extract event listings for a local Hot Springs, Arkansas tourism website. Return JSON only. Do not invent dates, times, prices, locations, performers, or links. Skip anything that is not clearly an upcoming event. Use YYYY-MM-DD dates and 24-hour HH:MM times when known. Mark needs_review true unless the listing is very clear.",
+          "You extract event listings for a local Hot Springs, Arkansas tourism website. Return JSON only. Do not invent dates, times, prices, locations, performers, or links. Skip anything that is not clearly an upcoming event. Use YYYY-MM-DD dates and 24-hour HH:MM times when known. Set needs_review false and confidence_score at least 0.9 ONLY when the event title, date, and town are explicit in the source. Otherwise mark needs_review true and lower confidence.",
       },
       {
         role: "user",

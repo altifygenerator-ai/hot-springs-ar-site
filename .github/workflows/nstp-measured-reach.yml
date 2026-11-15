@@ -24,5 +24,6 @@ jobs:
           NEXT_TELEMETRY_DISABLED: "1"
           NEXT_PUBLIC_SUPABASE_URL: "https://example.supabase.co"
           SUPABASE_SERVICE_ROLE_KEY: "ci-placeholder-not-production"
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: "ci-anon-placeholder-not-production"
           OPENAI_API_KEY: "sk-ci-placeholder-not-production"
           RESEND_API_KEY: "re_ci_placeholder_not_production"

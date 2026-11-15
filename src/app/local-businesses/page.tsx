@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { localBusinessesHero } from "@/data/hero";
-import { businesses } from "@/data/businesses";
+import { businesses, type Business } from "@/data/businesses";
 import { approvedCityListings, mergeApprovedListings } from "@/lib/nstp-business-sync";
 import { businessClickTracking, getPlacementType } from "@/lib/tracking";
 
@@ -237,7 +237,7 @@ function BusinessRail({
 }: {
   title: string;
   text: string;
-  businesses: typeof businesses;
+  businesses: Business[];
 }) {
   if (!businesses.length) return null;
 

@@ -1,0 +1,36 @@
+name: Business listing sync quality checks
+on:
+  push:
+    branches: [feature/approved-city-edits-sync]
+  pull_request:
+    paths:
+      - "**/nstp-business-sync.ts"
+      - "**/local-business/**"
+      - "**/local-businesses/**"
+      - "**/restaurants/**"
+      - "**/murfreesboro-local-businesses/**"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: node --test tests/nstp-owner-sync.test.cjs
+        env:
+          NSTP_TEST_CITY: "Hot Springs"
+          NSTP_TEST_SITE: "hotspringsarkansas.org"
+      - run: npx tsc --noEmit
+      - run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+          NEXT_PUBLIC_SUPABASE_URL: "https://example.supabase.co"
+          SUPABASE_SERVICE_ROLE_KEY: "ci-placeholder-not-production"
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: "ci-anon-placeholder-not-production"
+          OPENAI_API_KEY: "sk-ci-placeholder-not-production"
+          RESEND_API_KEY: "re_ci_placeholder_not_production"

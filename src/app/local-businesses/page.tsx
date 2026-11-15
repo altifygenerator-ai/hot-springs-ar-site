@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { localBusinessesHero } from "@/data/hero";
-import { businesses } from "@/data/businesses";
+import { businesses, type Business } from "@/data/businesses";
+import { approvedCityListings, mergeApprovedListings } from "@/lib/nstp-business-sync";
 import { businessClickTracking, getPlacementType } from "@/lib/tracking";
 
 export const metadata = {
@@ -26,49 +27,6 @@ export const metadata = {
     canonical: "/local-businesses",
   },
 };
-
-const localBusinesses = businesses.filter((business) =>
-  [
-    "Local Business",
-    "Local Service",
-    "Shopping",
-    "Outdoor Recreation",
-    "Spa & Bathhouse",
-    "Attraction",
-  ].includes(business.category)
-);
-
-const featuredBusinesses = localBusinesses.filter(
-  (business) => business.featured
-);
-
-const standardBusinesses = localBusinesses.filter(
-  (business) => !business.featured
-);
-
-const shoppingBusinesses = localBusinesses.filter(
-  (business) => business.category === "Shopping"
-);
-
-const outdoorBusinesses = localBusinesses.filter(
-  (business) => business.category === "Outdoor Recreation"
-);
-
-const spaBusinesses = localBusinesses.filter(
-  (business) => business.category === "Spa & Bathhouse"
-);
-
-const attractionBusinesses = localBusinesses.filter(
-  (business) => business.category === "Attraction"
-);
-
-const serviceBusinesses = localBusinesses.filter(
-  (business) => business.category === "Local Service"
-);
-
-const otherLocalBusinesses = localBusinesses.filter(
-  (business) => business.category === "Local Business"
-);
 
 const businessTypes = [
   {
@@ -279,7 +237,7 @@ function BusinessRail({
 }: {
   title: string;
   text: string;
-  businesses: typeof localBusinesses;
+  businesses: Business[];
 }) {
   if (!businesses.length) return null;
 
@@ -301,7 +259,54 @@ function BusinessRail({
   );
 }
 
-export default function LocalBusinessesPage() {
+export const revalidate = 300;
+export default async function LocalBusinessesPage() {
+  const currentBusinesses = mergeApprovedListings(businesses, await approvedCityListings("Hot Springs"));
+  const localBusinesses = currentBusinesses.filter((business) =>
+  [
+    "Local Business",
+    "Local Service",
+    "Shopping",
+    "Outdoor Recreation",
+    "Spa & Bathhouse",
+    "Attraction",
+  ].includes(business.category)
+);
+
+const featuredBusinesses = localBusinesses.filter(
+  (business) => business.featured
+);
+
+const standardBusinesses = localBusinesses.filter(
+  (business) => !business.featured
+);
+
+const shoppingBusinesses = localBusinesses.filter(
+  (business) => business.category === "Shopping"
+);
+
+const outdoorBusinesses = localBusinesses.filter(
+  (business) => business.category === "Outdoor Recreation"
+);
+
+const spaBusinesses = localBusinesses.filter(
+  (business) => business.category === "Spa & Bathhouse"
+);
+
+const attractionBusinesses = localBusinesses.filter(
+  (business) => business.category === "Attraction"
+);
+
+const serviceBusinesses = localBusinesses.filter(
+  (business) => business.category === "Local Service"
+);
+
+const otherLocalBusinesses = localBusinesses.filter(
+  (business) => business.category === "Local Business"
+);
+
+
+
   const mainBusiness = featuredBusinesses[0] ?? localBusinesses[0];
   const sideBusinesses = featuredBusinesses.length
     ? featuredBusinesses.slice(1, 3)

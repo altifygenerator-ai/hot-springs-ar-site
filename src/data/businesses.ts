@@ -447,6 +447,18 @@ export const businesses: Business[] = [
     featured: true,
   },
   {
+    name: "Lake Catherine's Cove",
+    category: "Cabins & Lodging",
+    type: "Lake Catherine Lake House • Private Dock • Hot Tub • Sleeps 18",
+    description:
+      "A secluded lakefront vacation home on a quiet Lake Catherine cove, with five bedrooms, three bathrooms, a private boat dock, hot tub, kayaks, paddleboards, screened patios, and an arcade. Sleeps up to 18 guests, making it a spacious option for family and group getaways near Hot Springs.",
+    image:
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1767732660306636525/original/11cf48d9-14b8-4702-8837-e44571687eb9.jpeg?im_w=720",
+    address: "Lake Catherine, Hot Springs area, AR",
+    website: "https://www.airbnb.com/rooms/1767732660306636525",
+    href: "/hot-springs-ar-cabins",
+  },
+  {
     name: "Lone Cedar Cabins",
     category: "Cabins & Lodging",
     type: "Secluded Cabins • Ouachita Foothills • Near DeGray Lake",

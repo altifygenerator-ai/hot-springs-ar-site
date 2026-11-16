@@ -364,6 +364,13 @@ export default function CabinsPage() {
                     {place.phone && (
                       <a
                         href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
+                        {...businessClickTracking({
+                          action: "call",
+                          business: place.name,
+                          page: "/hot-springs-ar-cabins",
+                          placement: "priority-cabins",
+                          placementType: getPlacementType(place.name),
+                        })}
                         className="inline-flex rounded-full px-5 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
                         style={{
                           background: "var(--green)",
@@ -377,6 +384,13 @@ export default function CabinsPage() {
                     {place.website && (
                       <a
                         href={place.website}
+                        {...businessClickTracking({
+                          action: "website",
+                          business: place.name,
+                          page: "/hot-springs-ar-cabins",
+                          placement: "priority-cabins",
+                          placementType: getPlacementType(place.name),
+                        })}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
@@ -386,13 +400,20 @@ export default function CabinsPage() {
                           background: "var(--surface-strong)",
                         }}
                       >
-                        {place.website?.includes("findaplacebooking.com") ? "Book on Find A Place" : "Website"}
+                        {place.website?.includes("airbnb.com") ? "View on Airbnb" : place.website?.includes("findaplacebooking.com") ? "Book on Find A Place" : "Website"}
                       </a>
                     )}
 
                     {place.directions && (
                       <a
                         href={place.directions}
+                        {...businessClickTracking({
+                          action: "directions",
+                          business: place.name,
+                          page: "/hot-springs-ar-cabins",
+                          placement: "priority-cabins",
+                          placementType: getPlacementType(place.name),
+                        })}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex rounded-full border px-5 py-2 text-sm font-bold transition hover:opacity-90"
@@ -455,6 +476,13 @@ export default function CabinsPage() {
                     {place.phone && (
                       <a
                         href={`tel:${place.phone.replace(/[^\d]/g, "")}`}
+                        {...businessClickTracking({
+                          action: "call",
+                          business: place.name,
+                          page: "/hot-springs-ar-cabins",
+                          placement: "more-cabins",
+                          placementType: getPlacementType(place.name),
+                        })}
                         className="inline-flex rounded-full px-4 py-2 text-sm font-bold shadow-sm transition hover:opacity-90"
                         style={{
                           background: "var(--green)",
@@ -468,6 +496,13 @@ export default function CabinsPage() {
                     {place.website && (
                       <a
                         href={place.website}
+                        {...businessClickTracking({
+                          action: "website",
+                          business: place.name,
+                          page: "/hot-springs-ar-cabins",
+                          placement: "more-cabins",
+                          placementType: getPlacementType(place.name),
+                        })}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex rounded-full border px-4 py-2 text-sm font-bold transition hover:opacity-90"
@@ -477,13 +512,20 @@ export default function CabinsPage() {
                           background: "var(--surface-strong)",
                         }}
                       >
-                        {place.website?.includes("findaplacebooking.com") ? "Book on Find A Place" : "Website"}
+                        {place.website?.includes("airbnb.com") ? "View on Airbnb" : place.website?.includes("findaplacebooking.com") ? "Book on Find A Place" : "Website"}
                       </a>
                     )}
 
                     {place.directions && (
                       <a
                         href={place.directions}
+                        {...businessClickTracking({
+                          action: "directions",
+                          business: place.name,
+                          page: "/hot-springs-ar-cabins",
+                          placement: "more-cabins",
+                          placementType: getPlacementType(place.name),
+                        })}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex rounded-full border px-4 py-2 text-sm font-bold transition hover:opacity-90"

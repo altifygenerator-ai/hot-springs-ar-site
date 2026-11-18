@@ -1278,6 +1278,7 @@ export const businesses: Business[] = [
     description:
       "A local cleaning service covering Hot Springs and nearby communities with standard cleaning, deep cleaning, move-in and move-out cleaning, Airbnb turnover cleaning, vacation rental cleaning, and small office cleaning.",
     image: "/images/businesses/lyn-and-lili-s-tidy-house.png",
+    phone: "870-260-4536",
     website: "https://www.lynandlilistidyhouse.com/house-cleaning-hot-springs-ar",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Lyn+and+Lili%27s+Tidy+House+Hot+Springs+AR",

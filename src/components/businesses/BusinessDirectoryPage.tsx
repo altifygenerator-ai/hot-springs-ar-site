@@ -86,14 +86,12 @@ function DirectoryCard({
         href={href}
         target={external ? "_blank" : undefined}
         rel={external ? "noopener noreferrer" : undefined}
-        {...(badge !== "Basic Listing"
-          ? businessClickTracking({
-              action: business.website ? "website" : business.directions ? "directions" : "view-details",
-              business: business.name,
-              placement: "business-directory-featured-card",
-              placementType: getPlacementType(business.name),
-            })
-          : {})}
+        {...businessClickTracking({
+          action: business.website ? "website" : business.directions ? "directions" : "view-details",
+          business: business.name,
+          placement: badge === "Basic Listing" ? "business-directory-basic-card" : "business-directory-featured-card",
+          placementType: getPlacementType(business.name),
+        })}
       >
         <div className="relative h-48 overflow-hidden bg-[color:var(--surface-strong)]">
           <img

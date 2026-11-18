@@ -1269,7 +1269,7 @@ export const businesses: Business[] = [
     phone: "870-828-2562",
     address: "Serving Hot Springs, Hot Springs Village & nearby areas",
     website: "https://www.reddirtpropertyservicesar.com/",
-    href: "/hot-springs-local-services",
+    href: "https://www.reddirtpropertyservicesar.com/",
   },
   {
     name: "Lyn & Lili's Tidy House",
@@ -1281,7 +1281,7 @@ export const businesses: Business[] = [
     website: "https://www.lynandlilistidyhouse.com/house-cleaning-hot-springs-ar",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Lyn+and+Lili%27s+Tidy+House+Hot+Springs+AR",
-    href: "/hot-springs-local-services",
+    href: "https://www.lynandlilistidyhouse.com/house-cleaning-hot-springs-ar",
   },
   {
     name: "Precise Property Cleaning",

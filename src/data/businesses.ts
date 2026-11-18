@@ -1260,6 +1260,18 @@ export const businesses: Business[] = [
     href: "/hot-springs-local-services",
   },
   {
+    name: "Red Dirt Property Services LLC",
+    category: "Local Service",
+    type: "Junk Removal • Property Cleanup • Dirt Work • Brush Hogging",
+    description:
+      "Locally owned property services serving Hot Springs and surrounding Arkansas communities, including junk removal, rental and estate cleanouts, driveway and culvert work, brush cutting, storm debris cleanup, and light demolition.",
+    image: "/images/local-services/red-dirt-property-services.svg",
+    phone: "870-828-2562",
+    address: "Serving Hot Springs, Hot Springs Village & nearby areas",
+    website: "https://www.reddirtpropertyservicesar.com/",
+    href: "/hot-springs-local-services",
+  },
+  {
     name: "Lyn & Lili's Tidy House",
     category: "Local Service",
     type: "House Cleaning • Vacation Rental Cleaning • Move-Out Cleaning",
